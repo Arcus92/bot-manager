@@ -20,14 +20,14 @@ An expression starts with an `@` followed by the name.
 ```json
 [
   {
-    "@OpenAiPlugin": {
+    "@OpenAiInit": {
       "ApiKey": {
         "@Env": "OPENAI_API_KEY"
       }
     }
   },
   {
-    "@DiscordPlugin": {
+    "@DiscordInit": {
       "TokenType": 1,
       "Token": {
         "@Env": "DISCORD_TOKEN"

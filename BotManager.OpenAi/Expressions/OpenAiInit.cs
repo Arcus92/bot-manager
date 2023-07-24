@@ -12,7 +12,7 @@ namespace BotManager.OpenAi.Expressions;
 /// Returns: <c>null</c>.
 /// </para>
 /// </summary>
-public sealed class OpenAiPlugin : IExpression
+public sealed class OpenAiInit : IExpression
 {
     internal const string Tag = "OpenAI";
     
@@ -57,16 +57,4 @@ public sealed class OpenAiPlugin : IExpression
         
         return null;
     }
-
-    #region Static
-    
-    /// <summary>
-    /// Registers the expressions in the OpenAI plugin.
-    /// </summary>
-    public static void Register()
-    {
-        IExpression.RegisterExpressionTypesFromAssembly(typeof(OpenAiPlugin).Assembly);
-    }
-    
-    #endregion Static
 }

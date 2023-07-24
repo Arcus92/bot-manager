@@ -5,7 +5,7 @@ using OpenAI.GPT3.ObjectModels.RequestModels;
 namespace BotManager.OpenAi.Expressions;
 
 /// <summary>
-/// Executes a char request to the OpenAI api. The <see cref="OpenAiPlugin"/> must be initialized.
+/// Executes a char request to the OpenAI api. The <see cref="OpenAiInit"/> must be initialized.
 /// <para>
 /// Returns: <see cref="string"/> value.
 /// </para>
@@ -34,7 +34,7 @@ public sealed class OpenAiChat : IExpression
         if (Messages is null || Messages.Length == 0)
             return null;
 
-        context.Logger.Info(OpenAiPlugin.Tag, "Sending OpenAI chat request...");
+        context.Logger.Info(OpenAiInit.Tag, "Sending OpenAI chat request...");
         
         foreach (var message in Messages)
         {
@@ -55,7 +55,7 @@ public sealed class OpenAiChat : IExpression
         var response = await openAi.Service.CreateCompletion(request);
         if (!response.Successful)
         {
-            context.Logger.Error(OpenAiPlugin.Tag, "OpenAI chat request failed!");
+            context.Logger.Error(OpenAiInit.Tag, "OpenAI chat request failed!");
             return null;
         }
 

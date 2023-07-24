@@ -4,7 +4,7 @@ using Discord;
 namespace BotManager.Discord.Expressions;
 
 /// <summary>
-/// Sends a text message to a Discord channel. The <see cref="DiscordPlugin"/> must be initialized.
+/// Sends a text message to a Discord channel. The <see cref="DiscordInit"/> must be initialized.
 /// <para>
 /// Returns: <c>null</c>.
 /// </para>
@@ -43,13 +43,13 @@ public sealed class DiscordSend : IExpression
         var channel = await context.DiscordChannelAsync(Guild, Channel);
         if (channel is null)
         {
-            context.Logger.Error(DiscordPlugin.Tag, "Could not detect Discord channel to send message.");
+            context.Logger.Error(DiscordInit.Tag, "Could not detect Discord channel to send message.");
             return null;
         }
         
         if (channel is not ITextChannel textChannel)
         {
-            context.Logger.Error(DiscordPlugin.Tag, $"Discord channel '{channel.Name}' is not a text channel to send message to.");
+            context.Logger.Error(DiscordInit.Tag, $"Discord channel '{channel.Name}' is not a text channel to send message to.");
             return null;
         }
 
@@ -57,7 +57,7 @@ public sealed class DiscordSend : IExpression
         var message = await context.ExecuteAsync<string>(Message);
         if (string.IsNullOrEmpty(message))
         {
-            context.Logger.Error(DiscordPlugin.Tag, $"Discord message is empty.");
+            context.Logger.Error(DiscordInit.Tag, $"Discord message is empty.");
             return null;
         }
         

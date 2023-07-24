@@ -12,7 +12,7 @@ namespace BotManager.Discord.Expressions;
 /// Returns: <c>null</c>.
 /// </para>
 /// </summary>
-public sealed class DiscordPlugin : IExpression
+public sealed class DiscordInit : IExpression
 {
     internal const string Tag = "Discord";
 
@@ -245,16 +245,4 @@ public sealed class DiscordPlugin : IExpression
     }
     
     #endregion Slash command
-    
-    #region Static
-    
-    /// <summary>
-    /// Registers the expressions in the Discord plugin.
-    /// </summary>
-    public static void Register()
-    {
-        IExpression.RegisterExpressionTypesFromAssembly(typeof(DiscordPlugin).Assembly);
-    }
-    
-    #endregion Static
 }

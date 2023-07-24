@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
-using BotManager.Discord.Expressions;
-using BotManager.OpenAi.Expressions;
+using BotManager.Discord;
+using BotManager.OpenAi;
 using BotManager.Runtime;
 using BotManager.Runtime.Converters;
 

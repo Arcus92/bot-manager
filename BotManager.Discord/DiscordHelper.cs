@@ -11,13 +11,13 @@ namespace BotManager.Discord;
 public static class DiscordHelper
 {
     /// <summary>
-    /// Returns the global <see cref="DiscordPlugin"/> from the current context.
+    /// Returns the global <see cref="DiscordInit"/> from the current context.
     /// </summary>
     /// <param name="context">The current runtime context.</param>
-    /// <returns>Returns the <see cref="DiscordPlugin"/>. Returns <c>null</c> if Discord wasn't initialized.</returns>
-    public static DiscordPlugin? Discord(this RuntimeContext context)
+    /// <returns>Returns the <see cref="DiscordInit"/>. Returns <c>null</c> if Discord wasn't initialized.</returns>
+    public static DiscordInit? Discord(this RuntimeContext context)
     {
-        return context.Get("discord.plugin") as DiscordPlugin;
+        return context.Get("discord.plugin") as DiscordInit;
     }
 
     /// <summary>

@@ -3,7 +3,7 @@ using BotManager.Runtime;
 namespace BotManager.Discord.Expressions;
 
 /// <summary>
-/// Responds with a text message on a <see cref="DiscordSlashCommand"/>. The <see cref="DiscordPlugin"/> must be
+/// Responds with a text message on a <see cref="DiscordSlashCommand"/>. The <see cref="DiscordInit"/> must be
 /// initialized.
 /// <para>
 /// Returns: <c>null</c>.
@@ -27,7 +27,7 @@ public sealed class DiscordRespond : IExpression
         var command = context.DiscordCommand();
         if (command is null)
         {
-            context.Logger.Error(DiscordPlugin.Tag, "Could not detect Discord slash command to respond to.");
+            context.Logger.Error(DiscordInit.Tag, "Could not detect Discord slash command to respond to.");
             return null;
         }
 
@@ -35,7 +35,7 @@ public sealed class DiscordRespond : IExpression
         var message = await context.ExecuteAsync<string>(Message);
         if (string.IsNullOrEmpty(message))
         {
-            context.Logger.Error(DiscordPlugin.Tag, $"Discord message is empty.");
+            context.Logger.Error(DiscordInit.Tag, $"Discord message is empty.");
             return null;
         }
         
