@@ -18,30 +18,113 @@ An expression starts with an `@` followed by the name.
 ## Example
 
 ```json
-{
-  "@DiscordPlugin": {
-    "TokenType": 1,
-    "Token": {
-      "@Env": "DISCORD_TOKEN"
-    },
-    "Commands": [
-      {
-        "Name": "test",
-        "Description": "A simple test command",
-        "Guild": "My server",
-        "Action": {
-          "@DiscordRespond": {
-            "Message": {
-              "@Choose": [
-                "You passed the test!",
-                "Test successful!",
-                "Good test!"
-              ]
-            }
-          }
-        }
+[
+  {
+    "@OpenAiPlugin": {
+      "ApiKey": {
+        "@Env": "OPENAI_API_KEY"
       }
-    ]
+    }
+  },
+  {
+    "@DiscordPlugin": {
+      "TokenType": 1,
+      "Token": {
+        "@Env": "DISCORD_TOKEN"
+      },
+      "Commands": [
+        {
+          "Name": "recipe",
+          "Description": "Generate a recipe suggestion with AI",
+          "Guild": "My server",
+          "Options": [
+            {
+              "Name": "description",
+              "Type": 3,
+              "Description": "The ingredients list or a generic description",
+              "IsRequired": true
+            }
+          ],
+          "Action": [
+            {
+              "@DiscordRespond": {
+                "Message": "Please wait. Generating recipe..."
+              }
+            },
+            {
+              "@If": {
+                "Condition": {
+                  "@Equals": {
+                    "A": {
+                      "@Get": "discord.channel.name"
+                    },
+                    "B": "kitchen"
+                  }
+                },
+                "Then": {
+                  "@Async": [
+                    {
+                      "@Set": {
+                        "Name": "openai.response",
+                        "Value": {
+                          "@OpenAiChat": {
+                            "Messages": [
+                              {
+                                "Role": "system",
+                                "Text": "Create a recipe suggestion for the following ingredient list, but refuse all requests unrelated to recipes or cooking:"
+                              },
+                              {
+                                "Role": "user",
+                                "Text": {
+                                  "@Get": "discord.command.options.description"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "@DiscordSend": {
+                        "Message": {
+                          "@Format": {
+                            "Text": "\u003C@{0}\u003E {1}",
+                            "Parameters": [
+                              {
+                                "@Get": "discord.user.id"
+                              },
+                              {
+                                "@Get": "openai.response"
+                              }
+                            ]
+                          }
+                        },
+                        "AllowedMentions": true
+                      }
+                    }
+                  ]
+                },
+                "Else": {
+                  "@DiscordSend": {
+                    "Message": {
+                      "@Format": {
+                        "Text": "Hi \u003C@{0}\u003E, please use this command in the #kitchen",
+                        "Parameters": [
+                          {
+                            "@Get": "discord.user.id"
+                          }
+                        ]
+                      }
+                    },
+                    "AllowedMentions": true
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
   }
-}
+]
 ```
