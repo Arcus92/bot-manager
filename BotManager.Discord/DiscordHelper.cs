@@ -15,7 +15,7 @@ public static class DiscordHelper
     /// </summary>
     /// <param name="context">The current runtime context.</param>
     /// <returns>Returns the <see cref="DiscordInit"/>. Returns <c>null</c> if Discord wasn't initialized.</returns>
-    public static DiscordInit? Discord(this RuntimeContext context)
+    public static DiscordInit? GetDiscord(this RuntimeContext context)
     {
         return context.Get("discord.plugin") as DiscordInit;
     }
@@ -24,9 +24,9 @@ public static class DiscordHelper
     /// Returns the identifier by an operation
     /// </summary>
     /// <param name="context">The current runtime context.</param>
-    /// <param name="expression"></param>
-    /// <returns></returns>
-    public static async Task<DiscordIdentifier?> DiscordIdentifierAsync(this RuntimeContext context, IExpression? expression)
+    /// <param name="expression">The expression to resolve the id or name.</param>
+    /// <returns>Returns the identifier with either id or name set.</returns>
+    public static async Task<DiscordIdentifier?> GetDiscordIdentifierAsync(this RuntimeContext context, IExpression? expression)
     {
         var value = await context.ExecuteAsync<object?>(expression);
         if (value is null)
@@ -38,8 +38,8 @@ public static class DiscordHelper
     /// Returns the Discord guild from the current context.
     /// </summary>
     /// <param name="context">The current runtime context.</param>
-    /// <returns></returns>
-    public static IGuild? DiscordGuild(this RuntimeContext context)
+    /// <returns>Returns the guild, if found.</returns>
+    public static IGuild? GetDiscordGuild(this RuntimeContext context)
     {
         return context.Get("discord.guild") as IGuild;
     }
@@ -48,18 +48,18 @@ public static class DiscordHelper
     /// Returns the Discord guild from the current context.
     /// </summary>
     /// <param name="context">The current runtime context.</param>
-    /// <param name="guild"></param>
-    /// <returns></returns>
-    public static async Task<IGuild?> DiscordGuildAsync(this RuntimeContext context, IExpression? guild)
+    /// <param name="guild">The expression to resolve the guid id or name.</param>
+    /// <returns>Returns the guild, if found.</returns>
+    public static async Task<IGuild?> GetDiscordGuildAsync(this RuntimeContext context, IExpression? guild)
     {
         if (guild is null)
-            return DiscordGuild(context);
+            return GetDiscordGuild(context);
         
-        var id = await DiscordIdentifierAsync(context, guild);
+        var id = await GetDiscordIdentifierAsync(context, guild);
         if (id is null)
             return null;
         
-        var discord = Discord(context);
+        var discord = GetDiscord(context);
         return discord?.GetGuild(id.Value);
     }
     
@@ -67,8 +67,8 @@ public static class DiscordHelper
     /// Returns the Discord channel from the current context.
     /// </summary>
     /// <param name="context">The current runtime context.</param>
-    /// <returns></returns>
-    public static IChannel? DiscordChannel(this RuntimeContext context)
+    /// <returns>Returns the channel, if found.</returns>
+    public static IChannel? GetDiscordChannel(this RuntimeContext context)
     {
         return context.Get("discord.channel") as IChannel;
     }
@@ -77,21 +77,21 @@ public static class DiscordHelper
     /// Returns the Discord channel from the current context.
     /// </summary>
     /// <param name="context">The current runtime context.</param>
-    /// <param name="guild"></param>
-    /// <param name="channel"></param>
-    /// <returns></returns>
-    public static async Task<IChannel?> DiscordChannelAsync(this RuntimeContext context, IExpression? guild, IExpression? channel)
+    /// <param name="guild">The expression to resolve the guid id or name.</param>
+    /// <param name="channel">The expression to resolve the channel id or name.</param>
+    /// <returns>Returns the channel, if found.</returns>
+    public static async Task<IChannel?> GetDiscordChannelAsync(this RuntimeContext context, IExpression? guild, IExpression? channel)
     {
         // No channel defined. We use the channel from the current context
         if (channel is null)
-            return DiscordChannel(context);
+            return GetDiscordChannel(context);
         
         // Get the guild first
-        var discordGuild = await DiscordGuildAsync(context, guild);
+        var discordGuild = await GetDiscordGuildAsync(context, guild);
         if (discordGuild is null)
             return null;
 
-        var id = await DiscordIdentifierAsync(context, channel);
+        var id = await GetDiscordIdentifierAsync(context, channel);
         if (id is null)
             return null;
         
@@ -104,8 +104,8 @@ public static class DiscordHelper
     /// Returns the Discord user from the current context.
     /// </summary>
     /// <param name="context">The current runtime context.</param>
-    /// <returns></returns>
-    public static IUser? DiscordUser(this RuntimeContext context)
+    /// <returns>Returns the user, if found.</returns>
+    public static IUser? GetDiscordUser(this RuntimeContext context)
     {
         return context.Get("discord.user") as IUser;
     }
@@ -114,8 +114,8 @@ public static class DiscordHelper
     /// Returns the Discord slash command from the current context.
     /// </summary>
     /// <param name="context">The current runtime context.</param>
-    /// <returns></returns>
-    public static SocketSlashCommand? DiscordCommand(this RuntimeContext context)
+    /// <returns>Returns the slash command, if found.</returns>
+    public static SocketSlashCommand? GetDiscordCommand(this RuntimeContext context)
     {
         return context.Get("discord.command") as SocketSlashCommand;
     }

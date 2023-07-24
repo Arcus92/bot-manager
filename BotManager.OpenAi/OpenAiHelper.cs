@@ -13,7 +13,7 @@ public static class OpenAiHelper
     /// </summary>
     /// <param name="context">The current runtime context.</param>
     /// <returns>Returns the <see cref="OpenAiInit"/>. Returns <c>null</c> if OpenAI wasn't initialized.</returns>
-    public static OpenAiInit? OpenAi(this RuntimeContext context)
+    public static OpenAiInit? GetOpenAi(this RuntimeContext context)
     {
         return context.Get("openai.plugin") as OpenAiInit;
     }

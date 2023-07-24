@@ -40,7 +40,7 @@ public sealed class DiscordSend : IExpression
     /// <inheritdoc />
     public async Task<object?> ExecuteAsync(RuntimeContext context, Type? returnType)
     {
-        var channel = await context.DiscordChannelAsync(Guild, Channel);
+        var channel = await context.GetDiscordChannelAsync(Guild, Channel);
         if (channel is null)
         {
             context.Logger.Error(DiscordInit.Tag, "Could not detect Discord channel to send message.");

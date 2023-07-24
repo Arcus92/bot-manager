@@ -24,7 +24,7 @@ public sealed class DiscordRespond : IExpression
     /// <inheritdoc />
     public async Task<object?> ExecuteAsync(RuntimeContext context, Type? returnType)
     {
-        var command = context.DiscordCommand();
+        var command = context.GetDiscordCommand();
         if (command is null)
         {
             context.Logger.Error(DiscordInit.Tag, "Could not detect Discord slash command to respond to.");

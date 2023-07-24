@@ -25,7 +25,7 @@ public sealed class OpenAiChat : IExpression
     /// <inheritdoc />
     public async Task<object?> ExecuteAsync(RuntimeContext context, Type? returnType)
     {
-        var openAi = context.OpenAi();
+        var openAi = context.GetOpenAi();
         if (openAi is null)
             return null;
 
