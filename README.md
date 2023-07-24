@@ -28,9 +28,7 @@ An expression starts with an `@` followed by the name.
       {
         "Name": "test",
         "Description": "A simple test command",
-        "Guild": {
-          "Name": "My server"
-        },
+        "Guild": "My server",
         "Action": {
           "@DiscordRespond": {
             "Message": {

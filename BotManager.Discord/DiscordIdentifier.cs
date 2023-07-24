@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+using BotManager.Discord.Converters;
 using Discord;
 
 namespace BotManager.Discord;
@@ -5,6 +7,7 @@ namespace BotManager.Discord;
 /// <summary>
 /// Identifies a guild, channel or user either by name or id.
 /// </summary>
+[JsonConverter(typeof(DiscordIdentifierConverter))]
 public readonly struct DiscordIdentifier
 {
     /// <summary>
