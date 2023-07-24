@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>BotManager.OpenAi</AssemblyName>
+        <RootNamespace>BotManager.OpenAi</RootNamespace>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>bin\Debug\net7.0\BotManager.OpenAi.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile>bin\Release\net7.0\BotManager.OpenAi.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Betalgo.OpenAI.GPT3" Version="6.8.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BotManager.Runtime\BotManager.Runtime.csproj" />
+    </ItemGroup>
+
+</Project>

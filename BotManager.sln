@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotManager", "BotManager\BotManager.csproj", "{3E1ED32D-9C9D-4828-A40D-EA99D1F9BC9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotManager.Discord", "BotManager.Discord\BotManager.Discord.csproj", "{68870FE7-C73E-433F-8B19-05E5B7820D8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotManager.OpenAi", "BotManager.OpenAi\BotManager.OpenAi.csproj", "{DD66EB93-2DF3-462D-A55C-DFFC388CBD08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotManager.Runtime", "BotManager.Runtime\BotManager.Runtime.csproj", "{CBA6477B-7136-4D13-BB98-02E1F4B08AA0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E1ED32D-9C9D-4828-A40D-EA99D1F9BC9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E1ED32D-9C9D-4828-A40D-EA99D1F9BC9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E1ED32D-9C9D-4828-A40D-EA99D1F9BC9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E1ED32D-9C9D-4828-A40D-EA99D1F9BC9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68870FE7-C73E-433F-8B19-05E5B7820D8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68870FE7-C73E-433F-8B19-05E5B7820D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68870FE7-C73E-433F-8B19-05E5B7820D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68870FE7-C73E-433F-8B19-05E5B7820D8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD66EB93-2DF3-462D-A55C-DFFC388CBD08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD66EB93-2DF3-462D-A55C-DFFC388CBD08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD66EB93-2DF3-462D-A55C-DFFC388CBD08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD66EB93-2DF3-462D-A55C-DFFC388CBD08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBA6477B-7136-4D13-BB98-02E1F4B08AA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBA6477B-7136-4D13-BB98-02E1F4B08AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBA6477B-7136-4D13-BB98-02E1F4B08AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBA6477B-7136-4D13-BB98-02E1F4B08AA0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
