@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using BotManager.Runtime.Converters;
 using Discord;
 
 namespace BotManager.Discord;
@@ -14,8 +15,9 @@ public struct DiscordSlashCommandOption
     public string? Name { get; set; }
 
     /// <summary>
-    /// Gets and sets the option type.
+    /// Gets and sets the option type. See <see cref="ApplicationCommandOptionType"/>.
     /// </summary>
+    [JsonConverter(typeof(EnumConverter<ApplicationCommandOptionType>))]
     public ApplicationCommandOptionType Type { get; set; }
 
     /// <summary>
