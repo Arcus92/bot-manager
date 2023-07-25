@@ -19,10 +19,4 @@
       <ProjectReference Include="..\BotManager.OpenAi\BotManager.OpenAi.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <None Update="run.json">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
-    </ItemGroup>
-
 </Project>
