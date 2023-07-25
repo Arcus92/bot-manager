@@ -45,6 +45,11 @@ public sealed class DiscordInit : IExpression
     /// The Discord client
     /// </summary>
     private readonly DiscordSocketClient _client = new();
+
+    /// <summary>
+    /// Gets the Discord client interface.
+    /// </summary>
+    public DiscordSocketClient Client => _client;
     
     /// <inheritdoc />
     public async Task<object?> ExecuteAsync(RuntimeContext context, Type? returnType)
