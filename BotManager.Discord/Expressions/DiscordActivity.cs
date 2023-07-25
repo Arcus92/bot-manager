@@ -1,4 +1,6 @@
+using System.Text.Json.Serialization;
 using BotManager.Runtime;
+using BotManager.Runtime.Converters;
 using Discord;
 
 namespace BotManager.Discord.Expressions;
@@ -22,9 +24,10 @@ public sealed class DiscordActivity : IExpression
     public IExpression? StreamUrl { get; set; }
 
     /// <summary>
-    /// Gets and sets the activity type.
+    /// Gets and sets the activity type. See <see cref="ActivityType"/>.
     /// </summary>
-    public ActivityType ActivityType { get; set; }
+    [JsonConverter(typeof(EnumConverter<ActivityType>))]
+    public ActivityType Activity { get; set; }
 
     /// <inheritdoc />
     public async Task<object?> ExecuteAsync(RuntimeContext context, Type? returnType)
@@ -37,7 +40,7 @@ public sealed class DiscordActivity : IExpression
         var name = await context.ExecuteAsync<string>(Name);
         var streamUrl = await context.ExecuteAsync<string>(StreamUrl);
         
-        await discord.Client.SetGameAsync(name, streamUrl: streamUrl, type: ActivityType);
+        await discord.Client.SetGameAsync(name, streamUrl: streamUrl, type: Activity);
         return null;
     }
 }

@@ -1,5 +1,6 @@
 using System.Text.Json.Serialization;
 using BotManager.Runtime;
+using BotManager.Runtime.Converters;
 using Discord;
 using Discord.WebSocket;
 
@@ -26,6 +27,7 @@ public sealed class DiscordInit : IExpression
     /// <summary>
     /// Gets and sets the <see cref="Token"/> type
     /// </summary>
+    [JsonConverter(typeof(EnumConverter<TokenType>))]
     public TokenType TokenType { get; set; } = TokenType.Bot;
 
     /// <summary>
@@ -49,6 +51,7 @@ public sealed class DiscordInit : IExpression
     /// <summary>
     /// Gets the Discord client interface.
     /// </summary>
+    [JsonIgnore]
     public DiscordSocketClient Client => _client;
     
     /// <inheritdoc />
