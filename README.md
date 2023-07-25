@@ -13,24 +13,24 @@ The idea of the json configuration is that everything can be represented as an e
 expressions. The available expressions can be extended by plugins. For example: there is currently an 
 [OpenAI](https://openai.com/) submodule that can return GPT chat responses.
 
-An expression starts with an `@` followed by the name.
+An expression starts with an `$` followed by the name.
 
 ## Example
 
 ```json
 [
   {
-    "@OpenAiInit": {
+    "$OpenAiInit": {
       "ApiKey": {
-        "@Env": "OPENAI_API_KEY"
+        "$Env": "OPENAI_API_KEY"
       }
     }
   },
   {
-    "@DiscordInit": {
+    "$DiscordInit": {
       "TokenType": 1,
       "Token": {
-        "@Env": "DISCORD_TOKEN"
+        "$Env": "DISCORD_TOKEN"
       },
       "Commands": [
         {
@@ -47,27 +47,27 @@ An expression starts with an `@` followed by the name.
           ],
           "Action": [
             {
-              "@DiscordRespond": {
+              "$DiscordRespond": {
                 "Message": "Please wait. Generating recipe..."
               }
             },
             {
-              "@If": {
+              "$If": {
                 "Condition": {
-                  "@Equals": {
+                  "$Equals": {
                     "A": {
-                      "@Get": "discord.channel.name"
+                      "$Get": "discord.channel.name"
                     },
                     "B": "kitchen"
                   }
                 },
                 "Then": {
-                  "@Async": [
+                  "$Async": [
                     {
-                      "@Set": {
+                      "$Set": {
                         "Name": "openai.response",
                         "Value": {
-                          "@OpenAiChat": {
+                          "$OpenAiChat": {
                             "Messages": [
                               {
                                 "Role": "system",
@@ -76,7 +76,7 @@ An expression starts with an `@` followed by the name.
                               {
                                 "Role": "user",
                                 "Text": {
-                                  "@Get": "discord.command.options.description"
+                                  "$Get": "discord.command.options.description"
                                 }
                               }
                             ]
@@ -85,16 +85,16 @@ An expression starts with an `@` followed by the name.
                       }
                     },
                     {
-                      "@DiscordSend": {
+                      "$DiscordSend": {
                         "Message": {
-                          "@Format": {
+                          "$Format": {
                             "Text": "\u003C@{0}\u003E {1}",
                             "Parameters": [
                               {
-                                "@Get": "discord.user.id"
+                                "$Get": "discord.user.id"
                               },
                               {
-                                "@Get": "openai.response"
+                                "$Get": "openai.response"
                               }
                             ]
                           }
@@ -105,13 +105,13 @@ An expression starts with an `@` followed by the name.
                   ]
                 },
                 "Else": {
-                  "@DiscordSend": {
+                  "$DiscordSend": {
                     "Message": {
-                      "@Format": {
+                      "$Format": {
                         "Text": "Hi \u003C@{0}\u003E, please use this command in the #kitchen",
                         "Parameters": [
                           {
-                            "@Get": "discord.user.id"
+                            "$Get": "discord.user.id"
                           }
                         ]
                       }

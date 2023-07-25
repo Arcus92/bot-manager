@@ -72,13 +72,13 @@ public class ExpressionConverter : JsonConverter<IExpression?>
             // Property name
             if (reader.TokenType == JsonTokenType.PropertyName)
             {
-                // There should be a single property starting with an @ followed by the type name to create.
+                // There should be a single property starting with an $ followed by the type name to create.
                 var propertyName = reader.GetString();
-                if (propertyName is null || !propertyName.StartsWith("@"))
-                    throw new JsonException($"Unknown property '{propertyName}'. Expected '@{{typeName}}'.");
+                if (propertyName is null || !propertyName.StartsWith("$"))
+                    throw new JsonException($"Unknown property '{propertyName}'. Expected '${{typeName}}'.");
 
                 if (result is not null)
-                    throw new JsonException("Multiple '@{typeName}' properties are not supported.");
+                    throw new JsonException("Multiple '${typeName}' properties are not supported.");
                 
                 var typeName = propertyName[1..];
 
@@ -90,7 +90,7 @@ public class ExpressionConverter : JsonConverter<IExpression?>
             }
             else
             {
-                throw new JsonException("Unknown token. Expected property with '@{typeName}'.");
+                throw new JsonException("Unknown token. Expected property with '${typeName}'.");
             }
         }
 
@@ -150,7 +150,7 @@ public class ExpressionConverter : JsonConverter<IExpression?>
         
         writer.WriteStartObject();
         
-        writer.WritePropertyName($"@{type.Name}");
+        writer.WritePropertyName($"${type.Name}");
         JsonSerializer.Serialize(writer, value, type, options);
         
         writer.WriteEndObject();
