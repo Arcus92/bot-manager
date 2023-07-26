@@ -40,6 +40,8 @@ public sealed class DiscordActivity : IExpression
         var name = await context.ExecuteAsync<string>(Name);
         var streamUrl = await context.ExecuteAsync<string>(StreamUrl);
         
+        context.Logger.Info(DiscordInit.Tag, $"Setting Discord activity to [{Activity}] '{name}'...");
+        
         await discord.Client.SetGameAsync(name, streamUrl: streamUrl, type: Activity);
         return null;
     }

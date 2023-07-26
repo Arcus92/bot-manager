@@ -4,9 +4,13 @@ using BotManager.OpenAi;
 using BotManager.Runtime;
 using BotManager.Runtime.Converters;
 
+const string tag = "Main";
+
+var context = new RuntimeContext();
+
 if (args.Length == 0)
 {
-    Console.Error.WriteLine("No json files provided via command line arguments!");
+    context.Logger.Error(tag, "No json files provided via command line arguments!");
     return -1;
 }
 
@@ -24,13 +28,16 @@ var jsonOptions = new JsonSerializerOptions
 // Load each argument as json expression file
 foreach (var configPath in args)
 {
-    await using var stream = new FileStream(configPath, FileMode.Open);
+    context.Logger.Error(tag, $"Reading and executing '{configPath}'...");
+    
+    await using var stream = new FileStream(configPath, FileMode.Open, FileAccess.Read);
     var config = JsonSerializer.Deserialize<IExpression>(stream, jsonOptions);
 
     // Run
-    var context = new RuntimeContext();
     await context.ExecuteAsync(config);
 }
+
+context.Logger.Error(tag, "Execution finished. Waiting for exit...");
 
 await Task.Delay(-1);
 return 0;
