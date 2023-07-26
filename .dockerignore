@@ -23,5 +23,6 @@
 **/values.dev.yaml
 .config
 .docfx
+docs
 LICENSE
 README.md
