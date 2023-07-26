@@ -1,5 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
+using System.Text.Json;
+using BotManager.Runtime.Converters;
 
 namespace BotManager.Runtime;
 
@@ -77,4 +79,36 @@ public interface IExpression
     }
     
     #endregion Type map
+    
+    #region Deserialize
+
+    /// <summary>
+    /// Gets the default json serializer options for the expression interface.
+    /// </summary>
+    public static readonly JsonSerializerOptions SerializerOptions = new()
+    {
+        Converters = { new ExpressionConverter() }
+    };
+    
+    /// <summary>
+    /// Deserialize the given json stream to an <see cref="IExpression"/>.
+    /// </summary>
+    /// <param name="stream">The input json stream.</param>
+    /// <returns></returns>
+    public static IExpression? Deserialize(Stream stream)
+    {
+        return JsonSerializer.Deserialize<IExpression>(stream, SerializerOptions);
+    }
+    
+    /// <summary>
+    /// Serializes an <see cref="IExpression"/> to a json stream.
+    /// </summary>
+    /// <param name="stream">The output json stream.</param>
+    /// <param name="expression">The expression to serialize.</param>
+    public static void Serialize(Stream stream, IExpression expression)
+    {
+        JsonSerializer.Serialize(stream, expression, SerializerOptions);
+    }
+    
+    #endregion Deserialize
 }
