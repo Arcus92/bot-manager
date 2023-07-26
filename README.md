@@ -10,12 +10,11 @@ and programed by a json file.
 ## Expressions
 
 The idea of the json configuration is that everything can be represented as an expression. The application defines the
-expressions.
+expressions. See the example below.
 
-An expression starts with an `$` followed by the expression type name.
-
-The available expressions can be extended by plugins. For example: there is currently an
-[OpenAI](https://openai.com/) submodule that can return GPT chat responses.
+An expression is defined in json by an `$` followed by the expression type name. 
+See [Api Documentation](https://arcus92.github.io/bot-manager/api/index.html) for a list of all expressions and how they
+work.
 
 ## Docker
 
