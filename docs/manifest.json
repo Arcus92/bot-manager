@@ -1,0 +1,709 @@
+{
+  "homepages": [],
+  "source_base_path": "/home/david/RiderProjects/BotManager/.docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Discord.Converters.DiscordIdentifierConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Discord.Converters.DiscordIdentifierConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Discord.Converters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Discord.Converters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Discord.DiscordHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Discord.DiscordHelper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Discord.DiscordIdentifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Discord.DiscordIdentifier.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Discord.DiscordPlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Discord.DiscordPlugin.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Discord.DiscordSlashCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Discord.DiscordSlashCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Discord.DiscordSlashCommandOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Discord.DiscordSlashCommandOption.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Discord.Expressions.DiscordActivity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Discord.Expressions.DiscordActivity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Discord.Expressions.DiscordInit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Discord.Expressions.DiscordInit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Discord.Expressions.DiscordPlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Discord.Expressions.DiscordPlugin.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Discord.Expressions.DiscordRespond.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Discord.Expressions.DiscordRespond.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Discord.Expressions.DiscordSend.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Discord.Expressions.DiscordSend.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Discord.Expressions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Discord.Expressions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Discord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Discord.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.OpenAi.Expressions.OpenAiChat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.OpenAi.Expressions.OpenAiChat.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.OpenAi.Expressions.OpenAiInit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.OpenAi.Expressions.OpenAiInit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.OpenAi.Expressions.OpenAiPlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.OpenAi.Expressions.OpenAiPlugin.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.OpenAi.Expressions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.OpenAi.Expressions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.OpenAi.OpenAiChatMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.OpenAi.OpenAiChatMessage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.OpenAi.OpenAiHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.OpenAi.OpenAiHelper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.OpenAi.OpenAiPlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.OpenAi.OpenAiPlugin.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.OpenAi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.OpenAi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.AsyncConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.AsyncConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.BooleanConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.BooleanConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.DelayConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.DelayConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.EnumConverter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.EnumConverter-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.EnvConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.EnvConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.ExpressionConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.ExpressionConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.ExpressionConverterBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.ExpressionConverterBase-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.GetConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.GetConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.Int32Converter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.Int32Converter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.Int64Converter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.Int64Converter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.ListConverter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.ListConverter-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.NotConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.NotConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.StringConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.StringConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.StringConverterBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.StringConverterBase-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.UInt32Converter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.UInt32Converter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.UInt64Converter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.UInt64Converter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.And.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.And.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.Async.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.Async.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.Boolean.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.Boolean.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.Choose.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.Choose.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.Delay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.Delay.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.Env.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.Env.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.Equals.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.Equals.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.Format.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.Format.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.Get.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.Get.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.If.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.If.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.Int32.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.Int32.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.Int64.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.Int64.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.List.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.List.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.Not.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.Not.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.Or.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.Or.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.Set.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.Set.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.String.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.String.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.Try.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.Try.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.UInt32.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.UInt32.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.UInt64.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.UInt64.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.IExpression.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.IExpression.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Logger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Logger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.RuntimeContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.RuntimeContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.RuntimePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.RuntimePlugin.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

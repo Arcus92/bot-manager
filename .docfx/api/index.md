@@ -1,2 +1,7 @@
-# PLACEHOLDER
-TODO: Add .NET projects to the *src* folder and run `docfx` to generate **REAL** *API Documentation*!
+# Api Documentation
+
+The project follows a modular design:
+
+- [Runtime expressions](~/api/BotManager.Runtime.Expressions.yml)
+- [Discord expressions](~/api/BotManager.Discord.Expressions.yml)
+- [OpenAI expressions](~/api/BotManager.OpenAi.Expressions.yml)

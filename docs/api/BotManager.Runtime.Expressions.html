@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace BotManager.Runtime.Expressions
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace BotManager.Runtime.Expressions
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="BotManager.Runtime.Expressions">
+
+  <h1 id="BotManager_Runtime_Expressions" data-uid="BotManager.Runtime.Expressions" class="text-break">Namespace BotManager.Runtime.Expressions
+</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.And.html">And</a></dt>
+      <dd><p>Logical and operator. It returns <code>true</code> if all expression in this list are <code>true</code> or if the list is empty.
+Execution is stopped, once the first entry returns <code>false</code>.</p>
+<p>
+Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.Async.html">Async</a></dt>
+      <dd><p>Runs the <a class="xref" href="BotManager.Runtime.Expressions.Async.html#BotManager_Runtime_Expressions_Async_Expression">Expression</a> in a new thread.</p>
+<p>
+Returns: <code>null</code>.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.Boolean.html">Boolean</a></dt>
+      <dd><p>A static <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value.</p>
+<p>
+Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.Choose.html">Choose</a></dt>
+      <dd><p>Executes and returns a random item from this list.</p>
+<p>
+Returns: Type of the chosen item.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.Delay.html">Delay</a></dt>
+      <dd><p>Holds execution and waits the defined number of milliseconds.</p>
+<p>
+Returns: <code>null</code>.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.Env.html">Env</a></dt>
+      <dd><p>Returns the value of a variable from the system environment variables.</p>
+<p>
+Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> value.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.Equals.html">Equals</a></dt>
+      <dd><p>Returns a boolean value if <a class="xref" href="BotManager.Runtime.Expressions.Equals.html#BotManager_Runtime_Expressions_Equals_A">A</a> and <a class="xref" href="BotManager.Runtime.Expressions.Equals.html#BotManager_Runtime_Expressions_Equals_B">B</a> are equal.</p>
+<p>
+Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.Format.html">Format</a></dt>
+      <dd><p>Formats a string by using <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.format#system-string-format(system-string-system-object())">Format(string, params object[])</a>.</p>
+<p>
+Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> value.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.Get.html">Get</a></dt>
+      <dd><p>Returns the value of a variable from the current <a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeContext</a>.</p>
+<p>
+Returns: Type of the variable.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.If.html">If</a></dt>
+      <dd><p>Executes the <a class="xref" href="BotManager.Runtime.Expressions.If.html#BotManager_Runtime_Expressions_If_Then">Then</a> expression if <a class="xref" href="BotManager.Runtime.Expressions.If.html#BotManager_Runtime_Expressions_If_Condition">Condition</a> returns <code>true</code>.
+Otherwise <a class="xref" href="BotManager.Runtime.Expressions.If.html#BotManager_Runtime_Expressions_If_Else">Else</a> is executed.</p>
+<p>
+Returns: Return value of the executed branch.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.Int32.html">Int32</a></dt>
+      <dd><p>A static <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> value.</p>
+<p>
+Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> value.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.Int64.html">Int64</a></dt>
+      <dd><p>A static <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a> value.</p>
+<p>
+Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a> value.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.List.html">List</a></dt>
+      <dd><p>A list of <a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a> that will be executed sequentially.
+The returned values of the expressions is returns as an array if <code>returnType</code> is not set to null.</p>
+<p>
+Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.array">Array</a> or <code>null</code>.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.Not.html">Not</a></dt>
+      <dd><p>Inverts the given boolean expression.</p>
+<p>
+Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.Or.html">Or</a></dt>
+      <dd><p>Logical or operator. It returns <code>true</code> if any expression in this list is <code>true</code> or if the list is empty.
+Execution is stopped, once the first entry returns <code>true</code>.</p>
+<p>
+Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.Set.html">Set</a></dt>
+      <dd><p>Sets a variable in the current <a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeContext</a>.</p>
+<p>
+Returns: Type of the variable.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.String.html">String</a></dt>
+      <dd><p>A static <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> value.</p>
+<p>
+Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> value.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.Try.html">Try</a></dt>
+      <dd><p>Trys to execute the <a class="xref" href="BotManager.Runtime.Expressions.Try.html#BotManager_Runtime_Expressions_Try_Expression">Expression</a> and handles any exceptions. If an exception is throw while executing
+<a class="xref" href="BotManager.Runtime.Expressions.Try.html#BotManager_Runtime_Expressions_Try_Expression">Expression</a>, it will write the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> to 'exception' in the current
+<a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeContext</a> and then run the <a class="xref" href="BotManager.Runtime.Expressions.Try.html#BotManager_Runtime_Expressions_Try_Catch">Catch</a> expression.</p>
+<p>
+Returns: Return value of the executed branch.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.UInt32.html">UInt32</a></dt>
+      <dd><p>A static <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a> value.</p>
+<p>
+Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a> value.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.UInt64.html">UInt64</a></dt>
+      <dd><p>A static <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a> value.</p>
+<p>
+Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a> value.
+</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
