@@ -28,7 +28,7 @@ An expression starts with an `$` followed by the name.
   },
   {
     "$DiscordInit": {
-      "TokenType": 1,
+      "TokenType": "Bot",
       "Token": {
         "$Env": "DISCORD_TOKEN"
       },
@@ -40,7 +40,7 @@ An expression starts with an `$` followed by the name.
           "Options": [
             {
               "Name": "description",
-              "Type": 3,
+              "Type": "String",
               "Description": "The ingredients list or a generic description",
               "IsRequired": true
             }
