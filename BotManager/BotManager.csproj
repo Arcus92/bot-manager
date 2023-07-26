@@ -7,13 +7,7 @@
         <Nullable>enable</Nullable>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
-
-    <ItemGroup>
-      <Content Include="..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
-    </ItemGroup>
-
+    
     <ItemGroup>
       <ProjectReference Include="..\BotManager.Discord\BotManager.Discord.csproj" />
       <ProjectReference Include="..\BotManager.OpenAi\BotManager.OpenAi.csproj" />

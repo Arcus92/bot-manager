@@ -10,10 +10,17 @@ and programed by a json file.
 ## Expressions
 
 The idea of the json configuration is that everything can be represented as an expression. The application defines the
-expressions. The available expressions can be extended by plugins. For example: there is currently an 
+expressions.
+
+An expression starts with an `$` followed by the expression type name.
+
+The available expressions can be extended by plugins. For example: there is currently an
 [OpenAI](https://openai.com/) submodule that can return GPT chat responses.
 
-An expression starts with an `$` followed by the name.
+## Docker
+
+The docker container runs the BotManager with the config provided in `/config/run.json`. This is just an example config
+and can be overwritten via a docker volume mount.
 
 ## Example
 
