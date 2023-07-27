@@ -6,7 +6,7 @@ namespace BotManager.Discord.Expressions;
 /// <summary>
 /// Returns a Discord embed message object. Embeds are formatted messages with title, description, a preview image,
 /// author and footer. 
-/// This can be used in <see cref="DiscordSend.Message"/> and <see cref="DiscordRespond.Message"/>.
+/// This can be used in <see cref="DiscordSend.Embed"/> and <see cref="DiscordRespond.Embed"/>.
 /// <para>
 /// Returns: <see cref="Embed"/>.
 /// </para>

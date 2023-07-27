@@ -910,6 +910,18 @@ references:
   commentId: Overload:BotManager.Discord.Expressions.DiscordRespond.AllowedMentions
   fullName: BotManager.Discord.Expressions.DiscordRespond.AllowedMentions
   nameWithType: DiscordRespond.AllowedMentions
+- uid: BotManager.Discord.Expressions.DiscordRespond.Embed
+  name: Embed
+  href: api/BotManager.Discord.Expressions.DiscordRespond.html#BotManager_Discord_Expressions_DiscordRespond_Embed
+  commentId: P:BotManager.Discord.Expressions.DiscordRespond.Embed
+  fullName: BotManager.Discord.Expressions.DiscordRespond.Embed
+  nameWithType: DiscordRespond.Embed
+- uid: BotManager.Discord.Expressions.DiscordRespond.Embed*
+  name: Embed
+  href: api/BotManager.Discord.Expressions.DiscordRespond.html#BotManager_Discord_Expressions_DiscordRespond_Embed_
+  commentId: Overload:BotManager.Discord.Expressions.DiscordRespond.Embed
+  fullName: BotManager.Discord.Expressions.DiscordRespond.Embed
+  nameWithType: DiscordRespond.Embed
 - uid: BotManager.Discord.Expressions.DiscordRespond.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)
   name: ExecuteAsync(RuntimeContext, Type?)
   href: api/BotManager.Discord.Expressions.DiscordRespond.html#BotManager_Discord_Expressions_DiscordRespond_ExecuteAsync_BotManager_Runtime_RuntimeContext_System_Type_
@@ -985,6 +997,18 @@ references:
   commentId: Overload:BotManager.Discord.Expressions.DiscordSend.Channel
   fullName: BotManager.Discord.Expressions.DiscordSend.Channel
   nameWithType: DiscordSend.Channel
+- uid: BotManager.Discord.Expressions.DiscordSend.Embed
+  name: Embed
+  href: api/BotManager.Discord.Expressions.DiscordSend.html#BotManager_Discord_Expressions_DiscordSend_Embed
+  commentId: P:BotManager.Discord.Expressions.DiscordSend.Embed
+  fullName: BotManager.Discord.Expressions.DiscordSend.Embed
+  nameWithType: DiscordSend.Embed
+- uid: BotManager.Discord.Expressions.DiscordSend.Embed*
+  name: Embed
+  href: api/BotManager.Discord.Expressions.DiscordSend.html#BotManager_Discord_Expressions_DiscordSend_Embed_
+  commentId: Overload:BotManager.Discord.Expressions.DiscordSend.Embed
+  fullName: BotManager.Discord.Expressions.DiscordSend.Embed
+  nameWithType: DiscordSend.Embed
 - uid: BotManager.Discord.Expressions.DiscordSend.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)
   name: ExecuteAsync(RuntimeContext, Type?)
   href: api/BotManager.Discord.Expressions.DiscordSend.html#BotManager_Discord_Expressions_DiscordSend_ExecuteAsync_BotManager_Runtime_RuntimeContext_System_Type_
