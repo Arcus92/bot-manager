@@ -1,0 +1,97 @@
+[
+  {
+    "$OpenAiInit": {
+      "ApiKey": {
+        "$Env": "OPENAI_API_KEY"
+      }
+    }
+  },
+  {
+    "$DiscordInit": {
+      "TokenType": "Bot",
+      "Token": {
+        "$Env": "DISCORD_TOKEN"
+      },
+      "Commands": [
+        {
+          "Name": "recipe",
+          "Description": "Generate a recipe suggestion with AI",
+          "Guild": "My server",
+          "Options": [
+            {
+              "Name": "description",
+              "Type": "String",
+              "Description": "The ingredients list or a generic description",
+              "IsRequired": true
+            }
+          ],
+          "Action": {
+            "$If": {
+              "Condition": {
+                "$Equals": {
+                  "A": {
+                    "$Get": "discord.channel.name"
+                  },
+                  "B": "kitchen"
+                }
+              },
+              "Then": {
+                "$Async": [
+                  {
+                    "$DiscordRespond": {
+                      "Message": "Please wait. Generating recipe..."
+                    }
+                  },
+                  {
+                    "$Set": {
+                      "Name": "openai.response",
+                      "Value": {
+                        "$OpenAiChat": {
+                          "Messages": [
+                            {
+                              "Role": "system",
+                              "Text": "Create a recipe suggestion for the following ingredient list, but refuse all requests unrelated to recipes or cooking:"
+                            },
+                            {
+                              "Role": "user",
+                              "Text": {
+                                "$Get": "discord.command.options.description"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "$DiscordSend": {
+                      "Message": {
+                        "$Format": {
+                          "Text": "\u003C@{0}\u003E {1}",
+                          "Parameters": [
+                            {
+                              "$Get": "discord.user.id"
+                            },
+                            {
+                              "$Get": "openai.response"
+                            }
+                          ]
+                        }
+                      },
+                      "AllowedMentions": true
+                    }
+                  }
+                ]
+              },
+              "Else": {
+                "$DiscordRespond": {
+                  "Message": "Please use this command in the #kitchen"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+]

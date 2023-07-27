@@ -1,0 +1,20 @@
+{
+  "$DiscordInit": {
+    "TokenType": "Bot",
+    "Token": {
+      "$Env": "DISCORD_TOKEN"
+    },
+    "Commands": [
+      {
+        "Name": "hello",
+        "Description": "Greets the world",
+        "Guild": "My server",
+        "Action": {
+          "$DiscordRespond": {
+            "Message": "Hello world!"
+          }
+        }
+      }
+    ]
+  }
+}
