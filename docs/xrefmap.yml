@@ -1462,6 +1462,57 @@ references:
   commentId: Overload:BotManager.Runtime.Converters.EnvConverter.To
   fullName: BotManager.Runtime.Converters.EnvConverter.To
   nameWithType: EnvConverter.To
+- uid: BotManager.Runtime.Converters.ErrorConverter
+  name: ErrorConverter
+  href: api/BotManager.Runtime.Converters.ErrorConverter.html
+  commentId: T:BotManager.Runtime.Converters.ErrorConverter
+  fullName: BotManager.Runtime.Converters.ErrorConverter
+  nameWithType: ErrorConverter
+- uid: BotManager.Runtime.Converters.ErrorConverter.#ctor
+  name: ErrorConverter()
+  href: api/BotManager.Runtime.Converters.ErrorConverter.html#BotManager_Runtime_Converters_ErrorConverter__ctor
+  commentId: M:BotManager.Runtime.Converters.ErrorConverter.#ctor
+  name.vb: New()
+  fullName: BotManager.Runtime.Converters.ErrorConverter.ErrorConverter()
+  fullName.vb: BotManager.Runtime.Converters.ErrorConverter.New()
+  nameWithType: ErrorConverter.ErrorConverter()
+  nameWithType.vb: ErrorConverter.New()
+- uid: BotManager.Runtime.Converters.ErrorConverter.#ctor*
+  name: ErrorConverter
+  href: api/BotManager.Runtime.Converters.ErrorConverter.html#BotManager_Runtime_Converters_ErrorConverter__ctor_
+  commentId: Overload:BotManager.Runtime.Converters.ErrorConverter.#ctor
+  name.vb: New
+  fullName: BotManager.Runtime.Converters.ErrorConverter.ErrorConverter
+  fullName.vb: BotManager.Runtime.Converters.ErrorConverter.New
+  nameWithType: ErrorConverter.ErrorConverter
+  nameWithType.vb: ErrorConverter.New
+- uid: BotManager.Runtime.Converters.ErrorConverter.From(BotManager.Runtime.IExpression)
+  name: From(IExpression?)
+  href: api/BotManager.Runtime.Converters.ErrorConverter.html#BotManager_Runtime_Converters_ErrorConverter_From_BotManager_Runtime_IExpression_
+  commentId: M:BotManager.Runtime.Converters.ErrorConverter.From(BotManager.Runtime.IExpression)
+  name.vb: From(IExpression)
+  fullName: BotManager.Runtime.Converters.ErrorConverter.From(BotManager.Runtime.IExpression?)
+  fullName.vb: BotManager.Runtime.Converters.ErrorConverter.From(BotManager.Runtime.IExpression)
+  nameWithType: ErrorConverter.From(IExpression?)
+  nameWithType.vb: ErrorConverter.From(IExpression)
+- uid: BotManager.Runtime.Converters.ErrorConverter.From*
+  name: From
+  href: api/BotManager.Runtime.Converters.ErrorConverter.html#BotManager_Runtime_Converters_ErrorConverter_From_
+  commentId: Overload:BotManager.Runtime.Converters.ErrorConverter.From
+  fullName: BotManager.Runtime.Converters.ErrorConverter.From
+  nameWithType: ErrorConverter.From
+- uid: BotManager.Runtime.Converters.ErrorConverter.To(BotManager.Runtime.Expressions.Error)
+  name: To(Error)
+  href: api/BotManager.Runtime.Converters.ErrorConverter.html#BotManager_Runtime_Converters_ErrorConverter_To_BotManager_Runtime_Expressions_Error_
+  commentId: M:BotManager.Runtime.Converters.ErrorConverter.To(BotManager.Runtime.Expressions.Error)
+  fullName: BotManager.Runtime.Converters.ErrorConverter.To(BotManager.Runtime.Expressions.Error)
+  nameWithType: ErrorConverter.To(Error)
+- uid: BotManager.Runtime.Converters.ErrorConverter.To*
+  name: To
+  href: api/BotManager.Runtime.Converters.ErrorConverter.html#BotManager_Runtime_Converters_ErrorConverter_To_
+  commentId: Overload:BotManager.Runtime.Converters.ErrorConverter.To
+  fullName: BotManager.Runtime.Converters.ErrorConverter.To
+  nameWithType: ErrorConverter.To
 - uid: BotManager.Runtime.Converters.ExpressionConverter
   name: ExpressionConverter
   href: api/BotManager.Runtime.Converters.ExpressionConverter.html
@@ -1660,6 +1711,57 @@ references:
   commentId: Overload:BotManager.Runtime.Converters.GetConverter.To
   fullName: BotManager.Runtime.Converters.GetConverter.To
   nameWithType: GetConverter.To
+- uid: BotManager.Runtime.Converters.InfoConverter
+  name: InfoConverter
+  href: api/BotManager.Runtime.Converters.InfoConverter.html
+  commentId: T:BotManager.Runtime.Converters.InfoConverter
+  fullName: BotManager.Runtime.Converters.InfoConverter
+  nameWithType: InfoConverter
+- uid: BotManager.Runtime.Converters.InfoConverter.#ctor
+  name: InfoConverter()
+  href: api/BotManager.Runtime.Converters.InfoConverter.html#BotManager_Runtime_Converters_InfoConverter__ctor
+  commentId: M:BotManager.Runtime.Converters.InfoConverter.#ctor
+  name.vb: New()
+  fullName: BotManager.Runtime.Converters.InfoConverter.InfoConverter()
+  fullName.vb: BotManager.Runtime.Converters.InfoConverter.New()
+  nameWithType: InfoConverter.InfoConverter()
+  nameWithType.vb: InfoConverter.New()
+- uid: BotManager.Runtime.Converters.InfoConverter.#ctor*
+  name: InfoConverter
+  href: api/BotManager.Runtime.Converters.InfoConverter.html#BotManager_Runtime_Converters_InfoConverter__ctor_
+  commentId: Overload:BotManager.Runtime.Converters.InfoConverter.#ctor
+  name.vb: New
+  fullName: BotManager.Runtime.Converters.InfoConverter.InfoConverter
+  fullName.vb: BotManager.Runtime.Converters.InfoConverter.New
+  nameWithType: InfoConverter.InfoConverter
+  nameWithType.vb: InfoConverter.New
+- uid: BotManager.Runtime.Converters.InfoConverter.From(BotManager.Runtime.IExpression)
+  name: From(IExpression?)
+  href: api/BotManager.Runtime.Converters.InfoConverter.html#BotManager_Runtime_Converters_InfoConverter_From_BotManager_Runtime_IExpression_
+  commentId: M:BotManager.Runtime.Converters.InfoConverter.From(BotManager.Runtime.IExpression)
+  name.vb: From(IExpression)
+  fullName: BotManager.Runtime.Converters.InfoConverter.From(BotManager.Runtime.IExpression?)
+  fullName.vb: BotManager.Runtime.Converters.InfoConverter.From(BotManager.Runtime.IExpression)
+  nameWithType: InfoConverter.From(IExpression?)
+  nameWithType.vb: InfoConverter.From(IExpression)
+- uid: BotManager.Runtime.Converters.InfoConverter.From*
+  name: From
+  href: api/BotManager.Runtime.Converters.InfoConverter.html#BotManager_Runtime_Converters_InfoConverter_From_
+  commentId: Overload:BotManager.Runtime.Converters.InfoConverter.From
+  fullName: BotManager.Runtime.Converters.InfoConverter.From
+  nameWithType: InfoConverter.From
+- uid: BotManager.Runtime.Converters.InfoConverter.To(BotManager.Runtime.Expressions.Info)
+  name: To(Info)
+  href: api/BotManager.Runtime.Converters.InfoConverter.html#BotManager_Runtime_Converters_InfoConverter_To_BotManager_Runtime_Expressions_Info_
+  commentId: M:BotManager.Runtime.Converters.InfoConverter.To(BotManager.Runtime.Expressions.Info)
+  fullName: BotManager.Runtime.Converters.InfoConverter.To(BotManager.Runtime.Expressions.Info)
+  nameWithType: InfoConverter.To(Info)
+- uid: BotManager.Runtime.Converters.InfoConverter.To*
+  name: To
+  href: api/BotManager.Runtime.Converters.InfoConverter.html#BotManager_Runtime_Converters_InfoConverter_To_
+  commentId: Overload:BotManager.Runtime.Converters.InfoConverter.To
+  fullName: BotManager.Runtime.Converters.InfoConverter.To
+  nameWithType: InfoConverter.To
 - uid: BotManager.Runtime.Converters.Int32Converter
   name: Int32Converter
   href: api/BotManager.Runtime.Converters.Int32Converter.html
@@ -2542,6 +2644,66 @@ references:
   commentId: Overload:BotManager.Runtime.Expressions.Equals.ExecuteAsync
   fullName: BotManager.Runtime.Expressions.Equals.ExecuteAsync
   nameWithType: Equals.ExecuteAsync
+- uid: BotManager.Runtime.Expressions.Error
+  name: Error
+  href: api/BotManager.Runtime.Expressions.Error.html
+  commentId: T:BotManager.Runtime.Expressions.Error
+  fullName: BotManager.Runtime.Expressions.Error
+  nameWithType: Error
+- uid: BotManager.Runtime.Expressions.Error.#ctor
+  name: Error()
+  href: api/BotManager.Runtime.Expressions.Error.html#BotManager_Runtime_Expressions_Error__ctor
+  commentId: M:BotManager.Runtime.Expressions.Error.#ctor
+  name.vb: New()
+  fullName: BotManager.Runtime.Expressions.Error.Error()
+  fullName.vb: BotManager.Runtime.Expressions.Error.New()
+  nameWithType: Error.Error()
+  nameWithType.vb: Error.New()
+- uid: BotManager.Runtime.Expressions.Error.#ctor(BotManager.Runtime.IExpression)
+  name: Error(IExpression?)
+  href: api/BotManager.Runtime.Expressions.Error.html#BotManager_Runtime_Expressions_Error__ctor_BotManager_Runtime_IExpression_
+  commentId: M:BotManager.Runtime.Expressions.Error.#ctor(BotManager.Runtime.IExpression)
+  name.vb: New(IExpression)
+  fullName: BotManager.Runtime.Expressions.Error.Error(BotManager.Runtime.IExpression?)
+  fullName.vb: BotManager.Runtime.Expressions.Error.New(BotManager.Runtime.IExpression)
+  nameWithType: Error.Error(IExpression?)
+  nameWithType.vb: Error.New(IExpression)
+- uid: BotManager.Runtime.Expressions.Error.#ctor*
+  name: Error
+  href: api/BotManager.Runtime.Expressions.Error.html#BotManager_Runtime_Expressions_Error__ctor_
+  commentId: Overload:BotManager.Runtime.Expressions.Error.#ctor
+  name.vb: New
+  fullName: BotManager.Runtime.Expressions.Error.Error
+  fullName.vb: BotManager.Runtime.Expressions.Error.New
+  nameWithType: Error.Error
+  nameWithType.vb: Error.New
+- uid: BotManager.Runtime.Expressions.Error.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)
+  name: ExecuteAsync(RuntimeContext, Type?)
+  href: api/BotManager.Runtime.Expressions.Error.html#BotManager_Runtime_Expressions_Error_ExecuteAsync_BotManager_Runtime_RuntimeContext_System_Type_
+  commentId: M:BotManager.Runtime.Expressions.Error.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)
+  name.vb: ExecuteAsync(RuntimeContext, Type)
+  fullName: BotManager.Runtime.Expressions.Error.ExecuteAsync(BotManager.Runtime.RuntimeContext, System.Type?)
+  fullName.vb: BotManager.Runtime.Expressions.Error.ExecuteAsync(BotManager.Runtime.RuntimeContext, System.Type)
+  nameWithType: Error.ExecuteAsync(RuntimeContext, Type?)
+  nameWithType.vb: Error.ExecuteAsync(RuntimeContext, Type)
+- uid: BotManager.Runtime.Expressions.Error.ExecuteAsync*
+  name: ExecuteAsync
+  href: api/BotManager.Runtime.Expressions.Error.html#BotManager_Runtime_Expressions_Error_ExecuteAsync_
+  commentId: Overload:BotManager.Runtime.Expressions.Error.ExecuteAsync
+  fullName: BotManager.Runtime.Expressions.Error.ExecuteAsync
+  nameWithType: Error.ExecuteAsync
+- uid: BotManager.Runtime.Expressions.Error.Message
+  name: Message
+  href: api/BotManager.Runtime.Expressions.Error.html#BotManager_Runtime_Expressions_Error_Message
+  commentId: P:BotManager.Runtime.Expressions.Error.Message
+  fullName: BotManager.Runtime.Expressions.Error.Message
+  nameWithType: Error.Message
+- uid: BotManager.Runtime.Expressions.Error.Message*
+  name: Message
+  href: api/BotManager.Runtime.Expressions.Error.html#BotManager_Runtime_Expressions_Error_Message_
+  commentId: Overload:BotManager.Runtime.Expressions.Error.Message
+  fullName: BotManager.Runtime.Expressions.Error.Message
+  nameWithType: Error.Message
 - uid: BotManager.Runtime.Expressions.Format
   name: Format
   href: api/BotManager.Runtime.Expressions.Format.html
@@ -2758,6 +2920,66 @@ references:
   commentId: Overload:BotManager.Runtime.Expressions.If.Then
   fullName: BotManager.Runtime.Expressions.If.Then
   nameWithType: If.Then
+- uid: BotManager.Runtime.Expressions.Info
+  name: Info
+  href: api/BotManager.Runtime.Expressions.Info.html
+  commentId: T:BotManager.Runtime.Expressions.Info
+  fullName: BotManager.Runtime.Expressions.Info
+  nameWithType: Info
+- uid: BotManager.Runtime.Expressions.Info.#ctor
+  name: Info()
+  href: api/BotManager.Runtime.Expressions.Info.html#BotManager_Runtime_Expressions_Info__ctor
+  commentId: M:BotManager.Runtime.Expressions.Info.#ctor
+  name.vb: New()
+  fullName: BotManager.Runtime.Expressions.Info.Info()
+  fullName.vb: BotManager.Runtime.Expressions.Info.New()
+  nameWithType: Info.Info()
+  nameWithType.vb: Info.New()
+- uid: BotManager.Runtime.Expressions.Info.#ctor(BotManager.Runtime.IExpression)
+  name: Info(IExpression?)
+  href: api/BotManager.Runtime.Expressions.Info.html#BotManager_Runtime_Expressions_Info__ctor_BotManager_Runtime_IExpression_
+  commentId: M:BotManager.Runtime.Expressions.Info.#ctor(BotManager.Runtime.IExpression)
+  name.vb: New(IExpression)
+  fullName: BotManager.Runtime.Expressions.Info.Info(BotManager.Runtime.IExpression?)
+  fullName.vb: BotManager.Runtime.Expressions.Info.New(BotManager.Runtime.IExpression)
+  nameWithType: Info.Info(IExpression?)
+  nameWithType.vb: Info.New(IExpression)
+- uid: BotManager.Runtime.Expressions.Info.#ctor*
+  name: Info
+  href: api/BotManager.Runtime.Expressions.Info.html#BotManager_Runtime_Expressions_Info__ctor_
+  commentId: Overload:BotManager.Runtime.Expressions.Info.#ctor
+  name.vb: New
+  fullName: BotManager.Runtime.Expressions.Info.Info
+  fullName.vb: BotManager.Runtime.Expressions.Info.New
+  nameWithType: Info.Info
+  nameWithType.vb: Info.New
+- uid: BotManager.Runtime.Expressions.Info.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)
+  name: ExecuteAsync(RuntimeContext, Type?)
+  href: api/BotManager.Runtime.Expressions.Info.html#BotManager_Runtime_Expressions_Info_ExecuteAsync_BotManager_Runtime_RuntimeContext_System_Type_
+  commentId: M:BotManager.Runtime.Expressions.Info.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)
+  name.vb: ExecuteAsync(RuntimeContext, Type)
+  fullName: BotManager.Runtime.Expressions.Info.ExecuteAsync(BotManager.Runtime.RuntimeContext, System.Type?)
+  fullName.vb: BotManager.Runtime.Expressions.Info.ExecuteAsync(BotManager.Runtime.RuntimeContext, System.Type)
+  nameWithType: Info.ExecuteAsync(RuntimeContext, Type?)
+  nameWithType.vb: Info.ExecuteAsync(RuntimeContext, Type)
+- uid: BotManager.Runtime.Expressions.Info.ExecuteAsync*
+  name: ExecuteAsync
+  href: api/BotManager.Runtime.Expressions.Info.html#BotManager_Runtime_Expressions_Info_ExecuteAsync_
+  commentId: Overload:BotManager.Runtime.Expressions.Info.ExecuteAsync
+  fullName: BotManager.Runtime.Expressions.Info.ExecuteAsync
+  nameWithType: Info.ExecuteAsync
+- uid: BotManager.Runtime.Expressions.Info.Message
+  name: Message
+  href: api/BotManager.Runtime.Expressions.Info.html#BotManager_Runtime_Expressions_Info_Message
+  commentId: P:BotManager.Runtime.Expressions.Info.Message
+  fullName: BotManager.Runtime.Expressions.Info.Message
+  nameWithType: Info.Message
+- uid: BotManager.Runtime.Expressions.Info.Message*
+  name: Message
+  href: api/BotManager.Runtime.Expressions.Info.html#BotManager_Runtime_Expressions_Info_Message_
+  commentId: Overload:BotManager.Runtime.Expressions.Info.Message
+  fullName: BotManager.Runtime.Expressions.Info.Message
+  nameWithType: Info.Message
 - uid: BotManager.Runtime.Expressions.Int32
   name: Int32
   href: api/BotManager.Runtime.Expressions.Int32.html

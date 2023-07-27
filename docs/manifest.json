@@ -275,6 +275,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.ErrorConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.ErrorConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BotManager.Runtime.Converters.ExpressionConverter.yml",
       "output": {
         ".html": {
@@ -299,6 +309,16 @@
       "output": {
         ".html": {
           "relative_path": "api/BotManager.Runtime.Converters.GetConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.InfoConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.InfoConverter.html"
         }
       },
       "version": ""
@@ -465,6 +485,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.Error.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.Error.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BotManager.Runtime.Expressions.Format.yml",
       "output": {
         ".html": {
@@ -489,6 +519,16 @@
       "output": {
         ".html": {
           "relative_path": "api/BotManager.Runtime.Expressions.If.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.Info.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.Info.html"
         }
       },
       "version": ""
