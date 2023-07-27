@@ -18,9 +18,9 @@ public sealed class DiscordRespond : IExpression
     public IExpression? Message { get; set; }
     
     /// <summary>
-    /// Gets and sets the expression to resolve the <see cref="DiscordEmbed"/>.
+    /// Gets and sets the optional embed data for this message.
     /// </summary>
-    public IExpression? Embed { get; set; }
+    public DiscordEmbed? Embed { get; set; }
     
     /// <summary>
     /// Gets and sets if mentions are allowed.
@@ -42,7 +42,7 @@ public sealed class DiscordRespond : IExpression
         
         // Build the message
         var message = await context.ExecuteAsync<string?>(Message);
-        var embed = await context.ExecuteAsync<Embed?>(Embed);
+        var embed = Embed is null ? null : await Embed.BuildAsync(context);
 
         // Check empty message
         if (string.IsNullOrEmpty(message) && embed is null)

@@ -1,17 +1,15 @@
+using BotManager.Discord.Expressions;
 using BotManager.Runtime;
 using Discord;
 
-namespace BotManager.Discord.Expressions;
+namespace BotManager.Discord;
 
 /// <summary>
 /// Returns a Discord embed message object. Embeds are formatted messages with title, description, a preview image,
 /// author and footer. 
 /// This can be used in <see cref="DiscordSend.Embed"/> and <see cref="DiscordRespond.Embed"/>.
-/// <para>
-/// Returns: <see cref="Embed"/>.
-/// </para>
 /// </summary>
-public class DiscordEmbed : IExpression
+public class DiscordEmbed
 {
     /// <summary>
     /// Gets and sets the expression to resolve the title.
@@ -48,8 +46,12 @@ public class DiscordEmbed : IExpression
     /// </summary>
     public IExpression? Footer { get; set; }
 
-    /// <inheritdoc />
-    public async Task<object?> ExecuteAsync(RuntimeContext context, Type? returnType)
+    /// <summary>
+    /// Builds the <see cref="Embed"/> object.
+    /// </summary>
+    /// <param name="context">The runtime context.</param>
+    /// <returns></returns>
+    public async Task<Embed> BuildAsync(RuntimeContext context)
     {
         var builder = new EmbedBuilder();
 
