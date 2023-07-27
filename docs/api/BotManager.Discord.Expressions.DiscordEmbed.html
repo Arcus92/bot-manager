@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class DiscordRespond
+      <title>Class DiscordEmbed
  </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class DiscordRespond
+      <meta name="title" content="Class DiscordEmbed
  ">
       
       <link rel="icon" href="../favicon.ico">
@@ -73,12 +73,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="BotManager.Discord.Expressions.DiscordRespond">
+        <article data-uid="BotManager.Discord.Expressions.DiscordEmbed">
 
 
 
-  <h1 id="BotManager_Discord_Expressions_DiscordRespond" data-uid="BotManager.Discord.Expressions.DiscordRespond" class="text-break">
-    Class DiscordRespond
+  <h1 id="BotManager_Discord_Expressions_DiscordEmbed" data-uid="BotManager.Discord.Expressions.DiscordEmbed" class="text-break">
+    Class DiscordEmbed
   
   </h1>
 
@@ -87,16 +87,17 @@
   <dl><dt>Assembly</dt><dd>BotManager.Discord.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Responds with a text message on a <a class="xref" href="BotManager.Discord.DiscordSlashCommand.html">DiscordSlashCommand</a>. The <a class="xref" href="BotManager.Discord.Expressions.DiscordInit.html">DiscordInit</a> must be
-initialized.</p>
+  <div class="markdown summary"><p>Returns a Discord embed message object. Embeds are formatted messages with title, description, a preview image,
+author and footer.
+This can be used in <a class="xref" href="BotManager.Discord.Expressions.DiscordSend.html#BotManager_Discord_Expressions_DiscordSend_Message">Message</a> and <a class="xref" href="BotManager.Discord.Expressions.DiscordRespond.html#BotManager_Discord_Expressions_DiscordRespond_Message">Message</a>.</p>
 <p>
-Returns: <code>null</code>.
+Returns: <span class="xref">Discord.Embed</span>.
 </p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class DiscordRespond : IExpression</code></pre>
+    <pre><code class="lang-csharp hljs">public class DiscordEmbed : IExpression</code></pre>
   </div>
 
 
@@ -106,7 +107,7 @@ Returns: <code>null</code>.
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">DiscordRespond</span></div>
+      <div><span class="xref">DiscordEmbed</span></div>
     </dd>
   </dl>
 
@@ -123,6 +124,9 @@ Returns: <code>null</code>.
     <dd>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -150,10 +154,10 @@ Returns: <code>null</code>.
 </h2>
 
 
-  <a id="BotManager_Discord_Expressions_DiscordRespond__ctor_" data-uid="BotManager.Discord.Expressions.DiscordRespond.#ctor*"></a>
+  <a id="BotManager_Discord_Expressions_DiscordEmbed__ctor_" data-uid="BotManager.Discord.Expressions.DiscordEmbed.#ctor*"></a>
 
-  <h3 id="BotManager_Discord_Expressions_DiscordRespond__ctor" data-uid="BotManager.Discord.Expressions.DiscordRespond.#ctor">
-  DiscordRespond()
+  <h3 id="BotManager_Discord_Expressions_DiscordEmbed__ctor" data-uid="BotManager.Discord.Expressions.DiscordEmbed.#ctor">
+  DiscordEmbed()
   
   </h3>
 
@@ -161,7 +165,7 @@ Returns: <code>null</code>.
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DiscordRespond()</code></pre>
+    <pre><code class="lang-csharp hljs">public DiscordEmbed()</code></pre>
   </div>
 
 
@@ -180,19 +184,19 @@ Returns: <code>null</code>.
 </h2>
 
 
-  <a id="BotManager_Discord_Expressions_DiscordRespond_AllowedMentions_" data-uid="BotManager.Discord.Expressions.DiscordRespond.AllowedMentions*"></a>
+  <a id="BotManager_Discord_Expressions_DiscordEmbed_Author_" data-uid="BotManager.Discord.Expressions.DiscordEmbed.Author*"></a>
 
-  <h3 id="BotManager_Discord_Expressions_DiscordRespond_AllowedMentions" data-uid="BotManager.Discord.Expressions.DiscordRespond.AllowedMentions">
-  AllowedMentions
+  <h3 id="BotManager_Discord_Expressions_DiscordEmbed_Author" data-uid="BotManager.Discord.Expressions.DiscordEmbed.Author">
+  Author
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets and sets if mentions are allowed.</p>
+  <div class="markdown level1 summary"><p>Gets and sets the expression to resolve the author name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool AllowedMentions { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IExpression? Author { get; set; }</code></pre>
   </div>
 
 
@@ -201,7 +205,7 @@ Returns: <code>null</code>.
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dt><a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a></dt>
     <dd></dd>
   </dl>
 
@@ -212,21 +216,179 @@ Returns: <code>null</code>.
 
 
 
-  <a id="BotManager_Discord_Expressions_DiscordRespond_Message_" data-uid="BotManager.Discord.Expressions.DiscordRespond.Message*"></a>
+  <a id="BotManager_Discord_Expressions_DiscordEmbed_Description_" data-uid="BotManager.Discord.Expressions.DiscordEmbed.Description*"></a>
 
-  <h3 id="BotManager_Discord_Expressions_DiscordRespond_Message" data-uid="BotManager.Discord.Expressions.DiscordRespond.Message">
-  Message
+  <h3 id="BotManager_Discord_Expressions_DiscordEmbed_Description" data-uid="BotManager.Discord.Expressions.DiscordEmbed.Description">
+  Description
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets and sets the expression to resolve the message.
-This can be a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> or a <a class="xref" href="BotManager.Discord.Expressions.DiscordEmbed.html">DiscordEmbed</a>. All other types are converted with
-<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">ToString()</a>.</p>
+  <div class="markdown level1 summary"><p>Gets and sets the expression to resolve the description.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IExpression? Message { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IExpression? Description { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BotManager_Discord_Expressions_DiscordEmbed_Footer_" data-uid="BotManager.Discord.Expressions.DiscordEmbed.Footer*"></a>
+
+  <h3 id="BotManager_Discord_Expressions_DiscordEmbed_Footer" data-uid="BotManager.Discord.Expressions.DiscordEmbed.Footer">
+  Footer
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets and sets the expression to resolve the footer text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IExpression? Footer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BotManager_Discord_Expressions_DiscordEmbed_ImageUrl_" data-uid="BotManager.Discord.Expressions.DiscordEmbed.ImageUrl*"></a>
+
+  <h3 id="BotManager_Discord_Expressions_DiscordEmbed_ImageUrl" data-uid="BotManager.Discord.Expressions.DiscordEmbed.ImageUrl">
+  ImageUrl
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets and sets the expression to resolve the image url.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IExpression? ImageUrl { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BotManager_Discord_Expressions_DiscordEmbed_ThumbnailUrl_" data-uid="BotManager.Discord.Expressions.DiscordEmbed.ThumbnailUrl*"></a>
+
+  <h3 id="BotManager_Discord_Expressions_DiscordEmbed_ThumbnailUrl" data-uid="BotManager.Discord.Expressions.DiscordEmbed.ThumbnailUrl">
+  ThumbnailUrl
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets and sets the expression to resolve the thumbnail url.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IExpression? ThumbnailUrl { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BotManager_Discord_Expressions_DiscordEmbed_Title_" data-uid="BotManager.Discord.Expressions.DiscordEmbed.Title*"></a>
+
+  <h3 id="BotManager_Discord_Expressions_DiscordEmbed_Title" data-uid="BotManager.Discord.Expressions.DiscordEmbed.Title">
+  Title
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets and sets the expression to resolve the title.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IExpression? Title { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BotManager_Discord_Expressions_DiscordEmbed_Url_" data-uid="BotManager.Discord.Expressions.DiscordEmbed.Url*"></a>
+
+  <h3 id="BotManager_Discord_Expressions_DiscordEmbed_Url" data-uid="BotManager.Discord.Expressions.DiscordEmbed.Url">
+  Url
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets and sets the expression to resolve the target url.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IExpression? Url { get; set; }</code></pre>
   </div>
 
 
@@ -250,9 +412,9 @@ This can be a <a class="xref" href="https://learn.microsoft.com/dotnet/api/syste
 </h2>
 
 
-  <a id="BotManager_Discord_Expressions_DiscordRespond_ExecuteAsync_" data-uid="BotManager.Discord.Expressions.DiscordRespond.ExecuteAsync*"></a>
+  <a id="BotManager_Discord_Expressions_DiscordEmbed_ExecuteAsync_" data-uid="BotManager.Discord.Expressions.DiscordEmbed.ExecuteAsync*"></a>
 
-  <h3 id="BotManager_Discord_Expressions_DiscordRespond_ExecuteAsync_BotManager_Runtime_RuntimeContext_System_Type_" data-uid="BotManager.Discord.Expressions.DiscordRespond.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)">
+  <h3 id="BotManager_Discord_Expressions_DiscordEmbed_ExecuteAsync_BotManager_Runtime_RuntimeContext_System_Type_" data-uid="BotManager.Discord.Expressions.DiscordEmbed.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)">
   ExecuteAsync(RuntimeContext, Type?)
   
   </h3>

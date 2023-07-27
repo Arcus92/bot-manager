@@ -12,7 +12,9 @@ namespace BotManager.Discord.Expressions;
 public sealed class DiscordSend : IExpression
 {
     /// <summary>
-    /// Gets and sets the message text.
+    /// Gets and sets the expression to resolve the message.
+    /// This can be a <see cref="string"/> or a <see cref="DiscordEmbed"/>. All other types are converted with
+    /// <see cref="object.ToString"/>.
     /// </summary>
     public IExpression? Message { get; set; }
 
@@ -53,16 +55,25 @@ public sealed class DiscordSend : IExpression
             return null;
         }
 
-        // Build the message
-        var message = await context.ExecuteAsync<string>(Message);
-        if (string.IsNullOrEmpty(message))
-        {
-            context.Logger.Error(DiscordInit.Tag, $"Discord message is empty.");
-            return null;
-        }
+        var allowedMentions =
+            AllowedMentions ? global::Discord.AllowedMentions.All : global::Discord.AllowedMentions.None;
         
-        await textChannel.SendMessageAsync(message, 
-            allowedMentions: AllowedMentions ? global::Discord.AllowedMentions.All : global::Discord.AllowedMentions.None);
-        return null;
+        // Build the message
+        var message = await context.ExecuteAsync<object?>(Message);
+        switch (message)
+        {
+            case null:
+                context.Logger.Error(DiscordInit.Tag, "Discord message is null.");
+                return null;
+
+            case Embed embed:
+                await textChannel.SendMessageAsync(embed: embed, allowedMentions: allowedMentions);
+                return null;
+            
+            default:
+                var text = message.ToString();
+                await textChannel.SendMessageAsync(text, allowedMentions: allowedMentions);
+                return null;
+        }
     }
 }
