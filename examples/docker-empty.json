@@ -1,0 +1,3 @@
+{
+  "$Info": "Yeah! I'm running, but I won't do anything unless you replace the '/config/run.json' inside your Docker container with your own configuration."
+}

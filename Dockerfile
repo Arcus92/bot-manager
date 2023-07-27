@@ -17,5 +17,5 @@ RUN dotnet publish "BotManager/BotManager.csproj" -c Release -o /app/publish /p:
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-COPY ./BotManager/run.json /config/run.json
+COPY ./examples/docker-empty.json /config/run.json
 ENTRYPOINT ["dotnet", "BotManager.dll", "/config/run.json"]
