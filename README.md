@@ -1,22 +1,31 @@
 # BotManager
 
-This project is in very early development and properly not usable for your purposes.
+This project is in very early development and properly not usable for your use case!
 
-There are many easy-to-use Discord bots out there. You can configure them over a website and you don't need to manually 
-host the bot. That's excellent for non-developers. However, I always want to have full control over the software that
-manages my server. I also want to have some programmable features. So I created this manager app that can be configured
-and programed by a json file.
+This is a programmable Discord bot we are using for our server. As a developer I always like to have full control over 
+my tools. While [MEE6](https://mee6.xyz) oder [Moobot](https://moo.bot/) are great tools for non-developers, they lack 
+certain complex features that would only takes a few lines of code for developers.
 
-## Expressions
+The Bot-Manager should provide an easy-to-use programmable interface.
 
-The idea of the json configuration is that everything can be represented as an expression. The application defines the
-expressions. See the example below.
+## How it works
 
-An expression is defined in json by an `$` followed by the expression type name. 
-See [Api Documentation](https://arcus92.github.io/bot-manager/api/index.html) for a list of all expressions and how they
+The application takes a json configuration and runs it. The whole logic is defined in these file. The project provides 
+building blocks called *expressions*. In the json file expression types starts with a dollar sign (`$`) followed by the
+type name. See [Api Documentation](https://arcus92.github.io/bot-manager/api/index.html) for a list of all expressions and how they
 work.
 
-## Docker
+Why am I using json instead of C# or JavaScript? The idea is not to write the configuration manually. I want to write a
+web interface with a [Scratch](https://scratch.mit.edu/)-like visual programming language.
+
+### Run
+
+Currently the `BotManager` only takes these json files als arguments. Simply drop a config file onto the binary to run 
+it. If multiple json files are provided the app will run all in sequence. 
+
+How ever this is just for the early stages and will change in future.
+
+### Docker
 
 The docker container runs the BotManager with the config provided in `/config/run.json`. This is just an example config
 and can be overwritten via a docker volume mount.
