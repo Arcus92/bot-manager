@@ -11,20 +11,18 @@ public sealed class RuntimeContext
     /// </summary>
     public RuntimeContext()
     {
+        Locals = new();
     }
     
     /// <summary>
     /// Creates a copy of the <paramref name="original"/> runtime. Use this if you plan to run expression outside the
     /// current stack. Otherwise multiple expression can mess with the data in parallel.
     /// </summary>
-    /// <param name="original"></param>
+    /// <param name="original">The original context to copy from.</param>
     public RuntimeContext(RuntimeContext original)
     {
-        // Copy the variables
-        foreach (var pair in original._variables)
-        {
-            _variables.Add(pair.Key, pair.Value);
-        }
+        // Local variables are copied so the two runtimes don't interfere.
+        Locals = new(original.Locals);
     }
     
     #region Logger
@@ -88,28 +86,29 @@ public sealed class RuntimeContext
     #region Variables
 
     /// <summary>
-    /// The map of all variables.
+    /// The map of local variables.
     /// </summary>
-    private readonly Dictionary<string, object?> _variables = new();
+    public Storage<object> Locals { get; }
+    
 
     /// <summary>
-    /// Gets the variable.
+    /// Gets a local variable by its name.
     /// </summary>
     /// <param name="name">The name of the variable.</param>
     /// <returns>Returns the value.</returns>
-    public object? Get(string name)
+    public object Get(string name)
     {
-        return _variables[name];
+        return Locals.Get(name);
     }
     
     /// <summary>
-    /// Sets the variable
+    /// Sets a local variable.
     /// </summary>
     /// <param name="name">The name of the variable.</param>
     /// <param name="value">The value to set.</param>
     public void Set(string name, object? value)
     {
-        _variables[name] = value;
+        Locals.Set(name, value);
     }
     
     #endregion Variables

@@ -37,6 +37,6 @@ public sealed class Get : IExpression
     /// <inheritdoc />
     public Task<object?> ExecuteAsync(RuntimeContext context, Type? returnType)
     {
-        return Task.FromResult(context.Get(Name));
+        return Task.FromResult((object?)context.Get(Name));
     }
 }
