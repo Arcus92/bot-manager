@@ -265,6 +265,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Converters.CallConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Converters.CallConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BotManager.Runtime.Converters.DelayConverter.yml",
       "output": {
         ".html": {
@@ -465,6 +475,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.Call.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.Call.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BotManager.Runtime.Expressions.Choose.yml",
       "output": {
         ".html": {
@@ -519,6 +539,16 @@
       "output": {
         ".html": {
           "relative_path": "api/BotManager.Runtime.Expressions.Format.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.Function.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.Function.html"
         }
       },
       "version": ""
@@ -699,6 +729,16 @@
       "output": {
         ".html": {
           "relative_path": "api/BotManager.Runtime.RuntimePlugin.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Storage-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Storage-1.html"
         }
       },
       "version": ""

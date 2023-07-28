@@ -12,6 +12,7 @@ public sealed class RuntimeContext
     public RuntimeContext()
     {
         Locals = new();
+        Functions = new();
     }
     
     /// <summary>
@@ -23,6 +24,7 @@ public sealed class RuntimeContext
     {
         // Local variables are copied so the two runtimes don't interfere.
         Locals = new(original.Locals);
+        Functions = new Storage<IExpression>(original.Functions);
     }
     
     #region Logger
@@ -90,7 +92,11 @@ public sealed class RuntimeContext
     /// </summary>
     public Storage<object> Locals { get; }
     
-
+    /// <summary>
+    /// The map of local functions.
+    /// </summary>
+    public Storage<IExpression> Functions { get; }
+    
     /// <summary>
     /// Gets a local variable by its name.
     /// </summary>

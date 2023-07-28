@@ -4,6 +4,7 @@ namespace BotManager.Runtime;
 
 /// <summary>
 /// A dictionary with text keys to store all kind of data. Used for the variables in <see cref="RuntimeContext"/>.
+/// <typeparam name="T">The value type for the storage objects.</typeparam>
 /// </summary>
 public class Storage<T>
 {
@@ -16,9 +17,9 @@ public class Storage<T>
     }
 
     /// <summary>
-    /// Copies the <see cref="original"/> storage into this one.
+    /// Copies the <paramref name="original"/> storage into this one.
     /// </summary>
-    /// <param name="original"></param>
+    /// <param name="original">The original storage to copy from.</param>
     public Storage(Storage<T> original)
     {
         _dictionary = new(original._dictionary);
@@ -26,7 +27,6 @@ public class Storage<T>
 
     /// <summary>
     /// The internal dictionary.
-    /// <typeparam name="T">The value type.</typeparam>
     /// </summary>
     private readonly Dictionary<string, T> _dictionary;
 

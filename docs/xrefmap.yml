@@ -1567,6 +1567,57 @@ references:
   commentId: Overload:BotManager.Runtime.Converters.BooleanConverter.Write
   fullName: BotManager.Runtime.Converters.BooleanConverter.Write
   nameWithType: BooleanConverter.Write
+- uid: BotManager.Runtime.Converters.CallConverter
+  name: CallConverter
+  href: api/BotManager.Runtime.Converters.CallConverter.html
+  commentId: T:BotManager.Runtime.Converters.CallConverter
+  fullName: BotManager.Runtime.Converters.CallConverter
+  nameWithType: CallConverter
+- uid: BotManager.Runtime.Converters.CallConverter.#ctor
+  name: CallConverter()
+  href: api/BotManager.Runtime.Converters.CallConverter.html#BotManager_Runtime_Converters_CallConverter__ctor
+  commentId: M:BotManager.Runtime.Converters.CallConverter.#ctor
+  name.vb: New()
+  fullName: BotManager.Runtime.Converters.CallConverter.CallConverter()
+  fullName.vb: BotManager.Runtime.Converters.CallConverter.New()
+  nameWithType: CallConverter.CallConverter()
+  nameWithType.vb: CallConverter.New()
+- uid: BotManager.Runtime.Converters.CallConverter.#ctor*
+  name: CallConverter
+  href: api/BotManager.Runtime.Converters.CallConverter.html#BotManager_Runtime_Converters_CallConverter__ctor_
+  commentId: Overload:BotManager.Runtime.Converters.CallConverter.#ctor
+  name.vb: New
+  fullName: BotManager.Runtime.Converters.CallConverter.CallConverter
+  fullName.vb: BotManager.Runtime.Converters.CallConverter.New
+  nameWithType: CallConverter.CallConverter
+  nameWithType.vb: CallConverter.New
+- uid: BotManager.Runtime.Converters.CallConverter.From(System.String)
+  name: From(string)
+  href: api/BotManager.Runtime.Converters.CallConverter.html#BotManager_Runtime_Converters_CallConverter_From_System_String_
+  commentId: M:BotManager.Runtime.Converters.CallConverter.From(System.String)
+  name.vb: From(String)
+  fullName: BotManager.Runtime.Converters.CallConverter.From(string)
+  fullName.vb: BotManager.Runtime.Converters.CallConverter.From(String)
+  nameWithType: CallConverter.From(string)
+  nameWithType.vb: CallConverter.From(String)
+- uid: BotManager.Runtime.Converters.CallConverter.From*
+  name: From
+  href: api/BotManager.Runtime.Converters.CallConverter.html#BotManager_Runtime_Converters_CallConverter_From_
+  commentId: Overload:BotManager.Runtime.Converters.CallConverter.From
+  fullName: BotManager.Runtime.Converters.CallConverter.From
+  nameWithType: CallConverter.From
+- uid: BotManager.Runtime.Converters.CallConverter.To(BotManager.Runtime.Expressions.Call)
+  name: To(Call)
+  href: api/BotManager.Runtime.Converters.CallConverter.html#BotManager_Runtime_Converters_CallConverter_To_BotManager_Runtime_Expressions_Call_
+  commentId: M:BotManager.Runtime.Converters.CallConverter.To(BotManager.Runtime.Expressions.Call)
+  fullName: BotManager.Runtime.Converters.CallConverter.To(BotManager.Runtime.Expressions.Call)
+  nameWithType: CallConverter.To(Call)
+- uid: BotManager.Runtime.Converters.CallConverter.To*
+  name: To
+  href: api/BotManager.Runtime.Converters.CallConverter.html#BotManager_Runtime_Converters_CallConverter_To_
+  commentId: Overload:BotManager.Runtime.Converters.CallConverter.To
+  fullName: BotManager.Runtime.Converters.CallConverter.To
+  nameWithType: CallConverter.To
 - uid: BotManager.Runtime.Converters.DelayConverter
   name: DelayConverter
   href: api/BotManager.Runtime.Converters.DelayConverter.html
@@ -2689,6 +2740,66 @@ references:
   commentId: Overload:BotManager.Runtime.Expressions.Boolean.Value
   fullName: BotManager.Runtime.Expressions.Boolean.Value
   nameWithType: Boolean.Value
+- uid: BotManager.Runtime.Expressions.Call
+  name: Call
+  href: api/BotManager.Runtime.Expressions.Call.html
+  commentId: T:BotManager.Runtime.Expressions.Call
+  fullName: BotManager.Runtime.Expressions.Call
+  nameWithType: Call
+- uid: BotManager.Runtime.Expressions.Call.#ctor
+  name: Call()
+  href: api/BotManager.Runtime.Expressions.Call.html#BotManager_Runtime_Expressions_Call__ctor
+  commentId: M:BotManager.Runtime.Expressions.Call.#ctor
+  name.vb: New()
+  fullName: BotManager.Runtime.Expressions.Call.Call()
+  fullName.vb: BotManager.Runtime.Expressions.Call.New()
+  nameWithType: Call.Call()
+  nameWithType.vb: Call.New()
+- uid: BotManager.Runtime.Expressions.Call.#ctor(System.String)
+  name: Call(string)
+  href: api/BotManager.Runtime.Expressions.Call.html#BotManager_Runtime_Expressions_Call__ctor_System_String_
+  commentId: M:BotManager.Runtime.Expressions.Call.#ctor(System.String)
+  name.vb: New(String)
+  fullName: BotManager.Runtime.Expressions.Call.Call(string)
+  fullName.vb: BotManager.Runtime.Expressions.Call.New(String)
+  nameWithType: Call.Call(string)
+  nameWithType.vb: Call.New(String)
+- uid: BotManager.Runtime.Expressions.Call.#ctor*
+  name: Call
+  href: api/BotManager.Runtime.Expressions.Call.html#BotManager_Runtime_Expressions_Call__ctor_
+  commentId: Overload:BotManager.Runtime.Expressions.Call.#ctor
+  name.vb: New
+  fullName: BotManager.Runtime.Expressions.Call.Call
+  fullName.vb: BotManager.Runtime.Expressions.Call.New
+  nameWithType: Call.Call
+  nameWithType.vb: Call.New
+- uid: BotManager.Runtime.Expressions.Call.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)
+  name: ExecuteAsync(RuntimeContext, Type?)
+  href: api/BotManager.Runtime.Expressions.Call.html#BotManager_Runtime_Expressions_Call_ExecuteAsync_BotManager_Runtime_RuntimeContext_System_Type_
+  commentId: M:BotManager.Runtime.Expressions.Call.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)
+  name.vb: ExecuteAsync(RuntimeContext, Type)
+  fullName: BotManager.Runtime.Expressions.Call.ExecuteAsync(BotManager.Runtime.RuntimeContext, System.Type?)
+  fullName.vb: BotManager.Runtime.Expressions.Call.ExecuteAsync(BotManager.Runtime.RuntimeContext, System.Type)
+  nameWithType: Call.ExecuteAsync(RuntimeContext, Type?)
+  nameWithType.vb: Call.ExecuteAsync(RuntimeContext, Type)
+- uid: BotManager.Runtime.Expressions.Call.ExecuteAsync*
+  name: ExecuteAsync
+  href: api/BotManager.Runtime.Expressions.Call.html#BotManager_Runtime_Expressions_Call_ExecuteAsync_
+  commentId: Overload:BotManager.Runtime.Expressions.Call.ExecuteAsync
+  fullName: BotManager.Runtime.Expressions.Call.ExecuteAsync
+  nameWithType: Call.ExecuteAsync
+- uid: BotManager.Runtime.Expressions.Call.Name
+  name: Name
+  href: api/BotManager.Runtime.Expressions.Call.html#BotManager_Runtime_Expressions_Call_Name
+  commentId: P:BotManager.Runtime.Expressions.Call.Name
+  fullName: BotManager.Runtime.Expressions.Call.Name
+  nameWithType: Call.Name
+- uid: BotManager.Runtime.Expressions.Call.Name*
+  name: Name
+  href: api/BotManager.Runtime.Expressions.Call.html#BotManager_Runtime_Expressions_Call_Name_
+  commentId: Overload:BotManager.Runtime.Expressions.Call.Name
+  fullName: BotManager.Runtime.Expressions.Call.Name
+  nameWithType: Call.Name
 - uid: BotManager.Runtime.Expressions.Choose
   name: Choose
   href: api/BotManager.Runtime.Expressions.Choose.html
@@ -3052,6 +3163,69 @@ references:
   commentId: Overload:BotManager.Runtime.Expressions.Format.Text
   fullName: BotManager.Runtime.Expressions.Format.Text
   nameWithType: Format.Text
+- uid: BotManager.Runtime.Expressions.Function
+  name: Function
+  href: api/BotManager.Runtime.Expressions.Function.html
+  commentId: T:BotManager.Runtime.Expressions.Function
+  fullName: BotManager.Runtime.Expressions.Function
+  nameWithType: Function
+- uid: BotManager.Runtime.Expressions.Function.#ctor
+  name: Function()
+  href: api/BotManager.Runtime.Expressions.Function.html#BotManager_Runtime_Expressions_Function__ctor
+  commentId: M:BotManager.Runtime.Expressions.Function.#ctor
+  name.vb: New()
+  fullName: BotManager.Runtime.Expressions.Function.Function()
+  fullName.vb: BotManager.Runtime.Expressions.Function.New()
+  nameWithType: Function.Function()
+  nameWithType.vb: Function.New()
+- uid: BotManager.Runtime.Expressions.Function.#ctor*
+  name: Function
+  href: api/BotManager.Runtime.Expressions.Function.html#BotManager_Runtime_Expressions_Function__ctor_
+  commentId: Overload:BotManager.Runtime.Expressions.Function.#ctor
+  name.vb: New
+  fullName: BotManager.Runtime.Expressions.Function.Function
+  fullName.vb: BotManager.Runtime.Expressions.Function.New
+  nameWithType: Function.Function
+  nameWithType.vb: Function.New
+- uid: BotManager.Runtime.Expressions.Function.Action
+  name: Action
+  href: api/BotManager.Runtime.Expressions.Function.html#BotManager_Runtime_Expressions_Function_Action
+  commentId: P:BotManager.Runtime.Expressions.Function.Action
+  fullName: BotManager.Runtime.Expressions.Function.Action
+  nameWithType: Function.Action
+- uid: BotManager.Runtime.Expressions.Function.Action*
+  name: Action
+  href: api/BotManager.Runtime.Expressions.Function.html#BotManager_Runtime_Expressions_Function_Action_
+  commentId: Overload:BotManager.Runtime.Expressions.Function.Action
+  fullName: BotManager.Runtime.Expressions.Function.Action
+  nameWithType: Function.Action
+- uid: BotManager.Runtime.Expressions.Function.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)
+  name: ExecuteAsync(RuntimeContext, Type?)
+  href: api/BotManager.Runtime.Expressions.Function.html#BotManager_Runtime_Expressions_Function_ExecuteAsync_BotManager_Runtime_RuntimeContext_System_Type_
+  commentId: M:BotManager.Runtime.Expressions.Function.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)
+  name.vb: ExecuteAsync(RuntimeContext, Type)
+  fullName: BotManager.Runtime.Expressions.Function.ExecuteAsync(BotManager.Runtime.RuntimeContext, System.Type?)
+  fullName.vb: BotManager.Runtime.Expressions.Function.ExecuteAsync(BotManager.Runtime.RuntimeContext, System.Type)
+  nameWithType: Function.ExecuteAsync(RuntimeContext, Type?)
+  nameWithType.vb: Function.ExecuteAsync(RuntimeContext, Type)
+- uid: BotManager.Runtime.Expressions.Function.ExecuteAsync*
+  name: ExecuteAsync
+  href: api/BotManager.Runtime.Expressions.Function.html#BotManager_Runtime_Expressions_Function_ExecuteAsync_
+  commentId: Overload:BotManager.Runtime.Expressions.Function.ExecuteAsync
+  fullName: BotManager.Runtime.Expressions.Function.ExecuteAsync
+  nameWithType: Function.ExecuteAsync
+- uid: BotManager.Runtime.Expressions.Function.Name
+  name: Name
+  href: api/BotManager.Runtime.Expressions.Function.html#BotManager_Runtime_Expressions_Function_Name
+  commentId: P:BotManager.Runtime.Expressions.Function.Name
+  fullName: BotManager.Runtime.Expressions.Function.Name
+  nameWithType: Function.Name
+- uid: BotManager.Runtime.Expressions.Function.Name*
+  name: Name
+  href: api/BotManager.Runtime.Expressions.Function.html#BotManager_Runtime_Expressions_Function_Name_
+  commentId: Overload:BotManager.Runtime.Expressions.Function.Name
+  fullName: BotManager.Runtime.Expressions.Function.Name
+  nameWithType: Function.Name
 - uid: BotManager.Runtime.Expressions.Get
   name: Get
   href: api/BotManager.Runtime.Expressions.Get.html
@@ -4039,6 +4213,18 @@ references:
   fullName.vb: BotManager.Runtime.RuntimeContext.ExecuteAsync(Of T)(BotManager.Runtime.IExpression)
   nameWithType: RuntimeContext.ExecuteAsync<T>(IExpression?)
   nameWithType.vb: RuntimeContext.ExecuteAsync(Of T)(IExpression)
+- uid: BotManager.Runtime.RuntimeContext.Functions
+  name: Functions
+  href: api/BotManager.Runtime.RuntimeContext.html#BotManager_Runtime_RuntimeContext_Functions
+  commentId: P:BotManager.Runtime.RuntimeContext.Functions
+  fullName: BotManager.Runtime.RuntimeContext.Functions
+  nameWithType: RuntimeContext.Functions
+- uid: BotManager.Runtime.RuntimeContext.Functions*
+  name: Functions
+  href: api/BotManager.Runtime.RuntimeContext.html#BotManager_Runtime_RuntimeContext_Functions_
+  commentId: Overload:BotManager.Runtime.RuntimeContext.Functions
+  fullName: BotManager.Runtime.RuntimeContext.Functions
+  nameWithType: RuntimeContext.Functions
 - uid: BotManager.Runtime.RuntimeContext.Get(System.String)
   name: Get(string)
   href: api/BotManager.Runtime.RuntimeContext.html#BotManager_Runtime_RuntimeContext_Get_System_String_
@@ -4054,6 +4240,18 @@ references:
   commentId: Overload:BotManager.Runtime.RuntimeContext.Get
   fullName: BotManager.Runtime.RuntimeContext.Get
   nameWithType: RuntimeContext.Get
+- uid: BotManager.Runtime.RuntimeContext.Locals
+  name: Locals
+  href: api/BotManager.Runtime.RuntimeContext.html#BotManager_Runtime_RuntimeContext_Locals
+  commentId: P:BotManager.Runtime.RuntimeContext.Locals
+  fullName: BotManager.Runtime.RuntimeContext.Locals
+  nameWithType: RuntimeContext.Locals
+- uid: BotManager.Runtime.RuntimeContext.Locals*
+  name: Locals
+  href: api/BotManager.Runtime.RuntimeContext.html#BotManager_Runtime_RuntimeContext_Locals_
+  commentId: Overload:BotManager.Runtime.RuntimeContext.Locals
+  fullName: BotManager.Runtime.RuntimeContext.Locals
+  nameWithType: RuntimeContext.Locals
 - uid: BotManager.Runtime.RuntimeContext.Logger
   name: Logger
   href: api/BotManager.Runtime.RuntimeContext.html#BotManager_Runtime_RuntimeContext_Logger
@@ -4099,3 +4297,99 @@ references:
   commentId: Overload:BotManager.Runtime.RuntimePlugin.Register
   fullName: BotManager.Runtime.RuntimePlugin.Register
   nameWithType: RuntimePlugin.Register
+- uid: BotManager.Runtime.Storage`1
+  name: Storage<T>
+  href: api/BotManager.Runtime.Storage-1.html
+  commentId: T:BotManager.Runtime.Storage`1
+  name.vb: Storage(Of T)
+  fullName: BotManager.Runtime.Storage<T>
+  fullName.vb: BotManager.Runtime.Storage(Of T)
+  nameWithType: Storage<T>
+  nameWithType.vb: Storage(Of T)
+- uid: BotManager.Runtime.Storage`1.#ctor
+  name: Storage()
+  href: api/BotManager.Runtime.Storage-1.html#BotManager_Runtime_Storage_1__ctor
+  commentId: M:BotManager.Runtime.Storage`1.#ctor
+  name.vb: New()
+  fullName: BotManager.Runtime.Storage<T>.Storage()
+  fullName.vb: BotManager.Runtime.Storage(Of T).New()
+  nameWithType: Storage<T>.Storage()
+  nameWithType.vb: Storage(Of T).New()
+- uid: BotManager.Runtime.Storage`1.#ctor(BotManager.Runtime.Storage{`0})
+  name: Storage(Storage<T>)
+  href: api/BotManager.Runtime.Storage-1.html#BotManager_Runtime_Storage_1__ctor_BotManager_Runtime_Storage__0__
+  commentId: M:BotManager.Runtime.Storage`1.#ctor(BotManager.Runtime.Storage{`0})
+  name.vb: New(Storage(Of T))
+  fullName: BotManager.Runtime.Storage<T>.Storage(BotManager.Runtime.Storage<T>)
+  fullName.vb: BotManager.Runtime.Storage(Of T).New(BotManager.Runtime.Storage(Of T))
+  nameWithType: Storage<T>.Storage(Storage<T>)
+  nameWithType.vb: Storage(Of T).New(Storage(Of T))
+- uid: BotManager.Runtime.Storage`1.#ctor*
+  name: Storage
+  href: api/BotManager.Runtime.Storage-1.html#BotManager_Runtime_Storage_1__ctor_
+  commentId: Overload:BotManager.Runtime.Storage`1.#ctor
+  name.vb: New
+  fullName: BotManager.Runtime.Storage<T>.Storage
+  fullName.vb: BotManager.Runtime.Storage(Of T).New
+  nameWithType: Storage<T>.Storage
+  nameWithType.vb: Storage(Of T).New
+- uid: BotManager.Runtime.Storage`1.Get(System.String)
+  name: Get(string)
+  href: api/BotManager.Runtime.Storage-1.html#BotManager_Runtime_Storage_1_Get_System_String_
+  commentId: M:BotManager.Runtime.Storage`1.Get(System.String)
+  name.vb: Get(String)
+  fullName: BotManager.Runtime.Storage<T>.Get(string)
+  fullName.vb: BotManager.Runtime.Storage(Of T).Get(String)
+  nameWithType: Storage<T>.Get(string)
+  nameWithType.vb: Storage(Of T).Get(String)
+- uid: BotManager.Runtime.Storage`1.Get*
+  name: Get
+  href: api/BotManager.Runtime.Storage-1.html#BotManager_Runtime_Storage_1_Get_
+  commentId: Overload:BotManager.Runtime.Storage`1.Get
+  fullName: BotManager.Runtime.Storage<T>.Get
+  fullName.vb: BotManager.Runtime.Storage(Of T).Get
+  nameWithType: Storage<T>.Get
+  nameWithType.vb: Storage(Of T).Get
+- uid: BotManager.Runtime.Storage`1.Set(System.String,`0)
+  name: Set(string, T?)
+  href: api/BotManager.Runtime.Storage-1.html#BotManager_Runtime_Storage_1_Set_System_String__0_
+  commentId: M:BotManager.Runtime.Storage`1.Set(System.String,`0)
+  name.vb: Set(String, T)
+  fullName: BotManager.Runtime.Storage<T>.Set(string, T?)
+  fullName.vb: BotManager.Runtime.Storage(Of T).Set(String, T)
+  nameWithType: Storage<T>.Set(string, T?)
+  nameWithType.vb: Storage(Of T).Set(String, T)
+- uid: BotManager.Runtime.Storage`1.Set*
+  name: Set
+  href: api/BotManager.Runtime.Storage-1.html#BotManager_Runtime_Storage_1_Set_
+  commentId: Overload:BotManager.Runtime.Storage`1.Set
+  fullName: BotManager.Runtime.Storage<T>.Set
+  fullName.vb: BotManager.Runtime.Storage(Of T).Set
+  nameWithType: Storage<T>.Set
+  nameWithType.vb: Storage(Of T).Set
+- uid: BotManager.Runtime.Storage`1.TryGet(System.String,`0@)
+  name: TryGet(string, out T)
+  href: api/BotManager.Runtime.Storage-1.html#BotManager_Runtime_Storage_1_TryGet_System_String__0__
+  commentId: M:BotManager.Runtime.Storage`1.TryGet(System.String,`0@)
+  name.vb: TryGet(String, T)
+  fullName: BotManager.Runtime.Storage<T>.TryGet(string, out T)
+  fullName.vb: BotManager.Runtime.Storage(Of T).TryGet(String, T)
+  nameWithType: Storage<T>.TryGet(string, out T)
+  nameWithType.vb: Storage(Of T).TryGet(String, T)
+- uid: BotManager.Runtime.Storage`1.TryGet*
+  name: TryGet
+  href: api/BotManager.Runtime.Storage-1.html#BotManager_Runtime_Storage_1_TryGet_
+  commentId: Overload:BotManager.Runtime.Storage`1.TryGet
+  fullName: BotManager.Runtime.Storage<T>.TryGet
+  fullName.vb: BotManager.Runtime.Storage(Of T).TryGet
+  nameWithType: Storage<T>.TryGet
+  nameWithType.vb: Storage(Of T).TryGet
+- uid: BotManager.Runtime.Storage`1.TryGet``1(System.String,``0@)
+  name: TryGet<TValue>(string, out TValue)
+  href: api/BotManager.Runtime.Storage-1.html#BotManager_Runtime_Storage_1_TryGet__1_System_String___0__
+  commentId: M:BotManager.Runtime.Storage`1.TryGet``1(System.String,``0@)
+  name.vb: TryGet(Of TValue)(String, TValue)
+  fullName: BotManager.Runtime.Storage<T>.TryGet<TValue>(string, out TValue)
+  fullName.vb: BotManager.Runtime.Storage(Of T).TryGet(Of TValue)(String, TValue)
+  nameWithType: Storage<T>.TryGet<TValue>(string, out TValue)
+  nameWithType.vb: Storage(Of T).TryGet(Of TValue)(String, TValue)
