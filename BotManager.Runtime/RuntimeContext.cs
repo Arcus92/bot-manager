@@ -25,8 +25,15 @@ public sealed class RuntimeContext
         // Local variables are copied so the two runtimes don't interfere.
         Locals = new(original.Locals);
         Functions = new Storage<IExpression>(original.Functions);
+
+        RootPath = original.RootPath;
     }
-    
+
+    /// <summary>
+    /// Gets and sets the root path of the current config file.
+    /// </summary>
+    public string? RootPath { get; set; }
+
     #region Logger
     
     /// <summary>

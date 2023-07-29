@@ -91,6 +91,17 @@ public interface IExpression
     };
     
     /// <summary>
+    /// Deserialize the given json file to an <see cref="IExpression"/>.
+    /// </summary>
+    /// <param name="fileName">The path to the json file.</param>
+    /// <returns></returns>
+    public static IExpression? Deserialize(string fileName)
+    {
+        using var stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+        return Deserialize(stream);
+    }
+    
+    /// <summary>
     /// Deserialize the given json stream to an <see cref="IExpression"/>.
     /// </summary>
     /// <param name="stream">The input json stream.</param>

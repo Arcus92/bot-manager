@@ -1,8 +1,6 @@
-﻿using System.Text.Json;
-using BotManager.Discord;
+﻿using BotManager.Discord;
 using BotManager.OpenAi;
 using BotManager.Runtime;
-using BotManager.Runtime.Converters;
 
 const string tag = "Main";
 
@@ -19,19 +17,13 @@ RuntimePlugin.Register();
 DiscordPlugin.Register();
 OpenAiPlugin.Register();
 
-// Load the config
-var jsonOptions = new JsonSerializerOptions
-{
-    Converters = { new ExpressionConverter() },
-};
-
 // Load each argument as json expression file
 foreach (var configPath in args)
 {
     context.Logger.Error(tag, $"Reading and executing '{configPath}'...");
+    context.RootPath = Path.GetDirectoryName(configPath);
     
-    await using var stream = new FileStream(configPath, FileMode.Open, FileAccess.Read);
-    var config = JsonSerializer.Deserialize<IExpression>(stream, jsonOptions);
+    var config = IExpression.Deserialize(configPath);
 
     // Run
     await context.ExecuteAsync(config);

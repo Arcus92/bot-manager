@@ -2029,6 +2029,57 @@ references:
   commentId: Overload:BotManager.Runtime.Converters.GetConverter.To
   fullName: BotManager.Runtime.Converters.GetConverter.To
   nameWithType: GetConverter.To
+- uid: BotManager.Runtime.Converters.IncludeConverter
+  name: IncludeConverter
+  href: api/BotManager.Runtime.Converters.IncludeConverter.html
+  commentId: T:BotManager.Runtime.Converters.IncludeConverter
+  fullName: BotManager.Runtime.Converters.IncludeConverter
+  nameWithType: IncludeConverter
+- uid: BotManager.Runtime.Converters.IncludeConverter.#ctor
+  name: IncludeConverter()
+  href: api/BotManager.Runtime.Converters.IncludeConverter.html#BotManager_Runtime_Converters_IncludeConverter__ctor
+  commentId: M:BotManager.Runtime.Converters.IncludeConverter.#ctor
+  name.vb: New()
+  fullName: BotManager.Runtime.Converters.IncludeConverter.IncludeConverter()
+  fullName.vb: BotManager.Runtime.Converters.IncludeConverter.New()
+  nameWithType: IncludeConverter.IncludeConverter()
+  nameWithType.vb: IncludeConverter.New()
+- uid: BotManager.Runtime.Converters.IncludeConverter.#ctor*
+  name: IncludeConverter
+  href: api/BotManager.Runtime.Converters.IncludeConverter.html#BotManager_Runtime_Converters_IncludeConverter__ctor_
+  commentId: Overload:BotManager.Runtime.Converters.IncludeConverter.#ctor
+  name.vb: New
+  fullName: BotManager.Runtime.Converters.IncludeConverter.IncludeConverter
+  fullName.vb: BotManager.Runtime.Converters.IncludeConverter.New
+  nameWithType: IncludeConverter.IncludeConverter
+  nameWithType.vb: IncludeConverter.New
+- uid: BotManager.Runtime.Converters.IncludeConverter.From(System.String)
+  name: From(string)
+  href: api/BotManager.Runtime.Converters.IncludeConverter.html#BotManager_Runtime_Converters_IncludeConverter_From_System_String_
+  commentId: M:BotManager.Runtime.Converters.IncludeConverter.From(System.String)
+  name.vb: From(String)
+  fullName: BotManager.Runtime.Converters.IncludeConverter.From(string)
+  fullName.vb: BotManager.Runtime.Converters.IncludeConverter.From(String)
+  nameWithType: IncludeConverter.From(string)
+  nameWithType.vb: IncludeConverter.From(String)
+- uid: BotManager.Runtime.Converters.IncludeConverter.From*
+  name: From
+  href: api/BotManager.Runtime.Converters.IncludeConverter.html#BotManager_Runtime_Converters_IncludeConverter_From_
+  commentId: Overload:BotManager.Runtime.Converters.IncludeConverter.From
+  fullName: BotManager.Runtime.Converters.IncludeConverter.From
+  nameWithType: IncludeConverter.From
+- uid: BotManager.Runtime.Converters.IncludeConverter.To(BotManager.Runtime.Expressions.Include)
+  name: To(Include)
+  href: api/BotManager.Runtime.Converters.IncludeConverter.html#BotManager_Runtime_Converters_IncludeConverter_To_BotManager_Runtime_Expressions_Include_
+  commentId: M:BotManager.Runtime.Converters.IncludeConverter.To(BotManager.Runtime.Expressions.Include)
+  fullName: BotManager.Runtime.Converters.IncludeConverter.To(BotManager.Runtime.Expressions.Include)
+  nameWithType: IncludeConverter.To(Include)
+- uid: BotManager.Runtime.Converters.IncludeConverter.To*
+  name: To
+  href: api/BotManager.Runtime.Converters.IncludeConverter.html#BotManager_Runtime_Converters_IncludeConverter_To_
+  commentId: Overload:BotManager.Runtime.Converters.IncludeConverter.To
+  fullName: BotManager.Runtime.Converters.IncludeConverter.To
+  nameWithType: IncludeConverter.To
 - uid: BotManager.Runtime.Converters.InfoConverter
   name: InfoConverter
   href: api/BotManager.Runtime.Converters.InfoConverter.html
@@ -3361,6 +3412,66 @@ references:
   commentId: Overload:BotManager.Runtime.Expressions.If.Then
   fullName: BotManager.Runtime.Expressions.If.Then
   nameWithType: If.Then
+- uid: BotManager.Runtime.Expressions.Include
+  name: Include
+  href: api/BotManager.Runtime.Expressions.Include.html
+  commentId: T:BotManager.Runtime.Expressions.Include
+  fullName: BotManager.Runtime.Expressions.Include
+  nameWithType: Include
+- uid: BotManager.Runtime.Expressions.Include.#ctor
+  name: Include()
+  href: api/BotManager.Runtime.Expressions.Include.html#BotManager_Runtime_Expressions_Include__ctor
+  commentId: M:BotManager.Runtime.Expressions.Include.#ctor
+  name.vb: New()
+  fullName: BotManager.Runtime.Expressions.Include.Include()
+  fullName.vb: BotManager.Runtime.Expressions.Include.New()
+  nameWithType: Include.Include()
+  nameWithType.vb: Include.New()
+- uid: BotManager.Runtime.Expressions.Include.#ctor(System.String)
+  name: Include(string)
+  href: api/BotManager.Runtime.Expressions.Include.html#BotManager_Runtime_Expressions_Include__ctor_System_String_
+  commentId: M:BotManager.Runtime.Expressions.Include.#ctor(System.String)
+  name.vb: New(String)
+  fullName: BotManager.Runtime.Expressions.Include.Include(string)
+  fullName.vb: BotManager.Runtime.Expressions.Include.New(String)
+  nameWithType: Include.Include(string)
+  nameWithType.vb: Include.New(String)
+- uid: BotManager.Runtime.Expressions.Include.#ctor*
+  name: Include
+  href: api/BotManager.Runtime.Expressions.Include.html#BotManager_Runtime_Expressions_Include__ctor_
+  commentId: Overload:BotManager.Runtime.Expressions.Include.#ctor
+  name.vb: New
+  fullName: BotManager.Runtime.Expressions.Include.Include
+  fullName.vb: BotManager.Runtime.Expressions.Include.New
+  nameWithType: Include.Include
+  nameWithType.vb: Include.New
+- uid: BotManager.Runtime.Expressions.Include.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)
+  name: ExecuteAsync(RuntimeContext, Type?)
+  href: api/BotManager.Runtime.Expressions.Include.html#BotManager_Runtime_Expressions_Include_ExecuteAsync_BotManager_Runtime_RuntimeContext_System_Type_
+  commentId: M:BotManager.Runtime.Expressions.Include.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)
+  name.vb: ExecuteAsync(RuntimeContext, Type)
+  fullName: BotManager.Runtime.Expressions.Include.ExecuteAsync(BotManager.Runtime.RuntimeContext, System.Type?)
+  fullName.vb: BotManager.Runtime.Expressions.Include.ExecuteAsync(BotManager.Runtime.RuntimeContext, System.Type)
+  nameWithType: Include.ExecuteAsync(RuntimeContext, Type?)
+  nameWithType.vb: Include.ExecuteAsync(RuntimeContext, Type)
+- uid: BotManager.Runtime.Expressions.Include.ExecuteAsync*
+  name: ExecuteAsync
+  href: api/BotManager.Runtime.Expressions.Include.html#BotManager_Runtime_Expressions_Include_ExecuteAsync_
+  commentId: Overload:BotManager.Runtime.Expressions.Include.ExecuteAsync
+  fullName: BotManager.Runtime.Expressions.Include.ExecuteAsync
+  nameWithType: Include.ExecuteAsync
+- uid: BotManager.Runtime.Expressions.Include.FileName
+  name: FileName
+  href: api/BotManager.Runtime.Expressions.Include.html#BotManager_Runtime_Expressions_Include_FileName
+  commentId: P:BotManager.Runtime.Expressions.Include.FileName
+  fullName: BotManager.Runtime.Expressions.Include.FileName
+  nameWithType: Include.FileName
+- uid: BotManager.Runtime.Expressions.Include.FileName*
+  name: FileName
+  href: api/BotManager.Runtime.Expressions.Include.html#BotManager_Runtime_Expressions_Include_FileName_
+  commentId: Overload:BotManager.Runtime.Expressions.Include.FileName
+  fullName: BotManager.Runtime.Expressions.Include.FileName
+  nameWithType: Include.FileName
 - uid: BotManager.Runtime.Expressions.Info
   name: Info
   href: api/BotManager.Runtime.Expressions.Info.html
@@ -4006,6 +4117,15 @@ references:
   commentId: M:BotManager.Runtime.IExpression.Deserialize(System.IO.Stream)
   fullName: BotManager.Runtime.IExpression.Deserialize(System.IO.Stream)
   nameWithType: IExpression.Deserialize(Stream)
+- uid: BotManager.Runtime.IExpression.Deserialize(System.String)
+  name: Deserialize(string)
+  href: api/BotManager.Runtime.IExpression.html#BotManager_Runtime_IExpression_Deserialize_System_String_
+  commentId: M:BotManager.Runtime.IExpression.Deserialize(System.String)
+  name.vb: Deserialize(String)
+  fullName: BotManager.Runtime.IExpression.Deserialize(string)
+  fullName.vb: BotManager.Runtime.IExpression.Deserialize(String)
+  nameWithType: IExpression.Deserialize(string)
+  nameWithType.vb: IExpression.Deserialize(String)
 - uid: BotManager.Runtime.IExpression.Deserialize*
   name: Deserialize
   href: api/BotManager.Runtime.IExpression.html#BotManager_Runtime_IExpression_Deserialize_
@@ -4264,6 +4384,18 @@ references:
   commentId: Overload:BotManager.Runtime.RuntimeContext.Logger
   fullName: BotManager.Runtime.RuntimeContext.Logger
   nameWithType: RuntimeContext.Logger
+- uid: BotManager.Runtime.RuntimeContext.RootPath
+  name: RootPath
+  href: api/BotManager.Runtime.RuntimeContext.html#BotManager_Runtime_RuntimeContext_RootPath
+  commentId: P:BotManager.Runtime.RuntimeContext.RootPath
+  fullName: BotManager.Runtime.RuntimeContext.RootPath
+  nameWithType: RuntimeContext.RootPath
+- uid: BotManager.Runtime.RuntimeContext.RootPath*
+  name: RootPath
+  href: api/BotManager.Runtime.RuntimeContext.html#BotManager_Runtime_RuntimeContext_RootPath_
+  commentId: Overload:BotManager.Runtime.RuntimeContext.RootPath
+  fullName: BotManager.Runtime.RuntimeContext.RootPath
+  nameWithType: RuntimeContext.RootPath
 - uid: BotManager.Runtime.RuntimeContext.Set(System.String,System.Object)
   name: Set(string, object?)
   href: api/BotManager.Runtime.RuntimeContext.html#BotManager_Runtime_RuntimeContext_Set_System_String_System_Object_
