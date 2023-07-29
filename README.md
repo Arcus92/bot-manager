@@ -3,7 +3,7 @@
 This project is in very early development and properly not usable for your use case!
 
 This is a programmable Discord bot we are using for our server. As a developer I always like to have full control over 
-my tools. While [MEE6](https://mee6.xyz) oder [Moobot](https://moo.bot/) are great tools for non-developers, they lack 
+my tools. While [MEE6](https://mee6.xyz) or [Moobot](https://moo.bot/) are great tools for non-developers, they lack 
 certain complex features that would only takes a few lines of code for developers.
 
 The Bot-Manager should provide an easy-to-use programmable interface.
@@ -20,7 +20,7 @@ web interface with a [Scratch](https://scratch.mit.edu/)-like visual programming
 
 ### Run
 
-Currently the `BotManager` only takes these json files als arguments. Simply drop a config file onto the binary to run 
+Currently the `BotManager` only takes these json files as arguments. Simply drop a config file onto the binary to run 
 it. If multiple json files are provided the app will run all in sequence. 
 
 How ever this is just for the early stages and will change in future.
