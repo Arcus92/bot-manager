@@ -65,6 +65,7 @@ public sealed class DiscordInit : IExpression
         if (token is null)
             throw new ArgumentException("Token is null.");
         
+        _client.Log += OnLog;
         _client.Ready += OnReady;
         _client.SlashCommandExecuted += OnSlashCommandExecuted;
 
@@ -79,6 +80,26 @@ public sealed class DiscordInit : IExpression
         context.Set("discord.plugin", this);
         
         return null;
+    }
+
+    /// <summary>
+    /// Discord logs a message
+    /// </summary>
+    /// <param name="arg"></param>
+    /// <returns></returns>
+    private Task OnLog(LogMessage arg)
+    {
+        switch (arg.Severity)
+        {
+            case LogSeverity.Critical:
+            case LogSeverity.Error:
+                _context.Logger.Error(Tag, arg.Message);
+                break;
+            default:
+                _context.Logger.Info(Tag, arg.Message);
+                break;
+        }
+        return Task.CompletedTask;
     }
 
     /// <summary>
