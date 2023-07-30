@@ -7,8 +7,9 @@ namespace BotManager.Discord;
 /// <summary>
 /// Returns a Discord embed message object. Embeds are formatted messages with title, description, a preview image,
 /// author and footer. 
-/// This can be used in <see cref="DiscordSend.Embed"/> and <see cref="DiscordRespond.Embed"/>.
+/// This can be used in <see cref="DiscordSend"/> and <see cref="DiscordRespond"/>.
 /// </summary>
+[Serializable]
 public class DiscordEmbed
 {
     /// <summary>
