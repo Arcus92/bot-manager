@@ -798,6 +798,29 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/docker.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/docker.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
