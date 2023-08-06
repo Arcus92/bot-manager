@@ -36,6 +36,7 @@ public class Include : IExpression
     /// Gets and sets the filename of the json file to execute.
     /// The file path can be absolute or relative to the root config file.
     /// </summary>
+    [Input(ContentProperty = true)]
     public string FileName { get; set; }
 
     /// <summary>

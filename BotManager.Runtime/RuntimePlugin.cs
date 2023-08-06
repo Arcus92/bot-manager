@@ -10,6 +10,6 @@ public static class RuntimePlugin
     /// </summary>
     public static void Register()
     {
-        IExpression.RegisterExpressionTypesFromAssembly(typeof(RuntimePlugin).Assembly);
+        IExpression.RegisterExpressionsFromAssembly(typeof(RuntimePlugin).Assembly);
     }
 }

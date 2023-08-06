@@ -15,16 +15,19 @@ public sealed class DiscordRespond : IExpression
     /// <summary>
     /// Gets and sets the expression to resolve the message.
     /// </summary>
+    [Input]
     public IExpression? Message { get; set; }
     
     /// <summary>
     /// Gets and sets the optional embed data for this message.
     /// </summary>
+    [Input]
     public DiscordEmbed? Embed { get; set; }
     
     /// <summary>
     /// Gets and sets if mentions are allowed.
     /// </summary>
+    [Input]
     public bool AllowedMentions { get; set; }
     
     /// <inheritdoc />

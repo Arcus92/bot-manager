@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using BotManager.Runtime.Converters;
 
 namespace BotManager.Runtime;
@@ -9,6 +10,7 @@ namespace BotManager.Runtime;
 /// The expression interface defines one operation that can be serialized in a json file.
 /// Use the <see cref="RuntimeContext"/> to execute these expressions.
 /// </summary>
+[JsonConverter(typeof(ExpressionConverter))]
 public interface IExpression
 {
     /// <summary>
@@ -22,40 +24,46 @@ public interface IExpression
     /// </param>
     /// <returns>Returns the result of the expression.</returns>
     Task<object?> ExecuteAsync(RuntimeContext context, Type? returnType);
-
+    
     #region Type map
     
     // For fast serialization, we store a static map for the name and the IExpression types.
     // If a type is not registered it will be not deserialized!
     
     /// <summary>
-    /// The internal type map.
+    /// The internal map for the registered expression information.
     /// </summary>
-    private static readonly Dictionary<string, Type> ExpressionTypeMap = new();
+    private static readonly Dictionary<string, Type> ExpressionMap = new();
+
+    /// <summary>
+    /// Returns a list of all registered expression types.
+    /// </summary>
+    /// <returns></returns>
+    public static IEnumerable<Type> Types => ExpressionMap.Values;
 
     /// <summary>
     /// Registers a new type for the serializer.
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public static void RegisterExpressionType<T>() where T : IExpression
+    /// <typeparam name="T">The expression type to register.</typeparam>
+    public static void RegisterExpression<T>() where T : IExpression
     {
-        RegisterExpressionType(typeof(T));
+        RegisterExpression(typeof(T));
     }
     
     /// <summary>
     /// Registers a new type for the serializer.
     /// </summary>
-    /// <param name="type"></param>
-    public static void RegisterExpressionType(Type type) 
+    /// <param name="type">The expression type to register.</param>
+    public static void RegisterExpression(Type type) 
     {
-        ExpressionTypeMap.Add(type.Name, type);
+        ExpressionMap.Add(type.Name, type);
     }
     
     /// <summary>
     /// Registers all public <see cref="IExpression"/> types from the serializer in the given assembly.
     /// </summary>
-    /// <param name="assembly"></param>
-    public static void RegisterExpressionTypesFromAssembly(Assembly assembly)
+    /// <param name="assembly">The assembly to scan for expressions.</param>
+    public static void RegisterExpressionsFromAssembly(Assembly assembly)
     {
         foreach (var type in assembly.ExportedTypes)
         {
@@ -63,19 +71,19 @@ public interface IExpression
                 continue;
             
             if (type.IsAssignableTo(typeof(IExpression)))
-                RegisterExpressionType(type);
+                RegisterExpression(type);
         }
     }
 
     /// <summary>
-    /// Tries to gets a registered type by it's name.
+    /// Tries to gets a registered schema by it's name.
     /// </summary>
     /// <param name="typeName">The name of the type.</param>
     /// <param name="type">The returned type.</param>
     /// <returns>Returns <c>true</c> if a type was found.</returns>
-    public static bool TryGetExpressionType(string typeName, [MaybeNullWhen(false)] out Type type)
+    public static bool TryGetExpressionInfo(string typeName, [MaybeNullWhen(false)] out Type type)
     {
-        return ExpressionTypeMap.TryGetValue(typeName, out type);
+        return ExpressionMap.TryGetValue(typeName, out type);
     }
     
     #endregion Type map

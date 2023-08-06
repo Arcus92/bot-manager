@@ -32,6 +32,7 @@ public sealed class Env : IExpression
     /// <summary>
     /// Gets and sets the name of the variable
     /// </summary>
+    [Input(ContentProperty = true)]
     public string Name { get; set; }
 
     /// <inheritdoc />

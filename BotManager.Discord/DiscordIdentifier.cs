@@ -1,5 +1,6 @@
 using System.Text.Json.Serialization;
 using BotManager.Discord.Converters;
+using BotManager.Runtime;
 using Discord;
 
 namespace BotManager.Discord;
@@ -58,6 +59,7 @@ public readonly struct DiscordIdentifier
     /// <summary>
     /// Gets the name. If this is <c>null</c>, the <see cref="Id"/> is used instead.
     /// </summary>
+    [Input(ContentProperty = true)]
     public string? Name { get; }
 
     /// <summary>

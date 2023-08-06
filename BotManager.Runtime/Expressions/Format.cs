@@ -38,11 +38,13 @@ public sealed class Format : IExpression
     /// <summary>
     /// Gets and sets the format text
     /// </summary>
+    [Input]
     public IExpression? Text { get; set; }
 
     /// <summary>
     /// Gets and sets the parameter list
     /// </summary>
+    [Input]
     public List? Parameters { get; set; }
     
 

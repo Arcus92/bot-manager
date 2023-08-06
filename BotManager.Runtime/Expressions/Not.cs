@@ -31,6 +31,7 @@ public sealed class Not : IExpression
     /// <summary>
     /// Gets and sets the expression
     /// </summary>
+    [Input(ContentProperty = true)]
     public IExpression? Expression { get; set; }
 
     /// <inheritdoc />

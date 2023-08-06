@@ -11,11 +11,13 @@ public sealed class Equals : IExpression
     /// <summary>
     /// Gets the first value
     /// </summary>
+    [Input]
     public IExpression? A { get; set; }
     
     /// <summary>
     /// Gets the second value
     /// </summary>
+    [Input]
     public IExpression? B { get; set; }
 
     /// <inheritdoc />

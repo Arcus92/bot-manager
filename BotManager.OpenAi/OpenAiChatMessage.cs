@@ -13,10 +13,12 @@ public sealed class OpenAiChatMessage
     /// Gets and sets the role of the message.
     /// See <see cref="StaticValues.ChatMessageRoles"/>.
     /// </summary>
+    [Input]
     public string Role { get; set; } = StaticValues.ChatMessageRoles.System;
 
     /// <summary>
     /// Gets and sets the message text.
     /// </summary>
+    [Input]
     public IExpression? Text { get; set; }
 }

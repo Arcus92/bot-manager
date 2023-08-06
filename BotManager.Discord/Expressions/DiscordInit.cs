@@ -27,17 +27,20 @@ public sealed class DiscordInit : IExpression
     /// <summary>
     /// Gets and sets the <see cref="Token"/> type
     /// </summary>
+    [Input]
     [JsonConverter(typeof(EnumConverter<TokenType>))]
     public TokenType TokenType { get; set; } = TokenType.Bot;
 
     /// <summary>
     /// Gets and sets the Discord API key
     /// </summary>
+    [Input]
     public IExpression? Token { get; set; }
 
     /// <summary>
     /// Gets and sets the slash commands
     /// </summary>
+    [Input]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public DiscordSlashCommand[]? Commands { get; set; }
 

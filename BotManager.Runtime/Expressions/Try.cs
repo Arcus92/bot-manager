@@ -13,11 +13,13 @@ public class Try : IExpression
     /// <summary>
     /// Gets and sets the expression to try.
     /// </summary>
+    [Input]
     public IExpression? Expression { get; set; }
     
     /// <summary>
     /// Gets and sets the expression to execute if <see cref="Expression"/> failed.
     /// </summary>
+    [Input]
     public IExpression? Catch { get; set; }
 
     /// <inheritdoc />

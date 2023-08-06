@@ -31,6 +31,7 @@ public class Info : IExpression
     /// <summary>
     /// Gets and sets the expression to resolve the message to log as information.
     /// </summary>
+    [Input(ContentProperty = true)]
     public IExpression? Message { get; set; }
 
     /// <inheritdoc />

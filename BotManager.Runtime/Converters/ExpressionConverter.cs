@@ -82,7 +82,7 @@ public class ExpressionConverter : JsonConverter<IExpression?>
                 
                 var typeName = propertyName[1..];
 
-                if (!IExpression.TryGetExpressionType(typeName, out var type))
+                if (!IExpression.TryGetExpressionInfo(typeName, out var type))
                     throw new JsonException($"Unknown type '{typeName}'.");
 
                 // Deserialize the inner objects

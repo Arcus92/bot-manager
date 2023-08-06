@@ -14,11 +14,13 @@ public sealed class DiscordSend : IExpression
     /// <summary>
     /// Gets and sets the expression to resolve the message.
     /// </summary>
+    [Input]
     public IExpression? Message { get; set; }
     
     /// <summary>
     /// Gets and sets the optional embed data for this message.
     /// </summary>
+    [Input]
     public DiscordEmbed? Embed { get; set; }
 
     /// <summary>
@@ -28,18 +30,21 @@ public sealed class DiscordSend : IExpression
     /// <c>@&lt;#roleId&gt;</c> to tag a role.
     /// </para>
     /// </summary>
+    [Input]
     public bool AllowedMentions { get; set; }
 
     /// <summary>
     /// Gets and sets the target guild to send the message to. If not defined, it will use the guild from the current
     /// runtime context.
     /// </summary>
+    [Input]
     public IExpression? Guild { get; set; }
     
     /// <summary>
     /// Gets and sets the target channel to send the message to. If not defined, it will use the channel from the
     /// current runtime context.
     /// </summary>
+    [Input]
     public IExpression? Channel { get; set; }
     
     /// <inheritdoc />

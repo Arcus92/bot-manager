@@ -12,6 +12,6 @@ public static class DiscordPlugin
     /// </summary>
     public static void Register()
     {
-        IExpression.RegisterExpressionTypesFromAssembly(typeof(DiscordPlugin).Assembly);
+        IExpression.RegisterExpressionsFromAssembly(typeof(DiscordPlugin).Assembly);
     }
 }

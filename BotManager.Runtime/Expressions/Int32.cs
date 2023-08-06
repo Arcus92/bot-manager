@@ -31,6 +31,7 @@ public sealed class Int32 : IExpression
     /// <summary>
     /// Gets and sets the value.
     /// </summary>
+    [Input(ContentProperty = true)]
     public int Value { get; set; }
 
     /// <inheritdoc />

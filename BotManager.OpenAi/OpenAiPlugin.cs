@@ -12,6 +12,6 @@ public static class OpenAiPlugin
     /// </summary>
     public static void Register()
     {
-        IExpression.RegisterExpressionTypesFromAssembly(typeof(OpenAiPlugin).Assembly);
+        IExpression.RegisterExpressionsFromAssembly(typeof(OpenAiPlugin).Assembly);
     }
 }
