@@ -1,0 +1,52 @@
+.value-box {
+  background: #00000010;
+  box-shadow: 0 0 1px #808080;
+  padding: 0.5em 0 0.5em 0.5em;
+  margin: 0 0 0.5em 0;
+  box-sizing: border-box;
+  clear: both;
+}
+
+.value-box:hover {
+  box-shadow: 0 0 2px #808080;
+}
+
+.value-box::after {
+  clear: both;
+  display:block;
+  content: '';
+}
+
+.value-controls {
+  background: #00000010;
+  padding: 0.2em;
+  float: right;
+  text-align: right;
+}
+
+.value-box button {
+  font-size: 80%;
+}
+
+.value-box-native {
+  padding: 0.5em;
+}
+
+.value-box input[type=text],
+.value-box input[type=number],
+.value-box select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.value-box-type-name,
+.value-box-property-name {
+  font-weight: bold;
+  float: left;
+  clear: left;
+}
+
+.value-box-property-type {
+  font-weight: normal;
+  font-size: 80%;
+}

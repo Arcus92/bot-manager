@@ -1,0 +1,77 @@
+<!-- Null -->
+<div class="value-box" *ngIf="!valueType">
+  <div class="value-box-type-name">-/-</div>
+</div>
+
+<ng-container *ngIf="valueType">
+  <!-- Value type -->
+  <div class="value-box value-box-native" *ngIf="valueType.isNative || valueType.isEnum">
+    <!-- Native -->
+    <ng-container *ngIf="valueType.isNative">
+      <input [ngModel]="value" [type]="getNativeInputType()" />
+    </ng-container>
+
+    <!-- Enum -->
+    <ng-container *ngIf="valueType.isEnum">
+      <select [ngModel]="value">
+        <option *ngFor="let option of valueType.values" [value]="option">{{ option }}</option>
+      </select>
+    </ng-container>
+  </div>
+
+  <!-- Object / List -->
+  <div class="value-box" *ngIf="!valueType.isNative && !valueType.isEnum">
+    <div class="value-box-type-name" (click)="collapsed = !collapsed">
+      {{ valueType.expressionName ?? valueType.typeName }}
+    </div>
+
+    <ng-container *ngIf="!collapsed">
+
+      <!-- List -->
+      <ng-container *ngIf="valueType.isList">
+        <ng-container *ngFor="let item of value">
+          <div class="value-controls">
+            <button>Set</button> <button>Remove</button>
+          </div>
+          <app-type-value [types]="types" [value]="item"></app-type-value>
+        </ng-container>
+
+        <button>Add</button>
+      </ng-container>
+
+      <!-- Properties -->
+      <ng-container *ngIf="valueType.properties">
+        <ng-container *ngFor="let property of valueType.properties">
+          <div class="value-box-property-name">
+            {{ property.name }}:
+            <span class="value-box-property-type">({{ property.typeName }})</span>
+          </div>
+
+          <!-- Array -->
+          <ng-container *ngIf="property.isArray">
+            <ng-container *ngFor="let item of getPropertyValue(property)">
+              <div class="value-controls">
+                <button>Set</button> <button>Remove</button>
+              </div>
+
+              <app-type-value [types]="types" [targetType]="getPropertyTargetType(property)" [value]="item"></app-type-value>
+            </ng-container>
+
+            <button>Add</button>
+          </ng-container>
+
+          <!-- Single value -->
+          <ng-container *ngIf="!property.isArray">
+            <div class="value-controls">
+              <button>Set</button>
+            </div>
+
+            <app-type-value [types]="types" [targetType]="getPropertyTargetType(property)" [value]="getPropertyValue(property)" ></app-type-value>
+          </ng-container>
+
+
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </div>
+</ng-container>
