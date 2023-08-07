@@ -2,9 +2,8 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {TypesService} from "../../services/types.service";
 import {TypeInfoDto} from "../../dto/type-info-dto";
 import {ConfigService} from "../../services/config.service";
-import {TypePropertyInfoDto} from "../../dto/type-property-info-dto";
-import {TypeList} from "../../controllers/type-list";
-import {TypeValueComponent} from "../type-value/type-value.component";
+import {TypeDefinitions} from "../../controllers/type-definitions";
+import {TypeObjectComponent} from "../type-object/type-object.component";
 
 @Component({
   selector: 'app-home',
@@ -13,14 +12,14 @@ import {TypeValueComponent} from "../type-value/type-value.component";
 export class HomeComponent implements OnInit {
   constructor(private configService: ConfigService, private typesService: TypesService) { }
 
-  @ViewChild('rootNode') rootNode?: TypeValueComponent;
+  @ViewChild('rootNode') rootNode?: TypeObjectComponent;
 
   /**
    * The loaded config.
    */
   private config?: any;
 
-  public types?: TypeList;
+  public types?: TypeDefinitions;
 
   public rootType: TypeInfoDto | null | undefined;
   public rootValue?: any;
@@ -39,7 +38,7 @@ export class HomeComponent implements OnInit {
 
   private fetchTypes() {
     this.typesService.get().subscribe(types => {
-      this.types = new TypeList(types);
+      this.types = new TypeDefinitions(types);
       this.initBuilder();
     });
   }

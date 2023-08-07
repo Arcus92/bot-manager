@@ -29,14 +29,7 @@
 
       <!-- List -->
       <ng-container *ngIf="valueType.isList">
-        <ng-container *ngFor="let item of value">
-          <div class="value-controls">
-            <button>Set</button> <button>Remove</button>
-          </div>
-          <app-type-value [types]="types" [value]="item"></app-type-value>
-        </ng-container>
-
-        <button>Add</button>
+        <app-type-list [types]="types" [value]="value"></app-type-list>
       </ng-container>
 
       <!-- Properties -->
@@ -49,15 +42,8 @@
 
           <!-- Array -->
           <ng-container *ngIf="property.isArray">
-            <ng-container *ngFor="let item of getPropertyValue(property)">
-              <div class="value-controls">
-                <button>Set</button> <button>Remove</button>
-              </div>
-
-              <app-type-value [types]="types" [targetType]="getPropertyTargetType(property)" [value]="item"></app-type-value>
-            </ng-container>
-
-            <button>Add</button>
+            <app-type-list [types]="types" [targetType]="getPropertyTargetType(property)"
+                           [value]="getPropertyValue(property)"></app-type-list>
           </ng-container>
 
           <!-- Single value -->
@@ -66,7 +52,7 @@
               <button>Set</button>
             </div>
 
-            <app-type-value [types]="types" [targetType]="getPropertyTargetType(property)" [value]="getPropertyValue(property)" ></app-type-value>
+            <app-type-object [types]="types" [targetType]="getPropertyTargetType(property)" [value]="getPropertyValue(property)" ></app-type-object>
           </ng-container>
 
 

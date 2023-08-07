@@ -1,6 +1,10 @@
 import {TypeInfoDto} from "../dto/type-info-dto";
 
-export class TypeList {
+/**
+ * This object holds a list of all types.
+ * It provides methods to find a type by name, expression name or the object itself.
+ */
+export class TypeDefinitions {
   public constructor(types: TypeInfoDto[]) {
     this.types = types;
   }
@@ -8,8 +12,11 @@ export class TypeList {
   /**
    * All registered types.
    */
-  private types: TypeInfoDto[] = [];
+  private readonly types: TypeInfoDto[] = [];
 
+  /**
+   * Returns the type (if found) by the full type name.
+   */
   public getTypeByTypeName(typeName: string): TypeInfoDto | undefined {
     for (let type of this.types) {
       if (type.typeName == typeName)
@@ -19,6 +26,9 @@ export class TypeList {
     return undefined;
   }
 
+  /**
+   * Returns the type (if found) by the expression name - including the $.
+   */
   public getTypeByExpressionName(expressionName: string): TypeInfoDto | undefined {
     for (let type of this.types) {
       if (type.expressionName == expressionName)
@@ -28,6 +38,10 @@ export class TypeList {
     return undefined;
   }
 
+  /**
+   * Returns the type of the given value object. The expected target type should be provided as a hint, if multiple
+   * types are possible.
+   */
   public getTypeByObject(object: any, targetType?: TypeInfoDto | null): TypeInfoDto | null | undefined {
     // Null
     if (object == null) {

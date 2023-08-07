@@ -1,0 +1,8 @@
+<ng-container *ngFor="let item of value; let i = index">
+  <div class="value-controls">
+    <button>Set</button> <button>Remove</button>
+  </div>
+  <app-type-object [types]="types" [targetType]="targetType" [value]="item"></app-type-object>
+</ng-container>
+
+<button>Add</button>

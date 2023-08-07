@@ -6,13 +6,15 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import {TypeValueComponent} from "./type-value/type-value.component";
+import {TypeObjectComponent} from "./type-object/type-object.component";
+import {TypeListComponent} from "./type-list/type-list.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    TypeValueComponent,
+    TypeObjectComponent,
+    TypeListComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
