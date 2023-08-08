@@ -6,17 +6,17 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import {TypeObjectComponent} from "./components/type-object/type-object.component";
-import {TypeListComponent} from "./components/type-list/type-list.component";
-import {TypeEditorComponent} from "./components/type-editor/type-editor.component";
+import {ConfigObjectComponent} from "./components/config-object/config-object.component";
+import {ConfigListComponent} from "./components/config-list/config-list.component";
+import {ConfigEditorComponent} from "./components/config-editor/config-editor.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    TypeEditorComponent,
-    TypeObjectComponent,
-    TypeListComponent,
+    ConfigEditorComponent,
+    ConfigObjectComponent,
+    ConfigListComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

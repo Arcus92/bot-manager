@@ -1,0 +1,10 @@
+<ng-container *ngFor="let item of value; let i = index">
+  <div class="config-controls">
+    <button>Set</button> <button>Remove</button>
+  </div>
+  <app-config-object [types]="types" [targetType]="targetType" [value]="item"></app-config-object>
+</ng-container>
+
+<div class="config-box">
+  <button>Add</button>
+</div>

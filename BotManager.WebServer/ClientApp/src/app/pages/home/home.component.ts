@@ -1,10 +1,8 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {TypesService} from "../../services/types.service";
-import {TypeInfoDto} from "../../dto/type-info-dto";
 import {ConfigService} from "../../services/config.service";
-import {TypeDefinitions} from "../../controllers/type-definitions";
-import {TypeObjectComponent} from "../../components/type-object/type-object.component";
-import {TypeEditorComponent} from "../../components/type-editor/type-editor.component";
+import {ConfigTypes} from "../../controllers/config-types";
+import {ConfigEditorComponent} from "../../components/config-editor/config-editor.component";
 
 @Component({
   selector: 'app-home',
@@ -16,12 +14,12 @@ export class HomeComponent implements OnInit {
   /**
    * Reference to the type editor.
    */
-  @ViewChild('typeEditor') typeEditor?: TypeEditorComponent;
+  @ViewChild('typeEditor') typeEditor?: ConfigEditorComponent;
 
   /**
    * The type definitions.
    */
-  public types?: TypeDefinitions;
+  public types?: ConfigTypes;
 
   /**
    * The loaded config.
@@ -42,7 +40,7 @@ export class HomeComponent implements OnInit {
 
   private fetchTypes() {
     this.typesService.get().subscribe(types => {
-      this.types = new TypeDefinitions(types);
+      this.types = new ConfigTypes(types);
     });
   }
 

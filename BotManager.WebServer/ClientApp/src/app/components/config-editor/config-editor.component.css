@@ -1,4 +1,4 @@
-.value-box {
+.config-box {
   background: #00000010;
   box-shadow: 0 0 1px #808080;
   padding: 0.5em 0 0.5em 0.5em;
@@ -7,46 +7,47 @@
   clear: both;
 }
 
-.value-box:hover {
+.config-box:hover {
   box-shadow: 0 0 2px #808080;
 }
 
-.value-box::after {
+.config-box::after {
   clear: both;
   display:block;
   content: '';
 }
 
-.value-controls {
+.config-controls {
   background: #00000010;
   padding: 0.2em;
   float: right;
   text-align: right;
 }
 
-.value-box button {
+.config-controls button,
+.config-box button {
   font-size: 80%;
 }
 
-.value-box-native {
+.config-native-value {
   padding: 0.5em;
 }
 
-.value-box input[type=text],
-.value-box input[type=number],
-.value-box select {
+.config-box input[type=text],
+.config-box input[type=number],
+.config-box select {
   width: 100%;
   box-sizing: border-box;
 }
 
-.value-box-type-name,
-.value-box-property-name {
+.config-type-name,
+.config-property-name {
   font-weight: bold;
   float: left;
   clear: left;
 }
 
-.value-box-property-type {
+.config-property-type {
   font-weight: normal;
   font-size: 80%;
 }

@@ -1,11 +1,11 @@
 <!-- Null -->
-<div class="value-box" *ngIf="!valueType">
-  <div class="value-box-type-name">-/-</div>
+<div class="config-box" *ngIf="!valueType">
+  <div class="config-type-name">-/-</div>
 </div>
 
 <ng-container *ngIf="valueType">
   <!-- Value type -->
-  <div class="value-box value-box-native" *ngIf="valueType.isNative || valueType.isEnum">
+  <div class="config-box config-native-value" *ngIf="valueType.isNative || valueType.isEnum">
     <!-- Native -->
     <ng-container *ngIf="valueType.isNative">
       <input [ngModel]="value" [type]="getNativeInputType()" />
@@ -20,8 +20,8 @@
   </div>
 
   <!-- Object / List -->
-  <div class="value-box" *ngIf="!valueType.isNative && !valueType.isEnum">
-    <div class="value-box-type-name" (click)="collapsed = !collapsed">
+  <div class="config-box" *ngIf="!valueType.isNative && !valueType.isEnum">
+    <div class="config-type-name" (click)="collapsed = !collapsed">
       {{ valueType.expressionName ?? valueType.typeName }}
     </div>
 
@@ -29,30 +29,30 @@
 
       <!-- List -->
       <ng-container *ngIf="valueType.isList">
-        <app-type-list [types]="types" [value]="value"></app-type-list>
+        <app-config-list [types]="types" [value]="value"></app-config-list>
       </ng-container>
 
       <!-- Properties -->
       <ng-container *ngIf="valueType.properties">
         <ng-container *ngFor="let property of valueType.properties">
-          <div class="value-box-property-name">
+          <div class="config-property-name">
             {{ property.name }}:
-            <span class="value-box-property-type">({{ property.typeName }})</span>
+            <span class="config-property-type">({{ property.typeName }})</span>
           </div>
 
           <!-- Array -->
           <ng-container *ngIf="property.isArray">
-            <app-type-list [types]="types" [targetType]="getPropertyTargetType(property)"
-                           [value]="getPropertyValue(property)"></app-type-list>
+            <app-config-list [types]="types" [targetType]="getPropertyTargetType(property)"
+                           [value]="getPropertyValue(property)"></app-config-list>
           </ng-container>
 
           <!-- Single value -->
           <ng-container *ngIf="!property.isArray">
-            <div class="value-controls">
+            <div class="config-controls">
               <button>Set</button>
             </div>
 
-            <app-type-object [types]="types" [targetType]="getPropertyTargetType(property)" [value]="getPropertyValue(property)" ></app-type-object>
+            <app-config-object [types]="types" [targetType]="getPropertyTargetType(property)" [value]="getPropertyValue(property)" ></app-config-object>
           </ng-container>
 
 

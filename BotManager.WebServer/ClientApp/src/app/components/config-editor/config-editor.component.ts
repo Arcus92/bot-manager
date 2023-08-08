@@ -1,26 +1,26 @@
 import {Component, Input} from '@angular/core';
 import {TypeInfoDto} from "../../dto/type-info-dto";
-import {TypeDefinitions} from "../../controllers/type-definitions";
+import {ConfigTypes} from "../../controllers/config-types";
 
 @Component({
-  selector: 'app-type-editor',
-  templateUrl: './type-editor.component.html',
-  styleUrls: ['./type-editor.component.css']
+  selector: 'app-config-editor',
+  templateUrl: './config-editor.component.html',
+  styleUrls: ['./config-editor.component.css']
 })
-export class TypeEditorComponent {
+export class ConfigEditorComponent {
   constructor() { }
 
   /**
   * The type definitions.
   */
-  private _types: TypeDefinitions | undefined;
+  private _types: ConfigTypes | undefined;
 
   @Input()
-  public set types(value: TypeDefinitions | undefined) {
+  public set types(value: ConfigTypes | undefined) {
     this._types = value;
     this.updateTargetType();
   }
-  public get types(): TypeDefinitions | undefined {
+  public get types(): ConfigTypes | undefined {
     return this._types;
   }
 

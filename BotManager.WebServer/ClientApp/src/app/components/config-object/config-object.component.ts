@@ -1,17 +1,17 @@
 import {Component, Input} from '@angular/core';
 import {TypeInfoDto} from "../../dto/type-info-dto";
 import {TypePropertyInfoDto} from "../../dto/type-property-info-dto";
-import {TypeDefinitions} from "../../controllers/type-definitions";
+import {ConfigTypes} from "../../controllers/config-types";
 
 /**
  * This component is the editor for an type object.
  */
 @Component({
-  selector: 'app-type-object',
-  templateUrl: './type-object.component.html',
-  styleUrls: ['./type-object.component.css']
+  selector: 'app-config-object',
+  templateUrl: './config-object.component.html',
+  styleUrls: ['../config-editor/config-editor.component.css']
 })
-export class TypeObjectComponent {
+export class ConfigObjectComponent {
 
   constructor() { }
 
@@ -19,7 +19,7 @@ export class TypeObjectComponent {
    * The type definitions.
    */
   @Input()
-  public types?: TypeDefinitions;
+  public types?: ConfigTypes;
 
   /**
    * Is the node collapsed?

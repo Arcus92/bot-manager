@@ -1,23 +1,23 @@
 import {Component, Input} from '@angular/core';
-import {TypeDefinitions} from "../../controllers/type-definitions";
+import {ConfigTypes} from "../../controllers/config-types";
 import {TypeInfoDto} from "../../dto/type-info-dto";
 
 /**
  * This component is the editor for type arrays or lists.
  */
 @Component({
-  selector: 'app-type-list',
-  templateUrl: './type-list.component.html',
-  styleUrls: ['./type-list.component.css']
+  selector: 'app-config-list',
+  templateUrl: './config-list.component.html',
+  styleUrls: ['../config-editor/config-editor.component.css']
 })
-export class TypeListComponent {
+export class ConfigListComponent {
   constructor() { }
 
   /**
    * The type definitions.
    */
   @Input()
-  public types?: TypeDefinitions;
+  public types?: ConfigTypes;
 
   /**
    * The list / array.

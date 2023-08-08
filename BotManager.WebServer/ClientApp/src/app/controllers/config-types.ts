@@ -4,7 +4,7 @@ import {TypeInfoDto} from "../dto/type-info-dto";
  * This object holds a list of all types.
  * It provides methods to find a type by name, expression name or the object itself.
  */
-export class TypeDefinitions {
+export class ConfigTypes {
   public constructor(types: TypeInfoDto[]) {
     this.types = types;
   }
