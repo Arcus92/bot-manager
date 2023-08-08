@@ -25,7 +25,7 @@ export class ConfigObjectComponent {
    * Is the node collapsed?
    */
   @Input()
-  public collapsed: boolean = false;
+  public collapsed: boolean = true;
 
 
   /**
