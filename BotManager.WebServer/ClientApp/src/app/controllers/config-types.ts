@@ -101,4 +101,51 @@ export class ConfigTypes {
 
     return (type?.parentTypeNames?.indexOf('BotManager.Runtime.IExpression') ?? -1) >= 0;
   }
+
+  /**
+   * Creates a new instance for the given type.
+   */
+  public createInstance(type: TypeInfoDto | null | undefined): any {
+    let item: any = {};
+    if (type) {
+      // Handles arrays.
+      if (type.isList) {
+        item = [];
+      } else if (type.isNative) {
+        switch (type.typeName) {
+          case "System.Int32":
+          case "System.UInt32":
+          case "System.Int64":
+          case "System.UInt64":
+            item = 0;
+            break;
+          case "System.String":
+            item = "";
+            break;
+          case "System.Boolean":
+            item = false;
+            break;
+        }
+      } else if (type.isEnum) {
+        item = type.values[0];
+      } else {
+        // Init native properties.
+        for (let property of type.properties) {
+          const propertyType = this.getTypeByTypeName(property.typeName);
+          if (!propertyType || !propertyType.isNative && !propertyType.isEnum) continue;
+
+          item[property.name] = this.createInstance(propertyType);
+        }
+      }
+
+      // Handles expression types.
+      if (type.expressionName) {
+        const root: any = {};
+        root[type.expressionName] = item;
+        item = root;
+      }
+    }
+
+    return item;
+  }
 }

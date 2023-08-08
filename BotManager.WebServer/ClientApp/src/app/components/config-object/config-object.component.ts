@@ -90,6 +90,21 @@ export class ConfigObjectComponent {
     return undefined;
   }
 
+  public set valueNode(value: any) {
+    // Only expressions have this $ type wrapper. All other types must be clearly defined.
+    if (!this.types?.isExpressionType(this.valueType)) {
+      this._value = value;
+      return;
+    }
+
+    for (let propertyName in this._value) {
+      if (propertyName.startsWith('$')) {
+        this._value[propertyName] = value;
+        return;
+      }
+    }
+  }
+
   /**
    * Returns the value for the given property for this object.
    */
@@ -113,6 +128,28 @@ export class ConfigObjectComponent {
   }
 
   /**
+   * Sets the value for the given property for this object.
+   */
+  public setPropertyValue(property: TypePropertyInfoDto, value: any) {
+    if (!this._value) return;
+
+    const content = this.valueNode;
+
+    // The property is the only property and its values is stored directly into the content.
+    if (property.isContentProperty) {
+      this.valueNode = value;
+      return;
+    }
+
+    // Gets the property
+    for (let propertyName in content) {
+      if (propertyName.localeCompare(property.name, undefined, { sensitivity: 'accent' }) === 0) {
+        content[propertyName] = value;
+      }
+    }
+  }
+
+  /**
    * Returns the target type for the given property in this object.
    */
   public getPropertyTargetType(property: TypePropertyInfoDto): TypeInfoDto | undefined {
@@ -131,5 +168,21 @@ export class ConfigObjectComponent {
       return 'text';
     }
     return 'number';
+  }
+
+  /**
+   * User action to replace an item in this object.
+   */
+  public clickedSetItem(property: TypePropertyInfoDto) {
+    if (!this.value) return;
+    const propertyType = this.types?.getTypeByTypeName(property.typeName);
+    console.log(propertyType);
+    if (propertyType && !propertyType.isAbstract) {
+      const item = this.types?.createInstance(propertyType);
+      this.setPropertyValue(property, item);
+    } else {
+      // TODO: Type select
+    }
+    // TODO: Item replace
   }
 }

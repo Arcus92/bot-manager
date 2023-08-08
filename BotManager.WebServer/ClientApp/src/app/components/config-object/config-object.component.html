@@ -49,7 +49,7 @@
           <!-- Single value -->
           <ng-container *ngIf="!property.isArray">
             <div class="config-controls">
-              <button>Set</button>
+              <button (click)="clickedSetItem(property)">Set</button>
             </div>
 
             <app-config-object [types]="types" [targetType]="getPropertyTargetType(property)" [value]="getPropertyValue(property)" ></app-config-object>
