@@ -5,14 +5,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import {TypeObjectComponent} from "./type-object/type-object.component";
-import {TypeListComponent} from "./type-list/type-list.component";
+import { HomeComponent } from './pages/home/home.component';
+import {TypeObjectComponent} from "./components/type-object/type-object.component";
+import {TypeListComponent} from "./components/type-list/type-list.component";
+import {TypeEditorComponent} from "./components/type-editor/type-editor.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    TypeEditorComponent,
     TypeObjectComponent,
     TypeListComponent,
   ],

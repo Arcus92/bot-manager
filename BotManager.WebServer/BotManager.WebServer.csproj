@@ -26,9 +26,6 @@
       <ProjectReference Include="..\BotManager.Discord\BotManager.Discord.csproj" />
       <ProjectReference Include="..\BotManager.OpenAi\BotManager.OpenAi.csproj" />
       <ProjectReference Include="..\BotManager.Runtime\BotManager.Runtime.csproj" />
-
-
-
     </ItemGroup>
 
 
