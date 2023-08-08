@@ -47,8 +47,13 @@ export class ConfigEditorComponent {
    * Sets the root target type. This should load the $List type.
    */
   private updateTargetType() {
+    // Ensure the root element is a list. A list element as root is useful, so you can add new expressions easier.
+    if (this._value) {
+      if (!Array.isArray(this._value)) {
+        this._value = [this._value];
+      }
+    }
+
     this.targetType = this.types?.getTypeByExpressionName("$List");
   }
-
-
 }
