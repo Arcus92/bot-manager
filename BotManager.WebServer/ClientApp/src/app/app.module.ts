@@ -9,6 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import {ConfigObjectComponent} from "./components/config-object/config-object.component";
 import {ConfigListComponent} from "./components/config-list/config-list.component";
 import {ConfigEditorComponent} from "./components/config-editor/config-editor.component";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -19,12 +20,13 @@ import {ConfigEditorComponent} from "./components/config-editor/config-editor.co
     ConfigListComponent,
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
+    BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
+    BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-    ])
+      {path: '', component: HomeComponent, pathMatch: 'full'},
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]
