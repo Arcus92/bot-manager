@@ -2,6 +2,7 @@ import {Component, Input} from '@angular/core';
 import {TypeInfoDto} from "../../dto/type-info-dto";
 import {TypePropertyInfoDto} from "../../dto/type-property-info-dto";
 import {ConfigTypes} from "../../controllers/config-types";
+import {FormControl} from "@angular/forms";
 
 /**
  * This component is the editor for an type object.
@@ -15,18 +16,13 @@ export class ConfigObjectComponent {
 
   constructor() { }
 
+  formControl = new FormControl('TEST', []);
+
   /**
    * The type definitions.
    */
   @Input()
   public types?: ConfigTypes;
-
-  /**
-   * Is the node collapsed?
-   */
-  @Input()
-  public collapsed: boolean = true;
-
 
   /**
    * The target type of the value. The value must match this type of a any type inherent from this.

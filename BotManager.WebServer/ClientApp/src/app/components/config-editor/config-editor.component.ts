@@ -1,6 +1,8 @@
 import {Component, Input} from '@angular/core';
 import {TypeInfoDto} from "../../dto/type-info-dto";
 import {ConfigTypes} from "../../controllers/config-types";
+import {NestedTreeControl} from "@angular/cdk/tree";
+import {MatTreeNestedDataSource} from "@angular/material/tree";
 
 @Component({
   selector: 'app-config-editor',

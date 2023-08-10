@@ -1,10 +1,13 @@
-<ng-container *ngFor="let item of value; let i = index">
-  <div class="config-controls">
-    <button (click)="clickedSetItem(i)">Set</button> <button (click)="clickedRemoveItem(i)">Remove</button>
-  </div>
-  <app-config-object [types]="types" [targetType]="targetType" [value]="item"></app-config-object>
-</ng-container>
+<mat-accordion [multi]="true">
+  <ng-container *ngFor="let item of value; let i = index">
+    <app-config-object [types]="types" [targetType]="targetType" [value]="item"></app-config-object>
+    <mat-action-row>
+      <button mat-button color="primary" (click)="clickedSetItem(i)">Set</button>
+      <button mat-button color="warn" (click)="clickedRemoveItem(i)">Remove</button>
+    </mat-action-row>
+  </ng-container>
+</mat-accordion>
 
-<div class="config-box">
-  <button (click)="clickedAddItem()">Add</button>
-</div>
+<mat-action-row>
+  <button mat-button color="primary" (click)="clickedAddItem()">Add</button>
+</mat-action-row>

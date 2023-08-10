@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
@@ -10,6 +10,14 @@ import {ConfigObjectComponent} from "./components/config-object/config-object.co
 import {ConfigListComponent} from "./components/config-list/config-list.component";
 import {ConfigEditorComponent} from "./components/config-editor/config-editor.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatCardModule} from "@angular/material/card";
+import {MatExpansionModule} from "@angular/material/expansion";
+import {MatInputModule} from "@angular/material/input";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
+import {MatButtonModule} from "@angular/material/button";
+import {MatTreeModule} from "@angular/material/tree";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -27,6 +35,15 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     RouterModule.forRoot([
       {path: '', component: HomeComponent, pathMatch: 'full'},
     ]),
+    MatCardModule,
+    MatExpansionModule,
+    MatInputModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatTreeModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

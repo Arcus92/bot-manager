@@ -43,8 +43,6 @@
 .config-type-name,
 .config-property-name {
   font-weight: bold;
-  float: left;
-  clear: left;
 }
 
 .config-property-type {

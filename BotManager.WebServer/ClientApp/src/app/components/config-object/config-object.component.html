@@ -1,63 +1,61 @@
 <!-- Null -->
-<div class="config-box" *ngIf="!valueType">
-  <div class="config-type-name">-/-</div>
-</div>
+<ng-container *ngIf="!valueType">
+  <mat-card-header>
+    <mat-card-title>-/-</mat-card-title>
+  </mat-card-header>
+</ng-container>
 
 <ng-container *ngIf="valueType">
   <!-- Value type -->
-  <div class="config-box config-native-value" *ngIf="valueType.isNative || valueType.isEnum">
-    <!-- Native -->
-    <ng-container *ngIf="valueType.isNative">
-      <input [ngModel]="value" [type]="getNativeInputType()" />
-    </ng-container>
+  <ng-container *ngIf="valueType.isNative || valueType.isEnum">
+      <!-- Native -->
+      <mat-form-field *ngIf="valueType.isNative">
+        <input matInput [ngModel]="value" [type]="getNativeInputType()" [formControl]="formControl" />
+      </mat-form-field>
 
-    <!-- Enum -->
-    <ng-container *ngIf="valueType.isEnum">
-      <select [ngModel]="value">
-        <option *ngFor="let option of valueType.values" [value]="option">{{ option }}</option>
-      </select>
-    </ng-container>
-  </div>
+      <!-- Enum -->
+      <mat-form-field *ngIf="valueType.isEnum">
+        <mat-select [ngModel]="value" [formControl]="formControl">
+          <mat-option *ngFor="let option of valueType.values" [value]="option">{{ option }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+  </ng-container>
 
   <!-- Object / List -->
-  <div class="config-box" *ngIf="!valueType.isNative && !valueType.isEnum">
-    <div class="config-type-name" (click)="collapsed = !collapsed">
-      {{ valueType.expressionName ?? valueType.typeName }}
-    </div>
+  <mat-expansion-panel *ngIf="!valueType.isNative && !valueType.isEnum">
+    <mat-expansion-panel-header>
+      <mat-panel-title>{{ valueType.expressionName ?? valueType.typeName }}</mat-panel-title>
+    </mat-expansion-panel-header>
 
-    <ng-container *ngIf="!collapsed">
-
-      <!-- List -->
-      <ng-container *ngIf="valueType.isList">
-        <app-config-list [types]="types" [value]="value"></app-config-list>
-      </ng-container>
-
-      <!-- Properties -->
-      <ng-container *ngIf="valueType.properties">
-        <ng-container *ngFor="let property of valueType.properties">
-          <div class="config-property-name">
-            {{ property.name }}:
-            <span class="config-property-type">({{ property.typeName }})</span>
-          </div>
-
-          <!-- Array -->
-          <ng-container *ngIf="property.isArray">
-            <app-config-list [types]="types" [targetType]="getPropertyTargetType(property)"
-                           [value]="getPropertyValue(property)"></app-config-list>
-          </ng-container>
-
-          <!-- Single value -->
-          <ng-container *ngIf="!property.isArray">
-            <div class="config-controls">
-              <button (click)="clickedSetItem(property)">Set</button>
-            </div>
-
-            <app-config-object [types]="types" [targetType]="getPropertyTargetType(property)" [value]="getPropertyValue(property)" ></app-config-object>
-          </ng-container>
-
-
-        </ng-container>
-      </ng-container>
+    <!-- List -->
+    <ng-container *ngIf="valueType.isList">
+      <app-config-list [types]="types" [value]="value"></app-config-list>
     </ng-container>
-  </div>
+
+    <!-- Properties -->
+    <mat-accordion *ngIf="valueType.properties" [multi]="true">
+      <mat-expansion-panel *ngFor="let property of valueType.properties">
+        <mat-expansion-panel-header>
+          <mat-panel-title>{{ property.name }}</mat-panel-title>
+          <mat-panel-description>{{ property.typeName }}<span *ngIf="property.isArray">[]</span></mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <!-- Array -->
+        <ng-container *ngIf="property.isArray">
+          <app-config-list [types]="types" [targetType]="getPropertyTargetType(property)"
+                         [value]="getPropertyValue(property)"></app-config-list>
+        </ng-container>
+
+        <!-- Single value -->
+        <ng-container *ngIf="!property.isArray">
+          <!--<div class="config-controls">
+            <button (click)="clickedSetItem(property)">Set</button>
+          </div>-->
+
+          <app-config-object [types]="types" [targetType]="getPropertyTargetType(property)" [value]="getPropertyValue(property)" ></app-config-object>
+        </ng-container>
+
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-expansion-panel>
 </ng-container>
