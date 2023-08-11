@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Docker </title>
+      <title>Build </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Docker ">
+      <meta name="title" content="Build ">
       
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -15,7 +15,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/Arcus92/bot-manager/blob/main/.docfx/articles/docker.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/Arcus92/bot-manager/blob/main/.docfx/articles/build.md/#L1">
   </head>
 
   <script type="module">
@@ -72,64 +72,17 @@
         </div>
 
         <article data-uid="">
-<h1 id="docker">Docker</h1>
+<h1 id="build">Build</h1>
 
-<p>You can use Docker to deploy the BotManager:</p>
-<h2 id="install-the-image">Install the image</h2>
-<p>Download the image from the GitHub repository:</p>
-<pre><code>docker pull ghcr.io/arcus92/bot-manager:latest
+<p>To build this project from source, you need to install <a href="https://dotnet.microsoft.com/en-us/download/dotnet/7.0">.NET 7</a>,
+checkout or download the source code, open the terminal in that directory and enter the following command:</p>
+<pre><code>dotnet publish -c Release
 </code></pre>
-<p>The image contains a pre-installed bot-manager with all necessary requirements.</p>
-<h2 id="create-the-configuration">Create the configuration</h2>
-<p>The BotManager need a configuration to run. Choose a good location to store your config file on your host system.
-For example:</p>
-<pre><code>mkdir ~/bot-manager
-cd ~/bot-manager
-</code></pre>
-<p>Now create your <code>config.json</code> or copy it from an <a href="https://github.com/Arcus92/bot-manager/tree/main/examples">example</a>.</p>
-<h2 id="create-a-container">Create a container</h2>
-<pre><code>docker container create -v ./config.json:/config/run.json --name bot-manager ghcr.io/arcus92/bot-manager:latest
-</code></pre>
-<ul>
-<li><p><code>docker container create</code></p>
-<p>Tells Docker to create a new container.</p>
-</li>
-<li><p><code>-v ./config.json:/config/run.json</code></p>
-<p>Links the <code>config.json</code> from your host system to the container. The config file inside the container must be stored at
-<code>/config/run.json</code>.</p>
-</li>
-<li><p><code>--name bot-manager</code></p>
-<p>Defines a name for your container for easy access later on. Without that Docker would generate a random name.
-You can define your own name as well.</p>
-</li>
-<li><p><code>ghcr.io/arcus92/bot-manager:latest</code></p>
-<p>The name of the image to creates the container. This is the image we downloaded in the previous step. It contains the
-BotManager and all its requirements pre-installed.</p>
-</li>
-</ul>
-<h2 id="start-the-container">Start the container</h2>
-<p>Once the container is created you can start and stop it anytime:</p>
-<pre><code>docker container start bot-manager
-</code></pre>
-<h2 id="stop-the-container">Stop the container</h2>
-<pre><code>docker container stop bot-manager
-</code></pre>
-<h2 id="auto-start-the-container">Auto start the container</h2>
-<p>You can ensure that the container is started automatically with the Docker demon, unless it's manually stopped:</p>
-<pre><code>docker update --restart unless-stopped bot-manager
-</code></pre>
-<p>This will also restart the BotManager if the process ends unexpectedly / crashes.</p>
-<p>You can undo this, so the container don't start with the Docker demon or on a crash:</p>
-<pre><code>docker update --restart no bot-manager
-</code></pre>
-<h2 id="checking-the-logs">Checking the logs</h2>
-<p>Peak inside the container and check the logs if the BotManager doesn't behave:</p>
-<pre><code>docker logs bot-manager
-</code></pre>
+<p>The output is stored in <code>./BotManager/bin/Release/net7.0/publish</code> for the current platform.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Arcus92/bot-manager/blob/main/.docfx/articles/docker.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Arcus92/bot-manager/blob/main/.docfx/articles/build.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

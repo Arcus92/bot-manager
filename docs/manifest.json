@@ -725,6 +725,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.InputAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.InputAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BotManager.Runtime.Logger.yml",
       "output": {
         ".html": {
@@ -792,6 +802,16 @@
         },
         ".json": {
           "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/build.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/build.html"
         }
       },
       "version": ""

@@ -4147,39 +4147,39 @@ references:
   commentId: Overload:BotManager.Runtime.IExpression.ExecuteAsync
   fullName: BotManager.Runtime.IExpression.ExecuteAsync
   nameWithType: IExpression.ExecuteAsync
-- uid: BotManager.Runtime.IExpression.RegisterExpressionType(System.Type)
-  name: RegisterExpressionType(Type)
-  href: api/BotManager.Runtime.IExpression.html#BotManager_Runtime_IExpression_RegisterExpressionType_System_Type_
-  commentId: M:BotManager.Runtime.IExpression.RegisterExpressionType(System.Type)
-  fullName: BotManager.Runtime.IExpression.RegisterExpressionType(System.Type)
-  nameWithType: IExpression.RegisterExpressionType(Type)
-- uid: BotManager.Runtime.IExpression.RegisterExpressionType*
-  name: RegisterExpressionType
-  href: api/BotManager.Runtime.IExpression.html#BotManager_Runtime_IExpression_RegisterExpressionType_
-  commentId: Overload:BotManager.Runtime.IExpression.RegisterExpressionType
-  fullName: BotManager.Runtime.IExpression.RegisterExpressionType
-  nameWithType: IExpression.RegisterExpressionType
-- uid: BotManager.Runtime.IExpression.RegisterExpressionType``1
-  name: RegisterExpressionType<T>()
-  href: api/BotManager.Runtime.IExpression.html#BotManager_Runtime_IExpression_RegisterExpressionType__1
-  commentId: M:BotManager.Runtime.IExpression.RegisterExpressionType``1
-  name.vb: RegisterExpressionType(Of T)()
-  fullName: BotManager.Runtime.IExpression.RegisterExpressionType<T>()
-  fullName.vb: BotManager.Runtime.IExpression.RegisterExpressionType(Of T)()
-  nameWithType: IExpression.RegisterExpressionType<T>()
-  nameWithType.vb: IExpression.RegisterExpressionType(Of T)()
-- uid: BotManager.Runtime.IExpression.RegisterExpressionTypesFromAssembly(System.Reflection.Assembly)
-  name: RegisterExpressionTypesFromAssembly(Assembly)
-  href: api/BotManager.Runtime.IExpression.html#BotManager_Runtime_IExpression_RegisterExpressionTypesFromAssembly_System_Reflection_Assembly_
-  commentId: M:BotManager.Runtime.IExpression.RegisterExpressionTypesFromAssembly(System.Reflection.Assembly)
-  fullName: BotManager.Runtime.IExpression.RegisterExpressionTypesFromAssembly(System.Reflection.Assembly)
-  nameWithType: IExpression.RegisterExpressionTypesFromAssembly(Assembly)
-- uid: BotManager.Runtime.IExpression.RegisterExpressionTypesFromAssembly*
-  name: RegisterExpressionTypesFromAssembly
-  href: api/BotManager.Runtime.IExpression.html#BotManager_Runtime_IExpression_RegisterExpressionTypesFromAssembly_
-  commentId: Overload:BotManager.Runtime.IExpression.RegisterExpressionTypesFromAssembly
-  fullName: BotManager.Runtime.IExpression.RegisterExpressionTypesFromAssembly
-  nameWithType: IExpression.RegisterExpressionTypesFromAssembly
+- uid: BotManager.Runtime.IExpression.RegisterExpression(System.Type)
+  name: RegisterExpression(Type)
+  href: api/BotManager.Runtime.IExpression.html#BotManager_Runtime_IExpression_RegisterExpression_System_Type_
+  commentId: M:BotManager.Runtime.IExpression.RegisterExpression(System.Type)
+  fullName: BotManager.Runtime.IExpression.RegisterExpression(System.Type)
+  nameWithType: IExpression.RegisterExpression(Type)
+- uid: BotManager.Runtime.IExpression.RegisterExpression*
+  name: RegisterExpression
+  href: api/BotManager.Runtime.IExpression.html#BotManager_Runtime_IExpression_RegisterExpression_
+  commentId: Overload:BotManager.Runtime.IExpression.RegisterExpression
+  fullName: BotManager.Runtime.IExpression.RegisterExpression
+  nameWithType: IExpression.RegisterExpression
+- uid: BotManager.Runtime.IExpression.RegisterExpression``1
+  name: RegisterExpression<T>()
+  href: api/BotManager.Runtime.IExpression.html#BotManager_Runtime_IExpression_RegisterExpression__1
+  commentId: M:BotManager.Runtime.IExpression.RegisterExpression``1
+  name.vb: RegisterExpression(Of T)()
+  fullName: BotManager.Runtime.IExpression.RegisterExpression<T>()
+  fullName.vb: BotManager.Runtime.IExpression.RegisterExpression(Of T)()
+  nameWithType: IExpression.RegisterExpression<T>()
+  nameWithType.vb: IExpression.RegisterExpression(Of T)()
+- uid: BotManager.Runtime.IExpression.RegisterExpressionsFromAssembly(System.Reflection.Assembly)
+  name: RegisterExpressionsFromAssembly(Assembly)
+  href: api/BotManager.Runtime.IExpression.html#BotManager_Runtime_IExpression_RegisterExpressionsFromAssembly_System_Reflection_Assembly_
+  commentId: M:BotManager.Runtime.IExpression.RegisterExpressionsFromAssembly(System.Reflection.Assembly)
+  fullName: BotManager.Runtime.IExpression.RegisterExpressionsFromAssembly(System.Reflection.Assembly)
+  nameWithType: IExpression.RegisterExpressionsFromAssembly(Assembly)
+- uid: BotManager.Runtime.IExpression.RegisterExpressionsFromAssembly*
+  name: RegisterExpressionsFromAssembly
+  href: api/BotManager.Runtime.IExpression.html#BotManager_Runtime_IExpression_RegisterExpressionsFromAssembly_
+  commentId: Overload:BotManager.Runtime.IExpression.RegisterExpressionsFromAssembly
+  fullName: BotManager.Runtime.IExpression.RegisterExpressionsFromAssembly
+  nameWithType: IExpression.RegisterExpressionsFromAssembly
 - uid: BotManager.Runtime.IExpression.Serialize(System.IO.Stream,BotManager.Runtime.IExpression)
   name: Serialize(Stream, IExpression)
   href: api/BotManager.Runtime.IExpression.html#BotManager_Runtime_IExpression_Serialize_System_IO_Stream_BotManager_Runtime_IExpression_
@@ -4198,21 +4198,69 @@ references:
   commentId: F:BotManager.Runtime.IExpression.SerializerOptions
   fullName: BotManager.Runtime.IExpression.SerializerOptions
   nameWithType: IExpression.SerializerOptions
-- uid: BotManager.Runtime.IExpression.TryGetExpressionType(System.String,System.Type@)
-  name: TryGetExpressionType(string, out Type)
-  href: api/BotManager.Runtime.IExpression.html#BotManager_Runtime_IExpression_TryGetExpressionType_System_String_System_Type__
-  commentId: M:BotManager.Runtime.IExpression.TryGetExpressionType(System.String,System.Type@)
-  name.vb: TryGetExpressionType(String, Type)
-  fullName: BotManager.Runtime.IExpression.TryGetExpressionType(string, out System.Type)
-  fullName.vb: BotManager.Runtime.IExpression.TryGetExpressionType(String, System.Type)
-  nameWithType: IExpression.TryGetExpressionType(string, out Type)
-  nameWithType.vb: IExpression.TryGetExpressionType(String, Type)
-- uid: BotManager.Runtime.IExpression.TryGetExpressionType*
-  name: TryGetExpressionType
-  href: api/BotManager.Runtime.IExpression.html#BotManager_Runtime_IExpression_TryGetExpressionType_
-  commentId: Overload:BotManager.Runtime.IExpression.TryGetExpressionType
-  fullName: BotManager.Runtime.IExpression.TryGetExpressionType
-  nameWithType: IExpression.TryGetExpressionType
+- uid: BotManager.Runtime.IExpression.TryGetExpressionInfo(System.String,System.Type@)
+  name: TryGetExpressionInfo(string, out Type)
+  href: api/BotManager.Runtime.IExpression.html#BotManager_Runtime_IExpression_TryGetExpressionInfo_System_String_System_Type__
+  commentId: M:BotManager.Runtime.IExpression.TryGetExpressionInfo(System.String,System.Type@)
+  name.vb: TryGetExpressionInfo(String, Type)
+  fullName: BotManager.Runtime.IExpression.TryGetExpressionInfo(string, out System.Type)
+  fullName.vb: BotManager.Runtime.IExpression.TryGetExpressionInfo(String, System.Type)
+  nameWithType: IExpression.TryGetExpressionInfo(string, out Type)
+  nameWithType.vb: IExpression.TryGetExpressionInfo(String, Type)
+- uid: BotManager.Runtime.IExpression.TryGetExpressionInfo*
+  name: TryGetExpressionInfo
+  href: api/BotManager.Runtime.IExpression.html#BotManager_Runtime_IExpression_TryGetExpressionInfo_
+  commentId: Overload:BotManager.Runtime.IExpression.TryGetExpressionInfo
+  fullName: BotManager.Runtime.IExpression.TryGetExpressionInfo
+  nameWithType: IExpression.TryGetExpressionInfo
+- uid: BotManager.Runtime.IExpression.Types
+  name: Types
+  href: api/BotManager.Runtime.IExpression.html#BotManager_Runtime_IExpression_Types
+  commentId: P:BotManager.Runtime.IExpression.Types
+  fullName: BotManager.Runtime.IExpression.Types
+  nameWithType: IExpression.Types
+- uid: BotManager.Runtime.IExpression.Types*
+  name: Types
+  href: api/BotManager.Runtime.IExpression.html#BotManager_Runtime_IExpression_Types_
+  commentId: Overload:BotManager.Runtime.IExpression.Types
+  fullName: BotManager.Runtime.IExpression.Types
+  nameWithType: IExpression.Types
+- uid: BotManager.Runtime.InputAttribute
+  name: InputAttribute
+  href: api/BotManager.Runtime.InputAttribute.html
+  commentId: T:BotManager.Runtime.InputAttribute
+  fullName: BotManager.Runtime.InputAttribute
+  nameWithType: InputAttribute
+- uid: BotManager.Runtime.InputAttribute.#ctor
+  name: InputAttribute()
+  href: api/BotManager.Runtime.InputAttribute.html#BotManager_Runtime_InputAttribute__ctor
+  commentId: M:BotManager.Runtime.InputAttribute.#ctor
+  name.vb: New()
+  fullName: BotManager.Runtime.InputAttribute.InputAttribute()
+  fullName.vb: BotManager.Runtime.InputAttribute.New()
+  nameWithType: InputAttribute.InputAttribute()
+  nameWithType.vb: InputAttribute.New()
+- uid: BotManager.Runtime.InputAttribute.#ctor*
+  name: InputAttribute
+  href: api/BotManager.Runtime.InputAttribute.html#BotManager_Runtime_InputAttribute__ctor_
+  commentId: Overload:BotManager.Runtime.InputAttribute.#ctor
+  name.vb: New
+  fullName: BotManager.Runtime.InputAttribute.InputAttribute
+  fullName.vb: BotManager.Runtime.InputAttribute.New
+  nameWithType: InputAttribute.InputAttribute
+  nameWithType.vb: InputAttribute.New
+- uid: BotManager.Runtime.InputAttribute.ContentProperty
+  name: ContentProperty
+  href: api/BotManager.Runtime.InputAttribute.html#BotManager_Runtime_InputAttribute_ContentProperty
+  commentId: P:BotManager.Runtime.InputAttribute.ContentProperty
+  fullName: BotManager.Runtime.InputAttribute.ContentProperty
+  nameWithType: InputAttribute.ContentProperty
+- uid: BotManager.Runtime.InputAttribute.ContentProperty*
+  name: ContentProperty
+  href: api/BotManager.Runtime.InputAttribute.html#BotManager_Runtime_InputAttribute_ContentProperty_
+  commentId: Overload:BotManager.Runtime.InputAttribute.ContentProperty
+  fullName: BotManager.Runtime.InputAttribute.ContentProperty
+  nameWithType: InputAttribute.ContentProperty
 - uid: BotManager.Runtime.Logger
   name: Logger
   href: api/BotManager.Runtime.Logger.html

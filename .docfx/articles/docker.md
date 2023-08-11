@@ -1,5 +1,7 @@
 # Docker
 
+You can use Docker to deploy the BotManager:
+
 ## Install the image
 
 Download the image from the GitHub repository:

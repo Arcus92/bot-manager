@@ -93,7 +93,8 @@ Use the <a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeCon
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IExpression</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(ExpressionConverter))]
+public interface IExpression</code></pre>
   </div>
 
 
@@ -135,6 +136,42 @@ Use the <a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeCon
     <dd></dd>
   </dl>
 
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="BotManager_Runtime_IExpression_Types_" data-uid="BotManager.Runtime.IExpression.Types*"></a>
+
+  <h3 id="BotManager_Runtime_IExpression_Types" data-uid="BotManager.Runtime.IExpression.Types">
+  Types
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a list of all registered expression types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Type&gt; Types { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>&gt;</dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -267,10 +304,10 @@ return value.</p>
 
 
 
-  <a id="BotManager_Runtime_IExpression_RegisterExpressionType_" data-uid="BotManager.Runtime.IExpression.RegisterExpressionType*"></a>
+  <a id="BotManager_Runtime_IExpression_RegisterExpression_" data-uid="BotManager.Runtime.IExpression.RegisterExpression*"></a>
 
-  <h3 id="BotManager_Runtime_IExpression_RegisterExpressionType_System_Type_" data-uid="BotManager.Runtime.IExpression.RegisterExpressionType(System.Type)">
-  RegisterExpressionType(Type)
+  <h3 id="BotManager_Runtime_IExpression_RegisterExpression_System_Type_" data-uid="BotManager.Runtime.IExpression.RegisterExpression(System.Type)">
+  RegisterExpression(Type)
   
   </h3>
 
@@ -279,13 +316,14 @@ return value.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void RegisterExpressionType(Type type)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void RegisterExpression(Type type)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
-    <dd></dd>
+    <dd><p>The expression type to register.</p>
+</dd>
   </dl>
 
 
@@ -299,10 +337,10 @@ return value.</p>
 
 
 
-  <a id="BotManager_Runtime_IExpression_RegisterExpressionType_" data-uid="BotManager.Runtime.IExpression.RegisterExpressionType*"></a>
+  <a id="BotManager_Runtime_IExpression_RegisterExpression_" data-uid="BotManager.Runtime.IExpression.RegisterExpression*"></a>
 
-  <h3 id="BotManager_Runtime_IExpression_RegisterExpressionType__1" data-uid="BotManager.Runtime.IExpression.RegisterExpressionType``1">
-  RegisterExpressionType&lt;T&gt;()
+  <h3 id="BotManager_Runtime_IExpression_RegisterExpression__1" data-uid="BotManager.Runtime.IExpression.RegisterExpression``1">
+  RegisterExpression&lt;T&gt;()
   
   </h3>
 
@@ -311,7 +349,7 @@ return value.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void RegisterExpressionType&lt;T&gt;() where T : IExpression</code></pre>
+    <pre><code class="lang-csharp hljs">public static void RegisterExpression&lt;T&gt;() where T : IExpression</code></pre>
   </div>
 
 
@@ -319,7 +357,8 @@ return value.</p>
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>The expression type to register.</p>
+</dd>
   </dl>
 
 
@@ -331,10 +370,10 @@ return value.</p>
 
 
 
-  <a id="BotManager_Runtime_IExpression_RegisterExpressionTypesFromAssembly_" data-uid="BotManager.Runtime.IExpression.RegisterExpressionTypesFromAssembly*"></a>
+  <a id="BotManager_Runtime_IExpression_RegisterExpressionsFromAssembly_" data-uid="BotManager.Runtime.IExpression.RegisterExpressionsFromAssembly*"></a>
 
-  <h3 id="BotManager_Runtime_IExpression_RegisterExpressionTypesFromAssembly_System_Reflection_Assembly_" data-uid="BotManager.Runtime.IExpression.RegisterExpressionTypesFromAssembly(System.Reflection.Assembly)">
-  RegisterExpressionTypesFromAssembly(Assembly)
+  <h3 id="BotManager_Runtime_IExpression_RegisterExpressionsFromAssembly_System_Reflection_Assembly_" data-uid="BotManager.Runtime.IExpression.RegisterExpressionsFromAssembly(System.Reflection.Assembly)">
+  RegisterExpressionsFromAssembly(Assembly)
   
   </h3>
 
@@ -343,13 +382,14 @@ return value.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void RegisterExpressionTypesFromAssembly(Assembly assembly)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void RegisterExpressionsFromAssembly(Assembly assembly)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>assembly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
-    <dd></dd>
+    <dd><p>The assembly to scan for expressions.</p>
+</dd>
   </dl>
 
 
@@ -399,19 +439,19 @@ return value.</p>
 
 
 
-  <a id="BotManager_Runtime_IExpression_TryGetExpressionType_" data-uid="BotManager.Runtime.IExpression.TryGetExpressionType*"></a>
+  <a id="BotManager_Runtime_IExpression_TryGetExpressionInfo_" data-uid="BotManager.Runtime.IExpression.TryGetExpressionInfo*"></a>
 
-  <h3 id="BotManager_Runtime_IExpression_TryGetExpressionType_System_String_System_Type__" data-uid="BotManager.Runtime.IExpression.TryGetExpressionType(System.String,System.Type@)">
-  TryGetExpressionType(string, out Type)
+  <h3 id="BotManager_Runtime_IExpression_TryGetExpressionInfo_System_String_System_Type__" data-uid="BotManager.Runtime.IExpression.TryGetExpressionInfo(System.String,System.Type@)">
+  TryGetExpressionInfo(string, out Type)
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Tries to gets a registered type by it's name.</p>
+  <div class="markdown level1 summary"><p>Tries to gets a registered schema by it's name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool TryGetExpressionType(string typeName, out Type type)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool TryGetExpressionInfo(string typeName, out Type type)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>

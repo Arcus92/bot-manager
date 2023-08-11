@@ -191,7 +191,8 @@ Returns: <code>null</code>.
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(EnumConverter&lt;ActivityType&gt;))]
+    <pre><code class="lang-csharp hljs">[Input]
+[JsonConverter(typeof(EnumConverter&lt;ActivityType&gt;))]
 public ActivityType Activity { get; set; }</code></pre>
   </div>
 
@@ -224,7 +225,8 @@ public ActivityType Activity { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IExpression? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Input]
+public IExpression? Name { get; set; }</code></pre>
   </div>
 
 
@@ -256,7 +258,8 @@ public ActivityType Activity { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IExpression? StreamUrl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Input]
+public IExpression? StreamUrl { get; set; }</code></pre>
   </div>
 
 

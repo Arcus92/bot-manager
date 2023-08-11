@@ -225,7 +225,8 @@ public DiscordSocketClient Client { get; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    <pre><code class="lang-csharp hljs">[Input]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
 public DiscordSlashCommand[]? Commands { get; set; }</code></pre>
   </div>
 
@@ -258,7 +259,8 @@ public DiscordSlashCommand[]? Commands { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IExpression? Token { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Input]
+public IExpression? Token { get; set; }</code></pre>
   </div>
 
 
@@ -290,7 +292,8 @@ public DiscordSlashCommand[]? Commands { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(EnumConverter&lt;TokenType&gt;))]
+    <pre><code class="lang-csharp hljs">[Input]
+[JsonConverter(typeof(EnumConverter&lt;TokenType&gt;))]
 public TokenType TokenType { get; set; }</code></pre>
   </div>
 
