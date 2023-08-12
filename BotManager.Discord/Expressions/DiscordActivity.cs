@@ -16,19 +16,16 @@ public sealed class DiscordActivity : IExpression
     /// <summary>
     /// Gets and sets the expression to resolve the activity name.
     /// </summary>
-    [Input]
     public IExpression? Name { get; set; }
     
     /// <summary>
     /// Gets and sets the expression to resolve the stream url of that activity.
     /// </summary>
-    [Input]
     public IExpression? StreamUrl { get; set; }
 
     /// <summary>
     /// Gets and sets the activity type. See <see cref="ActivityType"/>.
     /// </summary>
-    [Input]
     [JsonConverter(typeof(EnumConverter<ActivityType>))]
     public ActivityType Activity { get; set; }
 

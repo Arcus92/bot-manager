@@ -32,7 +32,7 @@ public sealed class String : IExpression
     /// <summary>
     /// Gets and sets the value.
     /// </summary>
-    [Input(ContentProperty = true)]
+    [JsonRootProperty]
     public string Value { get; set; }
 
     /// <inheritdoc />

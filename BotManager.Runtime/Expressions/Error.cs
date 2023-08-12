@@ -31,7 +31,7 @@ public class Error : IExpression
     /// <summary>
     /// Gets and sets the expression to resolve the message to log as error.
     /// </summary>
-    [Input(ContentProperty = true)]
+    [JsonRootProperty]
     public IExpression? Message { get; set; }
 
     /// <inheritdoc />

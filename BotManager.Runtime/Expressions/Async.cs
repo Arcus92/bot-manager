@@ -31,7 +31,7 @@ public sealed class Async : IExpression
     /// <summary>
     /// Gets and sets the expression
     /// </summary>
-    [Input]
+    [JsonRootProperty]
     public IExpression? Expression { get; set; }
 
     /// <inheritdoc />

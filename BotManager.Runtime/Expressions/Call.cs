@@ -34,7 +34,7 @@ public class Call : IExpression
     /// <summary>
     /// Gets and sets the name of the function to call.
     /// </summary>
-    [Input(ContentProperty = true)]
+    [JsonRootProperty]
     public string Name { get; set; }
     
     /// <inheritdoc />

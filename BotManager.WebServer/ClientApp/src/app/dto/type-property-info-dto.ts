@@ -1,6 +1,6 @@
 export interface TypePropertyInfoDto {
   name: string,
   typeName: string,
-  isContentProperty: boolean,
+  isRootProperty: boolean,
   isArray: boolean,
 }

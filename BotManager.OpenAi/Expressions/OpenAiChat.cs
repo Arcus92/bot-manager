@@ -20,7 +20,6 @@ public sealed class OpenAiChat : IExpression
     /// input. This prioritizes your ruleset over the user input and protects against prompt injection.
     /// </para>
     /// </summary>
-    [Input]
     public OpenAiChatMessage[]? Messages { get; set; }
 
     /// <inheritdoc />

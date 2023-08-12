@@ -31,7 +31,7 @@ public sealed class UInt64 : IExpression
     /// <summary>
     /// Gets and sets the value.
     /// </summary>
-    [Input(ContentProperty = true)]
+    [JsonRootProperty]
     public ulong Value { get; set; }
 
     /// <inheritdoc />

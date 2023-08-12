@@ -30,13 +30,11 @@ public sealed class Set : IExpression
     /// <summary>
     /// Gets and sets the name of the variable to set.
     /// </summary>
-    [Input]
     public string Name { get; set; }
 
     /// <summary>
     /// Gets and sets the value to set.
     /// </summary>
-    [Input]
     public IExpression? Value { get; set; }
 
     /// <inheritdoc />

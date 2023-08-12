@@ -12,19 +12,16 @@ public sealed class If : IExpression
     /// <summary>
     /// Gets and sets the condition to check.
     /// </summary>
-    [Input]
     public IExpression? Condition { get; set; }
     
     /// <summary>
     /// Gets and sets the operation if the condition is true.
     /// </summary>
-    [Input]
     public IExpression? Then { get; set; }
     
     /// <summary>
     /// Gets and sets the operation if the condition is false.
     /// </summary>
-    [Input]
     public IExpression? Else { get; set; }
 
     /// <inheritdoc />

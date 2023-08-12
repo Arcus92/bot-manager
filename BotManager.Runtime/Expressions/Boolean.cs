@@ -31,7 +31,7 @@ public sealed class Boolean : IExpression
     /// <summary>
     /// Gets and sets the value.
     /// </summary>
-    [Input(ContentProperty = true)]
+    [JsonRootProperty]
     public bool Value { get; set; }
 
     /// <inheritdoc />

@@ -32,7 +32,7 @@ public sealed class Env : IExpression
     /// <summary>
     /// Gets and sets the name of the variable
     /// </summary>
-    [Input(ContentProperty = true)]
+    [JsonRootProperty]
     public string Name { get; set; }
 
     /// <inheritdoc />

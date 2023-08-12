@@ -21,7 +21,6 @@ public sealed class OpenAiInit : IExpression
     /// <summary>
     /// Gets and sets the OpenAI api key.
     /// </summary>
-    [Input]
     public IExpression? ApiKey { get; set; }
 
     #endregion Config

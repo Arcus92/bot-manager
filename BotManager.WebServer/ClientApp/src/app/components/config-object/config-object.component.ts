@@ -110,7 +110,7 @@ export class ConfigObjectComponent {
     const content = this.valueNode;
 
     // The property is the only property and its values is stored directly into the content.
-    if (property.isContentProperty)
+    if (property.isRootProperty)
       return content;
 
     // Gets the property
@@ -132,7 +132,7 @@ export class ConfigObjectComponent {
     const content = this.valueNode;
 
     // The property is the only property and its values is stored directly into the content.
-    if (property.isContentProperty) {
+    if (property.isRootProperty) {
       this.valueNode = value;
       return;
     }

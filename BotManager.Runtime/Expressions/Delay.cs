@@ -31,7 +31,7 @@ public class Delay : IExpression
     /// <summary>
     /// Gets and sets the expression to resolve the number of milliseconds to wait.
     /// </summary>
-    [Input(ContentProperty = true)]
+    [JsonRootProperty]
     public IExpression? Milliseconds { get; set; }
 
     /// <inheritdoc />

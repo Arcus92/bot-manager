@@ -11,13 +11,11 @@ public class Function : IExpression
     /// <summary>
     /// Gets and sets the name of the function.
     /// </summary>
-    [Input]
     public string? Name { get; set; }
 
     /// <summary>
     /// Gets and sets the expression that is executed when the stored function is called.
     /// </summary>
-    [Input]
     public IExpression? Action { get; set; }
 
     /// <inheritdoc />

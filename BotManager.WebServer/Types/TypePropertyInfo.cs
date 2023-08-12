@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Reflection;
 using System.Text.Json.Serialization;
 using BotManager.Runtime;
@@ -14,19 +15,17 @@ public class TypePropertyInfo
     /// Creates the expression parameter info by the given property info.
     /// </summary>
     /// <param name="propertyInfo">The property info.</param>
-    /// <param name="attribute">The input attribute.</param>
-    public TypePropertyInfo(PropertyInfo propertyInfo, InputAttribute attribute)
+    public TypePropertyInfo(PropertyInfo propertyInfo)
     {
         _propertyInfo = propertyInfo;
         var originalType = _propertyInfo.PropertyType;
         Type = GetRawType(originalType);
         Name = _propertyInfo.Name;
         TypeName = Type.FullName;
-
-        // Check if this is a content property.
-        if (attribute.ContentProperty)
-            IsContentProperty = true;
-
+        
+        // Checks if this is a root property.
+        IsRootProperty = propertyInfo.GetCustomAttribute<JsonRootPropertyAttribute>() is not null;
+        
         // Checks if this is an array.
         IsArray = originalType.IsArray;
     }
@@ -56,7 +55,7 @@ public class TypePropertyInfo
     /// The property is written directly to the parent JSON object.
     /// This means there is no property map. The parent object can only have one property.
     /// </summary>
-    public bool IsContentProperty { get; }
+    public bool IsRootProperty { get; }
     
     /// <summary>
     /// Gets if the property is an array.
@@ -96,16 +95,19 @@ public class TypePropertyInfo
     /// <returns></returns>
     public static TypePropertyInfo[] GetFromType(Type type)
     {
-        var list = new List<TypePropertyInfo>();
-
+        // Lists don't have any properties.
+        if (type.IsAssignableTo(typeof(IList)))
+            return Array.Empty<TypePropertyInfo>();
+        
         // Collects all properties with the expression property attribute attribute
+        var list = new List<TypePropertyInfo>();
         foreach (var property in type.GetProperties(BindingFlags.Public | BindingFlags.Instance))
         {
-            var attribute = property.GetCustomAttribute<InputAttribute>();
-            if (attribute is null)
+            var jsonIgnore = property.GetCustomAttribute<JsonIgnoreAttribute>();
+            if (jsonIgnore is not null && jsonIgnore.Condition == JsonIgnoreCondition.Always)
                 continue;
             
-            list.Add(new TypePropertyInfo(property, attribute));
+            list.Add(new TypePropertyInfo(property));
         }
         
         return list.ToArray();

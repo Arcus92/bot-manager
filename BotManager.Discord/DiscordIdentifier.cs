@@ -59,7 +59,7 @@ public readonly struct DiscordIdentifier
     /// <summary>
     /// Gets the name. If this is <c>null</c>, the <see cref="Id"/> is used instead.
     /// </summary>
-    [Input(ContentProperty = true)]
+    [JsonRootProperty]
     public string? Name { get; }
 
     /// <summary>
