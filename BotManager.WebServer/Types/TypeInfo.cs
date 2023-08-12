@@ -6,9 +6,7 @@ namespace BotManager.WebServer.Types;
 
 /// <summary>
 /// The type info is used to translate the C# types to the JavaScript world.
-/// Most types are <see cref="IExpression"/>s but it also supports other custom classes. It is important to add the
-/// <see cref="InputAttribute"/> to all properties you wand to expose with <see cref="Properties"/>. Other properties
-/// are ignored.
+/// Most types are <see cref="IExpression"/>s but it also supports other custom classes.
 /// </summary>
 [Serializable]
 public class TypeInfo
