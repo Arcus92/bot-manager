@@ -3412,6 +3412,69 @@ references:
   commentId: Overload:BotManager.Runtime.Expressions.If.Then
   fullName: BotManager.Runtime.Expressions.If.Then
   nameWithType: If.Then
+- uid: BotManager.Runtime.Expressions.In
+  name: In
+  href: api/BotManager.Runtime.Expressions.In.html
+  commentId: T:BotManager.Runtime.Expressions.In
+  fullName: BotManager.Runtime.Expressions.In
+  nameWithType: In
+- uid: BotManager.Runtime.Expressions.In.#ctor
+  name: In()
+  href: api/BotManager.Runtime.Expressions.In.html#BotManager_Runtime_Expressions_In__ctor
+  commentId: M:BotManager.Runtime.Expressions.In.#ctor
+  name.vb: New()
+  fullName: BotManager.Runtime.Expressions.In.In()
+  fullName.vb: BotManager.Runtime.Expressions.In.New()
+  nameWithType: In.In()
+  nameWithType.vb: In.New()
+- uid: BotManager.Runtime.Expressions.In.#ctor*
+  name: In
+  href: api/BotManager.Runtime.Expressions.In.html#BotManager_Runtime_Expressions_In__ctor_
+  commentId: Overload:BotManager.Runtime.Expressions.In.#ctor
+  name.vb: New
+  fullName: BotManager.Runtime.Expressions.In.In
+  fullName.vb: BotManager.Runtime.Expressions.In.New
+  nameWithType: In.In
+  nameWithType.vb: In.New
+- uid: BotManager.Runtime.Expressions.In.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)
+  name: ExecuteAsync(RuntimeContext, Type?)
+  href: api/BotManager.Runtime.Expressions.In.html#BotManager_Runtime_Expressions_In_ExecuteAsync_BotManager_Runtime_RuntimeContext_System_Type_
+  commentId: M:BotManager.Runtime.Expressions.In.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)
+  name.vb: ExecuteAsync(RuntimeContext, Type)
+  fullName: BotManager.Runtime.Expressions.In.ExecuteAsync(BotManager.Runtime.RuntimeContext, System.Type?)
+  fullName.vb: BotManager.Runtime.Expressions.In.ExecuteAsync(BotManager.Runtime.RuntimeContext, System.Type)
+  nameWithType: In.ExecuteAsync(RuntimeContext, Type?)
+  nameWithType.vb: In.ExecuteAsync(RuntimeContext, Type)
+- uid: BotManager.Runtime.Expressions.In.ExecuteAsync*
+  name: ExecuteAsync
+  href: api/BotManager.Runtime.Expressions.In.html#BotManager_Runtime_Expressions_In_ExecuteAsync_
+  commentId: Overload:BotManager.Runtime.Expressions.In.ExecuteAsync
+  fullName: BotManager.Runtime.Expressions.In.ExecuteAsync
+  nameWithType: In.ExecuteAsync
+- uid: BotManager.Runtime.Expressions.In.List
+  name: List
+  href: api/BotManager.Runtime.Expressions.In.html#BotManager_Runtime_Expressions_In_List
+  commentId: P:BotManager.Runtime.Expressions.In.List
+  fullName: BotManager.Runtime.Expressions.In.List
+  nameWithType: In.List
+- uid: BotManager.Runtime.Expressions.In.List*
+  name: List
+  href: api/BotManager.Runtime.Expressions.In.html#BotManager_Runtime_Expressions_In_List_
+  commentId: Overload:BotManager.Runtime.Expressions.In.List
+  fullName: BotManager.Runtime.Expressions.In.List
+  nameWithType: In.List
+- uid: BotManager.Runtime.Expressions.In.Value
+  name: Value
+  href: api/BotManager.Runtime.Expressions.In.html#BotManager_Runtime_Expressions_In_Value
+  commentId: P:BotManager.Runtime.Expressions.In.Value
+  fullName: BotManager.Runtime.Expressions.In.Value
+  nameWithType: In.Value
+- uid: BotManager.Runtime.Expressions.In.Value*
+  name: Value
+  href: api/BotManager.Runtime.Expressions.In.html#BotManager_Runtime_Expressions_In_Value_
+  commentId: Overload:BotManager.Runtime.Expressions.In.Value
+  fullName: BotManager.Runtime.Expressions.In.Value
+  nameWithType: In.Value
 - uid: BotManager.Runtime.Expressions.Include
   name: Include
   href: api/BotManager.Runtime.Expressions.Include.html
@@ -4261,6 +4324,30 @@ references:
   commentId: Overload:BotManager.Runtime.InputAttribute.ContentProperty
   fullName: BotManager.Runtime.InputAttribute.ContentProperty
   nameWithType: InputAttribute.ContentProperty
+- uid: BotManager.Runtime.JsonRootPropertyAttribute
+  name: JsonRootPropertyAttribute
+  href: api/BotManager.Runtime.JsonRootPropertyAttribute.html
+  commentId: T:BotManager.Runtime.JsonRootPropertyAttribute
+  fullName: BotManager.Runtime.JsonRootPropertyAttribute
+  nameWithType: JsonRootPropertyAttribute
+- uid: BotManager.Runtime.JsonRootPropertyAttribute.#ctor
+  name: JsonRootPropertyAttribute()
+  href: api/BotManager.Runtime.JsonRootPropertyAttribute.html#BotManager_Runtime_JsonRootPropertyAttribute__ctor
+  commentId: M:BotManager.Runtime.JsonRootPropertyAttribute.#ctor
+  name.vb: New()
+  fullName: BotManager.Runtime.JsonRootPropertyAttribute.JsonRootPropertyAttribute()
+  fullName.vb: BotManager.Runtime.JsonRootPropertyAttribute.New()
+  nameWithType: JsonRootPropertyAttribute.JsonRootPropertyAttribute()
+  nameWithType.vb: JsonRootPropertyAttribute.New()
+- uid: BotManager.Runtime.JsonRootPropertyAttribute.#ctor*
+  name: JsonRootPropertyAttribute
+  href: api/BotManager.Runtime.JsonRootPropertyAttribute.html#BotManager_Runtime_JsonRootPropertyAttribute__ctor_
+  commentId: Overload:BotManager.Runtime.JsonRootPropertyAttribute.#ctor
+  name.vb: New
+  fullName: BotManager.Runtime.JsonRootPropertyAttribute.JsonRootPropertyAttribute
+  fullName.vb: BotManager.Runtime.JsonRootPropertyAttribute.New
+  nameWithType: JsonRootPropertyAttribute.JsonRootPropertyAttribute
+  nameWithType.vb: JsonRootPropertyAttribute.New
 - uid: BotManager.Runtime.Logger
   name: Logger
   href: api/BotManager.Runtime.Logger.html

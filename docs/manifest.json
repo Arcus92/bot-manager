@@ -585,6 +585,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.In.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.In.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BotManager.Runtime.Expressions.Include.yml",
       "output": {
         ".html": {
@@ -729,6 +739,16 @@
       "output": {
         ".html": {
           "relative_path": "api/BotManager.Runtime.InputAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.JsonRootPropertyAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.JsonRootPropertyAttribute.html"
         }
       },
       "version": ""

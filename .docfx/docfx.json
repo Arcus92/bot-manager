@@ -5,7 +5,7 @@
         {
           "src": "../",
           "files": [
-            "BotManager/bin/**/BotManager*.dll"
+            "BotManager/bin/Release/net7.0/BotManager*.dll"
           ]
         }
       ],

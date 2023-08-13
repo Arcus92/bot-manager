@@ -85,8 +85,11 @@
 Classes
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="BotManager.Runtime.InputAttribute.html">InputAttribute</a></dt>
-      <dd><p>Defines a public property for an <a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a>.</p>
+      <dt><a class="xref" href="BotManager.Runtime.JsonRootPropertyAttribute.html">JsonRootPropertyAttribute</a></dt>
+      <dd><p>Add this attribute to a property in your serializable class, if the property is it's only property .
+If this is present in a class, the json object with the property list is skipped and only the value of this
+property is returned.
+You will still need a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter">JsonConverter</a>.</p>
 </dd>
     </dl>
     <dl class="jumplist">

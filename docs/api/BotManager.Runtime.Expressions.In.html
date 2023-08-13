@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class Call
+      <title>Class In
  </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class Call
+      <meta name="title" content="Class In
  ">
       
       <link rel="icon" href="../favicon.ico">
@@ -73,12 +73,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="BotManager.Runtime.Expressions.Call">
+        <article data-uid="BotManager.Runtime.Expressions.In">
 
 
 
-  <h1 id="BotManager_Runtime_Expressions_Call" data-uid="BotManager.Runtime.Expressions.Call" class="text-break">
-    Class Call
+  <h1 id="BotManager_Runtime_Expressions_In" data-uid="BotManager.Runtime.Expressions.In" class="text-break">
+    Class In
   
   </h1>
 
@@ -87,16 +87,15 @@
   <dl><dt>Assembly</dt><dd>BotManager.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Calls a registered function and returns it's value. Use <a class="xref" href="BotManager.Runtime.Expressions.Function.html">Function</a> to register a function beforehand.</p>
+  <div class="markdown summary"><p>Returns a boolean value if <a class="xref" href="BotManager.Runtime.Expressions.In.html#BotManager_Runtime_Expressions_In_Value">Value</a> is equal to at least one item in <a class="xref" href="BotManager.Runtime.Expressions.In.html#BotManager_Runtime_Expressions_In_List">List</a>.</p>
 <p>
-Returns: Return value of the executed function.
+Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value.
 </p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(CallConverter))]
-public class Call : IExpression</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class In : IExpression</code></pre>
   </div>
 
 
@@ -106,7 +105,7 @@ public class Call : IExpression</code></pre>
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">Call</span></div>
+      <div><span class="xref">In</span></div>
     </dd>
   </dl>
 
@@ -123,9 +122,6 @@ public class Call : IExpression</code></pre>
     <dd>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -153,54 +149,20 @@ public class Call : IExpression</code></pre>
 </h2>
 
 
-  <a id="BotManager_Runtime_Expressions_Call__ctor_" data-uid="BotManager.Runtime.Expressions.Call.#ctor*"></a>
+  <a id="BotManager_Runtime_Expressions_In__ctor_" data-uid="BotManager.Runtime.Expressions.In.#ctor*"></a>
 
-  <h3 id="BotManager_Runtime_Expressions_Call__ctor" data-uid="BotManager.Runtime.Expressions.Call.#ctor">
-  Call()
+  <h3 id="BotManager_Runtime_Expressions_In__ctor" data-uid="BotManager.Runtime.Expressions.In.#ctor">
+  In()
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Empty constructor for serialization.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Call()</code></pre>
+    <pre><code class="lang-csharp hljs">public In()</code></pre>
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="BotManager_Runtime_Expressions_Call__ctor_" data-uid="BotManager.Runtime.Expressions.Call.#ctor*"></a>
-
-  <h3 id="BotManager_Runtime_Expressions_Call__ctor_System_String_" data-uid="BotManager.Runtime.Expressions.Call.#ctor(System.String)">
-  Call(string)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Creates an expression that calls the registered function with the <code class="paramref">name</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Call(string name)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the function.</p>
-</dd>
-  </dl>
 
 
 
@@ -217,20 +179,19 @@ public class Call : IExpression</code></pre>
 </h2>
 
 
-  <a id="BotManager_Runtime_Expressions_Call_Name_" data-uid="BotManager.Runtime.Expressions.Call.Name*"></a>
+  <a id="BotManager_Runtime_Expressions_In_List_" data-uid="BotManager.Runtime.Expressions.In.List*"></a>
 
-  <h3 id="BotManager_Runtime_Expressions_Call_Name" data-uid="BotManager.Runtime.Expressions.Call.Name">
-  Name
+  <h3 id="BotManager_Runtime_Expressions_In_List" data-uid="BotManager.Runtime.Expressions.In.List">
+  List
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets and sets the name of the function to call.</p>
+  <div class="markdown level1 summary"><p>Gets the list to compare <a class="xref" href="BotManager.Runtime.Expressions.In.html#BotManager_Runtime_Expressions_In_Value">Value</a> with.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonRootProperty]
-public string Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List? List { get; set; }</code></pre>
   </div>
 
 
@@ -239,7 +200,39 @@ public string Name { get; set; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="BotManager.Runtime.Expressions.List.html">List</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BotManager_Runtime_Expressions_In_Value_" data-uid="BotManager.Runtime.Expressions.In.Value*"></a>
+
+  <h3 id="BotManager_Runtime_Expressions_In_Value" data-uid="BotManager.Runtime.Expressions.In.Value">
+  Value
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the value to check.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IExpression? Value { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a></dt>
     <dd></dd>
   </dl>
 
@@ -254,9 +247,9 @@ public string Name { get; set; }</code></pre>
 </h2>
 
 
-  <a id="BotManager_Runtime_Expressions_Call_ExecuteAsync_" data-uid="BotManager.Runtime.Expressions.Call.ExecuteAsync*"></a>
+  <a id="BotManager_Runtime_Expressions_In_ExecuteAsync_" data-uid="BotManager.Runtime.Expressions.In.ExecuteAsync*"></a>
 
-  <h3 id="BotManager_Runtime_Expressions_Call_ExecuteAsync_BotManager_Runtime_RuntimeContext_System_Type_" data-uid="BotManager.Runtime.Expressions.Call.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)">
+  <h3 id="BotManager_Runtime_Expressions_In_ExecuteAsync_BotManager_Runtime_RuntimeContext_System_Type_" data-uid="BotManager.Runtime.Expressions.In.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)">
   ExecuteAsync(RuntimeContext, Type?)
   
   </h3>
