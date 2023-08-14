@@ -4,10 +4,22 @@ using BotManager.Runtime.Converters;
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
-/// A static <see cref="bool"/> value.
 /// <para>
-/// Returns: <see cref="bool"/> value.
+/// A static <see cref="bool"/> value.
 /// </para>
+/// <para>
+/// Returns type is <see cref="bool"/>.
+/// </para>
+/// <example>
+/// This json example returns <c>true</c>:
+/// <code>
+/// { "$Boolean": true }
+/// </code>
+/// Or even shorter:
+/// <code>
+/// true
+/// </code>
+/// </example>
 /// </summary>
 [JsonConverter(typeof(BooleanConverter))]
 public sealed class Boolean : IExpression

@@ -4,11 +4,19 @@ using BotManager.Runtime.Converters;
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
+/// <para>
 /// Includes and executes an external json config.
 /// The included file is only read and parsed once on the first execution.
-/// <para>
-/// Returns: Return value that is returned by the executed file.
 /// </para>
+/// <para>
+/// Returns the value that is returned by the executed file.
+/// </para>
+/// <example>
+/// This json example executes the expression in the "inc.json" file and returns its value:
+/// <code>
+/// { "$Include": "inc.json" }
+/// </code>
+/// </example>
 /// </summary>
 [JsonConverter(typeof(IncludeConverter))]
 public class Include : IExpression

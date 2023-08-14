@@ -1,10 +1,22 @@
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
-/// Returns a boolean value if <see cref="A"/> and <see cref="B"/> are equal.
 /// <para>
-/// Returns: <see cref="bool"/> value.
+/// Returns a boolean value if <see cref="A"/> and <see cref="B"/> are equal.
 /// </para>
+/// <para>
+/// Returns type os <see cref="bool"/>.
+/// </para>
+/// <example>
+/// This json example returns <c>true</c>:
+/// <code>
+/// { "$Equals": { "A": 10, "B": 10 } }
+/// </code>
+/// This json example returns <c>false</c>:
+/// <code>
+/// { "$Equals": { "A": 10, "B": 100 } }
+/// </code>
+/// </example>
 /// </summary>
 public sealed class Equals : IExpression
 {

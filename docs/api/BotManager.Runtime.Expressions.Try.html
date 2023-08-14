@@ -87,12 +87,18 @@
   <dl><dt>Assembly</dt><dd>BotManager.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Trys to execute the <a class="xref" href="BotManager.Runtime.Expressions.Try.html#BotManager_Runtime_Expressions_Try_Expression">Expression</a> and handles any exceptions. If an exception is throw while executing
+  <div class="markdown summary"><p>
+Trys to execute the <a class="xref" href="BotManager.Runtime.Expressions.Try.html#BotManager_Runtime_Expressions_Try_Expression">Expression</a> and handles any exceptions. If an exception is throw while executing
 <a class="xref" href="BotManager.Runtime.Expressions.Try.html#BotManager_Runtime_Expressions_Try_Expression">Expression</a>, it will write the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> to 'exception' in the current
-<a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeContext</a> and then run the <a class="xref" href="BotManager.Runtime.Expressions.Try.html#BotManager_Runtime_Expressions_Try_Catch">Catch</a> expression.</p>
-<p>
-Returns: Return value of the executed branch.
+<a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeContext</a> and then run the <a class="xref" href="BotManager.Runtime.Expressions.Try.html#BotManager_Runtime_Expressions_Try_Catch">Catch</a> expression.
 </p>
+<p>
+Returns the value of the executed branch.
+</p>
+<example>
+This json example returns <code>10</code>:
+<pre><code class="lang-csharp">{ "$Try": { "Expression": 10, "Catch": -10 } }</code></pre>
+</example>
 </div>
   <div class="markdown conceptual"></div>
 

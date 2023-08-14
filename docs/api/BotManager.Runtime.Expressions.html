@@ -86,217 +86,391 @@ Classes
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.And.html">And</a></dt>
-      <dd><p>Logical and operator. It returns <code>true</code> if all expression in this list are <code>true</code> or if the list is empty.
-Execution is stopped, once the first entry returns <code>false</code>.</p>
-<p>
-Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value.
+      <dd><p>
+Logical and operator. It returns <code>true</code> if all expression in this list are <code>true</code> or if the list is empty.
+Execution is stopped, once the first entry returns <code>false</code>.
 </p>
+<p>
+Return type is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>.
+</p>
+<example>
+This json example returns <code>true</code>:
+<pre><code class="lang-csharp">{ "$And": [ true, true ] }</code></pre>
+This json example returns <code>false</code>:
+<pre><code class="lang-csharp">{ "$And": [ true, false ] }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Async.html">Async</a></dt>
-      <dd><p>Runs the <a class="xref" href="BotManager.Runtime.Expressions.Async.html#BotManager_Runtime_Expressions_Async_Expression">Expression</a> in a new thread.</p>
-<p>
-Returns: <code>null</code>.
+      <dd><p>
+Runs the <a class="xref" href="BotManager.Runtime.Expressions.Async.html#BotManager_Runtime_Expressions_Async_Expression">Expression</a> in a new thread.
 </p>
+<p>
+Return type is <code>null</code>.
+</p>
+<example>
+This json example waits 5 seconds in a async thread, but doesn't block the main thread and returns <code>null</code>:
+<pre><code class="lang-csharp">{ "$Async": { "$Delay": 5000 } }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Boolean.html">Boolean</a></dt>
-      <dd><p>A static <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value.</p>
-<p>
-Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value.
+      <dd><p>
+A static <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value.
 </p>
+<p>
+Returns type is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>.
+</p>
+<example>
+This json example returns <code>true</code>:
+<pre><code class="lang-csharp">{ "$Boolean": true }</code></pre>
+Or even shorter:
+<pre><code class="lang-csharp">true</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Call.html">Call</a></dt>
-      <dd><p>Calls a registered function and returns it's value. Use <a class="xref" href="BotManager.Runtime.Expressions.Function.html">Function</a> to register a function beforehand.</p>
-<p>
-Returns: Return value of the executed function.
+      <dd><p>
+Calls a registered function and returns it's value. Use <a class="xref" href="BotManager.Runtime.Expressions.Function.html">Function</a> to register a function beforehand.
 </p>
+<p>
+Returns the value of the executed function.
+</p>
+<example>
+This json example executes the user-defined function "MyFunction" and returns its value:
+<pre><code class="lang-csharp">{ "$Call": "MyFunction" }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Choose.html">Choose</a></dt>
-      <dd><p>Executes and returns a random item from this list.</p>
-<p>
-Returns: Type of the chosen item.
+      <dd><p>
+Executes and returns a random item from this list.
 </p>
+<p>
+Return type is the type of the chosen item.
+</p>
+<example>
+This json example returns either <code>1</code>, <code>2</code> or <code>3</code> chosen randomly:
+<pre><code class="lang-csharp">{ "Choose": [ 1, 2, 3 ] }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Delay.html">Delay</a></dt>
-      <dd><p>Holds execution and waits the defined number of milliseconds.</p>
-<p>
-Returns: <code>null</code>.
+      <dd><p>
+Holds execution and waits the defined number of milliseconds.
 </p>
+<p>
+Return type is <code>null</code>.
+</p>
+<example>
+This json example waits three seconds and returns <code>null</code>:
+<pre><code class="lang-csharp">{ "$Delay": 3000 }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Env.html">Env</a></dt>
-      <dd><p>Returns the value of a variable from the system environment variables.</p>
-<p>
-Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> value.
+      <dd><p>
+Returns the value of a variable from the system environment variables.
 </p>
+<p>
+Return type is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>.
+</p>
+<example>
+This json example returns the value of the environment variable "MY_VAR":
+<pre><code class="lang-csharp">{ "$Env": "MY_VAR" }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Equals.html">Equals</a></dt>
-      <dd><p>Returns a boolean value if <a class="xref" href="BotManager.Runtime.Expressions.Equals.html#BotManager_Runtime_Expressions_Equals_A">A</a> and <a class="xref" href="BotManager.Runtime.Expressions.Equals.html#BotManager_Runtime_Expressions_Equals_B">B</a> are equal.</p>
-<p>
-Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value.
+      <dd><p>
+Returns a boolean value if <a class="xref" href="BotManager.Runtime.Expressions.Equals.html#BotManager_Runtime_Expressions_Equals_A">A</a> and <a class="xref" href="BotManager.Runtime.Expressions.Equals.html#BotManager_Runtime_Expressions_Equals_B">B</a> are equal.
 </p>
+<p>
+Returns type os <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>.
+</p>
+<example>
+This json example returns <code>true</code>:
+<pre><code class="lang-csharp">{ "$Equals": { "A": 10, "B": 10 } }</code></pre>
+This json example returns <code>false</code>:
+<pre><code class="lang-csharp">{ "$Equals": { "A": 10, "B": 100 } }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Error.html">Error</a></dt>
-      <dd><p>Writes a log message to the error output.</p>
-<p>
-Returns: <code>null</code>.
+      <dd><p>
+Writes a log message to the error output.
 </p>
+<p>
+Return type is <code>null</code>.
+</p>
+<example>
+This json example writes an error to the output and returns <code>null</code>:
+<pre><code class="lang-csharp">{ "$Error": "This is an error!" }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Format.html">Format</a></dt>
-      <dd><p>Formats a string by using <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.format#system-string-format(system-string-system-object())">Format(string, params object[])</a>.</p>
-<p>
-Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> value.
+      <dd><p>
+Formats a string by using <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.format#system-string-format(system-string-system-object())">Format(string, params object[])</a>.
 </p>
+<p>
+Return type is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>.
+</p>
+<example>
+This json example returns <code>"Hello World! 1 + 2 = 3"</code>:
+<pre><code class="lang-csharp">{ "$Format": { "Text": "Hello {0}! {1} + {2} = {3}", "Parameters": [ "World", 1, 2, 3 ] } }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Function.html">Function</a></dt>
-      <dd><p>Registers a new function in the runtime context. Use <a class="xref" href="BotManager.Runtime.Expressions.Call.html">Call</a> to execute it later.</p>
-<p>
-Returns: <code>null</code>.
+      <dd><p>
+Registers a new function in the runtime context. Use <a class="xref" href="BotManager.Runtime.Expressions.Call.html">Call</a> to execute it later.
 </p>
+<p>
+Return type is <code>null</code>.
+</p>
+<example>
+This json example executes registers a user-defined function "MyFunction":
+<pre><code class="lang-csharp">{ "$Function": { "Name": "MyFunction", "Action": 10 } }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Get.html">Get</a></dt>
-      <dd><p>Returns the value of a variable from the current <a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeContext</a>.</p>
-<p>
-Returns: Type of the variable.
+      <dd><p>
+Returns the value of a variable from the current <a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeContext</a>.
 </p>
+<p>
+Return type is the type of the variable.
+</p>
+<example>
+This json example returns the value of the "MyVar" variable:
+<pre><code class="lang-csharp">{ "$Get": "MyVar" }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.If.html">If</a></dt>
-      <dd><p>Executes the <a class="xref" href="BotManager.Runtime.Expressions.If.html#BotManager_Runtime_Expressions_If_Then">Then</a> expression if <a class="xref" href="BotManager.Runtime.Expressions.If.html#BotManager_Runtime_Expressions_If_Condition">Condition</a> returns <code>true</code>.
-Otherwise <a class="xref" href="BotManager.Runtime.Expressions.If.html#BotManager_Runtime_Expressions_If_Else">Else</a> is executed.</p>
-<p>
-Returns: Return value of the executed branch.
+      <dd><p>
+Executes the <a class="xref" href="BotManager.Runtime.Expressions.If.html#BotManager_Runtime_Expressions_If_Then">Then</a> expression if <a class="xref" href="BotManager.Runtime.Expressions.If.html#BotManager_Runtime_Expressions_If_Condition">Condition</a> returns <code>true</code>.
+Otherwise <a class="xref" href="BotManager.Runtime.Expressions.If.html#BotManager_Runtime_Expressions_If_Else">Else</a> is executed.
 </p>
+<p>
+Returns the value of the executed branch.
+</p>
+<example>
+This json example returns <code>10</code>:
+<pre><code class="lang-csharp">{ "$If": { "Condition": true, "Then": 10, "Else": 20 } }</code></pre>
+This json example returns <code>20</code>:
+<pre><code class="lang-csharp">{ "$If": { "Condition": false, "Then": 10, "Else": 20 } }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.In.html">In</a></dt>
-      <dd><p>Returns a boolean value if <a class="xref" href="BotManager.Runtime.Expressions.In.html#BotManager_Runtime_Expressions_In_Value">Value</a> is equal to at least one item in <a class="xref" href="BotManager.Runtime.Expressions.In.html#BotManager_Runtime_Expressions_In_List">List</a>.</p>
-<p>
-Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value.
+      <dd><p>
+Returns a boolean value if <a class="xref" href="BotManager.Runtime.Expressions.In.html#BotManager_Runtime_Expressions_In_Value">Value</a> is equal to at least one item in <a class="xref" href="BotManager.Runtime.Expressions.In.html#BotManager_Runtime_Expressions_In_List">List</a>.
 </p>
+<p>
+Return type is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>.
+</p>
+<example>
+This json example returns <code>true</code>:
+<pre><code class="lang-csharp">{ "$In": { "Value": 10, "List": [ 1, 2, 10 ] } }</code></pre>
+This json example returns <code>false</code>:
+<pre><code class="lang-csharp">{ "$In": { "Value": 10, "List": [ 1, 2, 3 ] } }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Include.html">Include</a></dt>
-      <dd><p>Includes and executes an external json config.
-The included file is only read and parsed once on the first execution.</p>
-<p>
-Returns: Return value that is returned by the executed file.
+      <dd><p>
+Includes and executes an external json config.
+The included file is only read and parsed once on the first execution.
 </p>
+<p>
+Returns the value that is returned by the executed file.
+</p>
+<example>
+This json example executes the expression in the "inc.json" file and returns its value:
+<pre><code class="lang-csharp">{ "$Include": "inc.json" }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Info.html">Info</a></dt>
-      <dd><p>Writes a log message to the standard output.</p>
-<p>
-Returns: <code>null</code>.
+      <dd><p>
+Writes a log message to the standard output.
 </p>
+<p>
+Return type is <code>null</code>.
+</p>
+<example>
+This json example writes an info message to the output and returns <code>null</code>:
+<pre><code class="lang-csharp">{ "$Info": "This is an info!" }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Int32.html">Int32</a></dt>
-      <dd><p>A static <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> value.</p>
-<p>
-Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> value.
+      <dd><p>
+A static <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> value.
 </p>
+<p>
+Return type is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>.
+</p>
+<example>
+This json example returns <code>10</code>:
+<pre><code class="lang-csharp">{ "$Int32": 10 }</code></pre>
+Or even shorter:
+<pre><code class="lang-csharp">10</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Int64.html">Int64</a></dt>
-      <dd><p>A static <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a> value.</p>
-<p>
-Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a> value.
+      <dd><p>
+A static <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a> value.
 </p>
+<p>
+Return type is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>.
+</p>
+<example>
+This json example returns <code>10</code>:
+<pre><code class="lang-csharp">{ "$Int64": 10 }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.List.html">List</a></dt>
-      <dd><p>A list of <a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a> that will be executed sequentially.
-The returned values of the expressions is returns as an array if <code>returnType</code> is not set to null.</p>
-<p>
-Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.array">Array</a> or <code>null</code>.
+      <dd><p>
+A list of <a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a> that will be executed sequentially.
+The returned values of the expressions is returns as an array if <code>returnType</code> is not set to null.
 </p>
+<p>
+Return type is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.array">Array</a> or <code>null</code>.
+</p>
+<example>
+This json example returns a list with the values <code>1</code>, <code>2</code>, <code>3</code>:
+<pre><code class="lang-csharp">[ 1, 2, 3 ]</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Not.html">Not</a></dt>
-      <dd><p>Inverts the given boolean expression.</p>
-<p>
-Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value.
+      <dd><p>
+Inverts the given boolean expression.
 </p>
+<p>
+Return type is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>.
+</p>
+<example>
+This json example returns <code>false</code>:
+<pre><code class="lang-csharp">{ "$Not": true }</code></pre>
+This json example returns <code>true</code>:
+<pre><code class="lang-csharp">{ "$Not": false }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Or.html">Or</a></dt>
-      <dd><p>Logical or operator. It returns <code>true</code> if any expression in this list is <code>true</code> or if the list is empty.
-Execution is stopped, once the first entry returns <code>true</code>.</p>
-<p>
-Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value.
+      <dd><p>
+Logical or operator. It returns <code>true</code> if any expression in this list is <code>true</code> or if the list is empty.
+Execution is stopped, once the first entry returns <code>true</code>.
 </p>
+<p>
+Return type is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>.
+</p>
+<example>
+This json example returns <code>true</code>:
+<pre><code class="lang-csharp">{ "$Or": [ true, false ] }</code></pre>
+This json example returns <code>false</code>:
+<pre><code class="lang-csharp">{ "$Or": [ false, false ] }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Set.html">Set</a></dt>
-      <dd><p>Sets a variable in the current <a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeContext</a>.</p>
-<p>
-Returns: Type of the variable.
+      <dd><p>
+Sets a variable in the current <a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeContext</a>.
 </p>
+<p>
+Returns type is the type of the variable.
+</p>
+<example>
+This json example set the variable "MyVar" to <code>10</code> and returns this value:
+<pre><code class="lang-csharp">{ "$Set": { "Name": "MyVar", "Value": 10 } }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.String.html">String</a></dt>
-      <dd><p>A static <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> value.</p>
-<p>
-Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> value.
+      <dd><p>
+A static <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> value.
 </p>
+<p>
+Returns type is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>.
+</p>
+<example>
+This json example returns <code>"Hello"</code>:
+<pre><code class="lang-csharp">{ "$String": "Hello" }</code></pre>
+Or even shorter:
+<pre><code class="lang-csharp">"Hello"</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Try.html">Try</a></dt>
-      <dd><p>Trys to execute the <a class="xref" href="BotManager.Runtime.Expressions.Try.html#BotManager_Runtime_Expressions_Try_Expression">Expression</a> and handles any exceptions. If an exception is throw while executing
+      <dd><p>
+Trys to execute the <a class="xref" href="BotManager.Runtime.Expressions.Try.html#BotManager_Runtime_Expressions_Try_Expression">Expression</a> and handles any exceptions. If an exception is throw while executing
 <a class="xref" href="BotManager.Runtime.Expressions.Try.html#BotManager_Runtime_Expressions_Try_Expression">Expression</a>, it will write the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> to 'exception' in the current
-<a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeContext</a> and then run the <a class="xref" href="BotManager.Runtime.Expressions.Try.html#BotManager_Runtime_Expressions_Try_Catch">Catch</a> expression.</p>
-<p>
-Returns: Return value of the executed branch.
+<a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeContext</a> and then run the <a class="xref" href="BotManager.Runtime.Expressions.Try.html#BotManager_Runtime_Expressions_Try_Catch">Catch</a> expression.
 </p>
+<p>
+Returns the value of the executed branch.
+</p>
+<example>
+This json example returns <code>10</code>:
+<pre><code class="lang-csharp">{ "$Try": { "Expression": 10, "Catch": -10 } }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.UInt32.html">UInt32</a></dt>
-      <dd><p>A static <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a> value.</p>
-<p>
-Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a> value.
+      <dd><p>
+A static <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a> value.
 </p>
+<p>
+Return type is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>.
+</p>
+<example>
+This json example returns <code>10</code>:
+<pre><code class="lang-csharp">{ "$UInt32": 10 }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.UInt64.html">UInt64</a></dt>
-      <dd><p>A static <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a> value.</p>
-<p>
-Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a> value.
+      <dd><p>
+A static <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a> value.
 </p>
+<p>
+Return type is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+</p>
+<example>
+This json example returns <code>10</code>:
+<pre><code class="lang-csharp">{ "$UInt64": 10 }</code></pre>
+</example>
 </dd>
     </dl>
 

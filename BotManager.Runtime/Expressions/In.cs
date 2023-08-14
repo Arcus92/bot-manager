@@ -1,10 +1,22 @@
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
-/// Returns a boolean value if <see cref="Value"/> is equal to at least one item in <see cref="List"/>.
 /// <para>
-/// Returns: <see cref="bool"/> value.
+/// Returns a boolean value if <see cref="Value"/> is equal to at least one item in <see cref="List"/>.
 /// </para>
+/// <para>
+/// Return type is <see cref="bool"/>.
+/// </para>
+/// <example>
+/// This json example returns <c>true</c>:
+/// <code>
+/// { "$In": { "Value": 10, "List": [ 1, 2, 10 ] } }
+/// </code>
+/// This json example returns <c>false</c>:
+/// <code>
+/// { "$In": { "Value": 10, "List": [ 1, 2, 3 ] } }
+/// </code>
+/// </example>
 /// </summary>
 public sealed class In : IExpression
 {

@@ -87,11 +87,17 @@
   <dl><dt>Assembly</dt><dd>BotManager.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Includes and executes an external json config.
-The included file is only read and parsed once on the first execution.</p>
-<p>
-Returns: Return value that is returned by the executed file.
+  <div class="markdown summary"><p>
+Includes and executes an external json config.
+The included file is only read and parsed once on the first execution.
 </p>
+<p>
+Returns the value that is returned by the executed file.
+</p>
+<example>
+This json example executes the expression in the "inc.json" file and returns its value:
+<pre><code class="lang-csharp">{ "$Include": "inc.json" }</code></pre>
+</example>
 </div>
   <div class="markdown conceptual"></div>
 

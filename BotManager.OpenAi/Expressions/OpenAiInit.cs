@@ -6,10 +6,12 @@ using OpenAI.GPT3.Managers;
 namespace BotManager.OpenAi.Expressions;
 
 /// <summary>
+/// <para>
 /// The OpenAI plugin will connect to the OpenAI api by using the <see cref="ApiKey"/> and allows you to run AI
 /// expressions like <see cref="OpenAiChat"/>.
+/// </para>
 /// <para>
-/// Returns: <c>null</c>.
+/// Return type is <c>null</c>.
 /// </para>
 /// </summary>
 public sealed class OpenAiInit : IExpression

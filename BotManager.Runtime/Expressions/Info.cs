@@ -4,10 +4,18 @@ using BotManager.Runtime.Converters;
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
-/// Writes a log message to the standard output.
 /// <para>
-/// Returns: <c>null</c>.
+/// Writes a log message to the standard output.
 /// </para>
+/// <para>
+/// Return type is <c>null</c>.
+/// </para>
+/// <example>
+/// This json example writes an info message to the output and returns <c>null</c>:
+/// <code>
+/// { "$Info": "This is an info!" }
+/// </code>
+/// </example>
 /// </summary>
 [JsonConverter(typeof(InfoConverter))]
 public class Info : IExpression

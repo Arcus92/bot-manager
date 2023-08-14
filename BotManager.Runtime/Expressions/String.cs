@@ -4,10 +4,22 @@ using BotManager.Runtime.Converters;
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
-/// A static <see cref="string"/> value.
 /// <para>
-/// Returns: <see cref="string"/> value.
+/// A static <see cref="string"/> value.
 /// </para>
+/// <para>
+/// Returns type is <see cref="string"/>.
+/// </para>
+/// <example>
+/// This json example returns <c>"Hello"</c>:
+/// <code>
+/// { "$String": "Hello" }
+/// </code>
+/// Or even shorter:
+/// <code>
+/// "Hello"
+/// </code>
+/// </example>
 /// </summary>
 [JsonConverter(typeof(StringConverter))]
 public sealed class String : IExpression

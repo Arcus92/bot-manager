@@ -7,10 +7,12 @@ using Discord.WebSocket;
 namespace BotManager.Discord.Expressions;
 
 /// <summary>
+/// <para>
 /// The Discord plugin will connect to the Discord api using the given <see cref="Token"/>.
 /// You can register <see cref="Commands"/> that will run an expression once a user executes them.
+/// </para>
 /// <para>
-/// Returns: <c>null</c>.
+/// Return type is <c>null</c>.
 /// </para>
 /// </summary>
 public sealed class DiscordInit : IExpression

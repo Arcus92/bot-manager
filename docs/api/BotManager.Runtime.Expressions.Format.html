@@ -87,10 +87,16 @@
   <dl><dt>Assembly</dt><dd>BotManager.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Formats a string by using <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.format#system-string-format(system-string-system-object())">Format(string, params object[])</a>.</p>
-<p>
-Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> value.
+  <div class="markdown summary"><p>
+Formats a string by using <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.format#system-string-format(system-string-system-object())">Format(string, params object[])</a>.
 </p>
+<p>
+Return type is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>.
+</p>
+<example>
+This json example returns <code>"Hello World! 1 + 2 = 3"</code>:
+<pre><code class="lang-csharp">{ "$Format": { "Text": "Hello {0}! {1} + {2} = {3}", "Parameters": [ "World", 1, 2, 3 ] } }</code></pre>
+</example>
 </div>
   <div class="markdown conceptual"></div>
 

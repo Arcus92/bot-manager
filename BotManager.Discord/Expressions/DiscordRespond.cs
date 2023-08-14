@@ -4,10 +4,12 @@ using Discord;
 namespace BotManager.Discord.Expressions;
 
 /// <summary>
+/// <para>
 /// Responds with a text message on a <see cref="DiscordSlashCommand"/>. The <see cref="DiscordInit"/> must be
 /// initialized.
+/// </para>
 /// <para>
-/// Returns: <c>null</c>.
+/// Return type is <c>null</c>.
 /// </para>
 /// </summary>
 public sealed class DiscordRespond : IExpression

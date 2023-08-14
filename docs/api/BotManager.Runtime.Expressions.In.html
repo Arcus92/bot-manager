@@ -87,10 +87,18 @@
   <dl><dt>Assembly</dt><dd>BotManager.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Returns a boolean value if <a class="xref" href="BotManager.Runtime.Expressions.In.html#BotManager_Runtime_Expressions_In_Value">Value</a> is equal to at least one item in <a class="xref" href="BotManager.Runtime.Expressions.In.html#BotManager_Runtime_Expressions_In_List">List</a>.</p>
-<p>
-Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value.
+  <div class="markdown summary"><p>
+Returns a boolean value if <a class="xref" href="BotManager.Runtime.Expressions.In.html#BotManager_Runtime_Expressions_In_Value">Value</a> is equal to at least one item in <a class="xref" href="BotManager.Runtime.Expressions.In.html#BotManager_Runtime_Expressions_In_List">List</a>.
 </p>
+<p>
+Return type is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>.
+</p>
+<example>
+This json example returns <code>true</code>:
+<pre><code class="lang-csharp">{ "$In": { "Value": 10, "List": [ 1, 2, 10 ] } }</code></pre>
+This json example returns <code>false</code>:
+<pre><code class="lang-csharp">{ "$In": { "Value": 10, "List": [ 1, 2, 3 ] } }</code></pre>
+</example>
 </div>
   <div class="markdown conceptual"></div>
 

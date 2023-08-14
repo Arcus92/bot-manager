@@ -4,10 +4,18 @@ using BotManager.Runtime.Converters;
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
-/// Returns the value of a variable from the system environment variables.
 /// <para>
-/// Returns: <see cref="string"/> value.
+/// Returns the value of a variable from the system environment variables.
 /// </para>
+/// <para>
+/// Return type is <see cref="string"/>.
+/// </para>
+/// <example>
+/// This json example returns the value of the environment variable "MY_VAR":
+/// <code>
+/// { "$Env": "MY_VAR" }
+/// </code>
+/// </example>
 /// </summary>
 [JsonConverter(typeof(EnvConverter))]
 public sealed class Env : IExpression

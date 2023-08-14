@@ -87,11 +87,19 @@
   <dl><dt>Assembly</dt><dd>BotManager.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Logical and operator. It returns <code>true</code> if all expression in this list are <code>true</code> or if the list is empty.
-Execution is stopped, once the first entry returns <code>false</code>.</p>
-<p>
-Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value.
+  <div class="markdown summary"><p>
+Logical and operator. It returns <code>true</code> if all expression in this list are <code>true</code> or if the list is empty.
+Execution is stopped, once the first entry returns <code>false</code>.
 </p>
+<p>
+Return type is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>.
+</p>
+<example>
+This json example returns <code>true</code>:
+<pre><code class="lang-csharp">{ "$And": [ true, true ] }</code></pre>
+This json example returns <code>false</code>:
+<pre><code class="lang-csharp">{ "$And": [ true, false ] }</code></pre>
+</example>
 </div>
   <div class="markdown conceptual"></div>
 

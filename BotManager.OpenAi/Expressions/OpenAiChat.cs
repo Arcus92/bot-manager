@@ -5,9 +5,11 @@ using OpenAI.GPT3.ObjectModels.RequestModels;
 namespace BotManager.OpenAi.Expressions;
 
 /// <summary>
-/// Executes a char request to the OpenAI api. The <see cref="OpenAiInit"/> must be initialized.
 /// <para>
-/// Returns: <see cref="string"/> value.
+/// Executes a char request to the OpenAI api. The <see cref="OpenAiInit"/> must be initialized.
+/// </para>
+/// <para>
+/// Return type is <see cref="string"/>.
 /// </para>
 /// </summary>
 public sealed class OpenAiChat : IExpression

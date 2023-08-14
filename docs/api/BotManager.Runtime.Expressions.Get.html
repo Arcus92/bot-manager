@@ -87,10 +87,16 @@
   <dl><dt>Assembly</dt><dd>BotManager.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Returns the value of a variable from the current <a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeContext</a>.</p>
-<p>
-Returns: Type of the variable.
+  <div class="markdown summary"><p>
+Returns the value of a variable from the current <a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeContext</a>.
 </p>
+<p>
+Return type is the type of the variable.
+</p>
+<example>
+This json example returns the value of the "MyVar" variable:
+<pre><code class="lang-csharp">{ "$Get": "MyVar" }</code></pre>
+</example>
 </div>
   <div class="markdown conceptual"></div>
 

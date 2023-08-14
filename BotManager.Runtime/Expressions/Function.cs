@@ -1,10 +1,18 @@
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
-/// Registers a new function in the runtime context. Use <see cref="Call"/> to execute it later.
 /// <para>
-/// Returns: <c>null</c>.
+/// Registers a new function in the runtime context. Use <see cref="Call"/> to execute it later.
 /// </para>
+/// <para>
+/// Return type is <c>null</c>.
+/// </para>
+/// <example>
+/// This json example executes registers a user-defined function "MyFunction":
+/// <code>
+/// { "$Function": { "Name": "MyFunction", "Action": 10 } }
+/// </code>
+/// </example>
 /// </summary>
 public class Function : IExpression
 {

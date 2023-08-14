@@ -87,11 +87,17 @@
   <dl><dt>Assembly</dt><dd>BotManager.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>A list of <a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a> that will be executed sequentially.
-The returned values of the expressions is returns as an array if <code>returnType</code> is not set to null.</p>
-<p>
-Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.array">Array</a> or <code>null</code>.
+  <div class="markdown summary"><p>
+A list of <a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a> that will be executed sequentially.
+The returned values of the expressions is returns as an array if <code>returnType</code> is not set to null.
 </p>
+<p>
+Return type is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.array">Array</a> or <code>null</code>.
+</p>
+<example>
+This json example returns a list with the values <code>1</code>, <code>2</code>, <code>3</code>:
+<pre><code class="lang-csharp">[ 1, 2, 3 ]</code></pre>
+</example>
 </div>
   <div class="markdown conceptual"></div>
 

@@ -4,10 +4,18 @@ using BotManager.Runtime.Converters;
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
-/// A static <see cref="long"/> value.
 /// <para>
-/// Returns: <see cref="long"/> value.
+/// A static <see cref="long"/> value.
 /// </para>
+/// <para>
+/// Return type is <see cref="long"/>.
+/// </para>
+/// <example>
+/// This json example returns <c>10</c>:
+/// <code>
+/// { "$Int64": 10 }
+/// </code>
+/// </example>
 /// </summary>
 [JsonConverter(typeof(Int64Converter))]
 public sealed class Int64 : IExpression

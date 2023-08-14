@@ -4,10 +4,18 @@ using BotManager.Runtime.Converters;
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
-/// Calls a registered function and returns it's value. Use <see cref="Function"/> to register a function beforehand.
 /// <para>
-/// Returns: Return value of the executed function.
+/// Calls a registered function and returns it's value. Use <see cref="Function"/> to register a function beforehand.
 /// </para>
+/// <para>
+/// Returns the value of the executed function.
+/// </para>
+/// <example>
+/// This json example executes the user-defined function "MyFunction" and returns its value:
+/// <code>
+/// { "$Call": "MyFunction" }
+/// </code>
+/// </example>
 /// </summary>
 [JsonConverter(typeof(CallConverter))]
 public class Call : IExpression

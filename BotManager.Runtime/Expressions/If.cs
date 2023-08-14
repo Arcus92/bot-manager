@@ -1,11 +1,23 @@
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
+/// <para>
 /// Executes the <see cref="Then"/> expression if <see cref="Condition"/> returns <c>true</c>.
 /// Otherwise <see cref="Else"/> is executed.
-/// <para>
-/// Returns: Return value of the executed branch.
 /// </para>
+/// <para>
+/// Returns the value of the executed branch.
+/// </para>
+/// <example>
+/// This json example returns <c>10</c>:
+/// <code>
+/// { "$If": { "Condition": true, "Then": 10, "Else": 20 } }
+/// </code>
+/// This json example returns <c>20</c>:
+/// <code>
+/// { "$If": { "Condition": false, "Then": 10, "Else": 20 } }
+/// </code>
+/// </example>
 /// </summary>
 public sealed class If : IExpression
 {

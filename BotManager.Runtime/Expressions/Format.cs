@@ -1,10 +1,18 @@
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
-/// Formats a string by using <see cref="string.Format(string,object?[])"/>.
 /// <para>
-/// Returns: <see cref="string"/> value.
+/// Formats a string by using <see cref="string.Format(string,object?[])"/>.
 /// </para>
+/// <para>
+/// Return type is <see cref="string"/>.
+/// </para>
+/// <example>
+/// This json example returns <c>"Hello World! 1 + 2 = 3"</c>:
+/// <code>
+/// { "$Format": { "Text": "Hello {0}! {1} + {2} = {3}", "Parameters": [ "World", 1, 2, 3 ] } }
+/// </code>
+/// </example>
 /// </summary>
 public sealed class Format : IExpression
 {

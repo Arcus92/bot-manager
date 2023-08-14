@@ -1,10 +1,18 @@
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
-/// Sets a variable in the current <see cref="RuntimeContext"/>.
 /// <para>
-/// Returns: Type of the variable.
+/// Sets a variable in the current <see cref="RuntimeContext"/>.
 /// </para>
+/// <para>
+/// Returns type is the type of the variable.
+/// </para>
+/// <example>
+/// This json example set the variable "MyVar" to <c>10</c> and returns this value:
+/// <code>
+/// { "$Set": { "Name": "MyVar", "Value": 10 } }
+/// </code>
+/// </example>
 /// </summary>
 public sealed class Set : IExpression
 {

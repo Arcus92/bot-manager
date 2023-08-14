@@ -4,10 +4,22 @@ using BotManager.Runtime.Converters;
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
-/// A static <see cref="int"/> value.
 /// <para>
-/// Returns: <see cref="int"/> value.
+/// A static <see cref="int"/> value.
 /// </para>
+/// <para>
+/// Return type is <see cref="int"/>.
+/// </para>
+/// <example>
+/// This json example returns <c>10</c>:
+/// <code>
+/// { "$Int32": 10 }
+/// </code>
+/// Or even shorter:
+/// <code>
+/// 10
+/// </code>
+/// </example>
 /// </summary>
 [JsonConverter(typeof(Int32Converter))]
 public sealed class Int32 : IExpression

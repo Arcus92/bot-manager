@@ -4,10 +4,22 @@ using BotManager.Runtime.Converters;
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
-/// Inverts the given boolean expression.
 /// <para>
-/// Returns: <see cref="bool"/> value.
+/// Inverts the given boolean expression.
 /// </para>
+/// <para>
+/// Return type is <see cref="bool"/>.
+/// </para>
+/// <example>
+/// This json example returns <c>false</c>:
+/// <code>
+/// { "$Not": true }
+/// </code>
+/// This json example returns <c>true</c>:
+/// <code>
+/// { "$Not": false }
+/// </code>
+/// </example>
 /// </summary>
 [JsonConverter(typeof(NotConverter))]
 public sealed class Not : IExpression

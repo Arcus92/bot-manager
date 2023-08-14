@@ -87,10 +87,16 @@
   <dl><dt>Assembly</dt><dd>BotManager.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Registers a new function in the runtime context. Use <a class="xref" href="BotManager.Runtime.Expressions.Call.html">Call</a> to execute it later.</p>
-<p>
-Returns: <code>null</code>.
+  <div class="markdown summary"><p>
+Registers a new function in the runtime context. Use <a class="xref" href="BotManager.Runtime.Expressions.Call.html">Call</a> to execute it later.
 </p>
+<p>
+Return type is <code>null</code>.
+</p>
+<example>
+This json example executes registers a user-defined function "MyFunction":
+<pre><code class="lang-csharp">{ "$Function": { "Name": "MyFunction", "Action": 10 } }</code></pre>
+</example>
 </div>
   <div class="markdown conceptual"></div>
 

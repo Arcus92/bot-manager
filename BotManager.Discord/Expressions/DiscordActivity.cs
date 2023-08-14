@@ -6,9 +6,11 @@ using Discord;
 namespace BotManager.Discord.Expressions;
 
 /// <summary>
-/// Sets the status activity shown in the current bot users profile. The <see cref="DiscordInit"/> must be initialized.
 /// <para>
-/// Returns: <c>null</c>.
+/// Sets the status activity shown in the current bot users profile. The <see cref="DiscordInit"/> must be initialized.
+/// </para>
+/// <para>
+/// Return type is <c>null</c>.
 /// </para>
 /// </summary>
 public sealed class DiscordActivity : IExpression

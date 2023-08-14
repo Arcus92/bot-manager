@@ -4,9 +4,11 @@ using Discord;
 namespace BotManager.Discord.Expressions;
 
 /// <summary>
-/// Sends a text message to a Discord channel. The <see cref="DiscordInit"/> must be initialized.
 /// <para>
-/// Returns: <c>null</c>.
+/// Sends a text message to a Discord channel. The <see cref="DiscordInit"/> must be initialized.
+/// </para>
+/// <para>
+/// Return type is <c>null</c>.
 /// </para>
 /// </summary>
 public sealed class DiscordSend : IExpression

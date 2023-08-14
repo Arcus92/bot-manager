@@ -87,10 +87,16 @@
   <dl><dt>Assembly</dt><dd>BotManager.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Runs the <a class="xref" href="BotManager.Runtime.Expressions.Async.html#BotManager_Runtime_Expressions_Async_Expression">Expression</a> in a new thread.</p>
-<p>
-Returns: <code>null</code>.
+  <div class="markdown summary"><p>
+Runs the <a class="xref" href="BotManager.Runtime.Expressions.Async.html#BotManager_Runtime_Expressions_Async_Expression">Expression</a> in a new thread.
 </p>
+<p>
+Return type is <code>null</code>.
+</p>
+<example>
+This json example waits 5 seconds in a async thread, but doesn't block the main thread and returns <code>null</code>:
+<pre><code class="lang-csharp">{ "$Async": { "$Delay": 5000 } }</code></pre>
+</example>
 </div>
   <div class="markdown conceptual"></div>
 

@@ -1,12 +1,20 @@
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
+/// <para>
 /// Trys to execute the <see cref="Expression"/> and handles any exceptions. If an exception is throw while executing
 /// <see cref="Expression"/>, it will write the <see cref="Exception"/> to 'exception' in the current
 /// <see cref="RuntimeContext"/> and then run the <see cref="Catch"/> expression.
-/// <para>
-/// Returns: Return value of the executed branch.
 /// </para>
+/// <para>
+/// Returns the value of the executed branch.
+/// </para>
+/// <example>
+/// This json example returns <c>10</c>:
+/// <code>
+/// { "$Try": { "Expression": 10, "Catch": -10 } }
+/// </code>
+/// </example>
 /// </summary>
 public class Try : IExpression
 {

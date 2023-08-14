@@ -4,10 +4,18 @@ using BotManager.Runtime.Converters;
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
-/// A static <see cref="ulong"/> value.
 /// <para>
-/// Returns: <see cref="ulong"/> value.
+/// A static <see cref="ulong"/> value.
 /// </para>
+/// <para>
+/// Return type is <see cref="ulong"/>.
+/// </para>
+/// <example>
+/// This json example returns <c>10</c>:
+/// <code>
+/// { "$UInt64": 10 }
+/// </code>
+/// </example>
 /// </summary>
 [JsonConverter(typeof(UInt64Converter))]
 public sealed class UInt64 : IExpression

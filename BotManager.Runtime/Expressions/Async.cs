@@ -4,10 +4,18 @@ using BotManager.Runtime.Converters;
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
-/// Runs the <see cref="Expression"/> in a new thread.
 /// <para>
-/// Returns: <c>null</c>.
+/// Runs the <see cref="Expression"/> in a new thread.
 /// </para>
+/// <para>
+/// Return type is <c>null</c>.
+/// </para>
+/// <example>
+/// This json example waits 5 seconds in a async thread, but doesn't block the main thread and returns <c>null</c>:
+/// <code>
+/// { "$Async": { "$Delay": 5000 } }
+/// </code>
+/// </example>
 /// </summary>
 [JsonConverter(typeof(AsyncConverter))]
 public sealed class Async : IExpression

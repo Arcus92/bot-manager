@@ -87,11 +87,19 @@
   <dl><dt>Assembly</dt><dd>BotManager.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Executes the <a class="xref" href="BotManager.Runtime.Expressions.If.html#BotManager_Runtime_Expressions_If_Then">Then</a> expression if <a class="xref" href="BotManager.Runtime.Expressions.If.html#BotManager_Runtime_Expressions_If_Condition">Condition</a> returns <code>true</code>.
-Otherwise <a class="xref" href="BotManager.Runtime.Expressions.If.html#BotManager_Runtime_Expressions_If_Else">Else</a> is executed.</p>
-<p>
-Returns: Return value of the executed branch.
+  <div class="markdown summary"><p>
+Executes the <a class="xref" href="BotManager.Runtime.Expressions.If.html#BotManager_Runtime_Expressions_If_Then">Then</a> expression if <a class="xref" href="BotManager.Runtime.Expressions.If.html#BotManager_Runtime_Expressions_If_Condition">Condition</a> returns <code>true</code>.
+Otherwise <a class="xref" href="BotManager.Runtime.Expressions.If.html#BotManager_Runtime_Expressions_If_Else">Else</a> is executed.
 </p>
+<p>
+Returns the value of the executed branch.
+</p>
+<example>
+This json example returns <code>10</code>:
+<pre><code class="lang-csharp">{ "$If": { "Condition": true, "Then": 10, "Else": 20 } }</code></pre>
+This json example returns <code>20</code>:
+<pre><code class="lang-csharp">{ "$If": { "Condition": false, "Then": 10, "Else": 20 } }</code></pre>
+</example>
 </div>
   <div class="markdown conceptual"></div>
 

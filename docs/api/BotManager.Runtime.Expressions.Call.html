@@ -87,10 +87,16 @@
   <dl><dt>Assembly</dt><dd>BotManager.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Calls a registered function and returns it's value. Use <a class="xref" href="BotManager.Runtime.Expressions.Function.html">Function</a> to register a function beforehand.</p>
-<p>
-Returns: Return value of the executed function.
+  <div class="markdown summary"><p>
+Calls a registered function and returns it's value. Use <a class="xref" href="BotManager.Runtime.Expressions.Function.html">Function</a> to register a function beforehand.
 </p>
+<p>
+Returns the value of the executed function.
+</p>
+<example>
+This json example executes the user-defined function "MyFunction" and returns its value:
+<pre><code class="lang-csharp">{ "$Call": "MyFunction" }</code></pre>
+</example>
 </div>
   <div class="markdown conceptual"></div>
 

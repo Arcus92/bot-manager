@@ -4,10 +4,18 @@ using BotManager.Runtime.Converters;
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
-/// Returns the value of a variable from the current <see cref="RuntimeContext"/>.
 /// <para>
-/// Returns: Type of the variable.
+/// Returns the value of a variable from the current <see cref="RuntimeContext"/>.
 /// </para>
+/// <para>
+/// Return type is the type of the variable.
+/// </para>
+/// <example>
+/// This json example returns the value of the "MyVar" variable:
+/// <code>
+/// { "$Get": "MyVar" }
+/// </code>
+/// </example>
 /// </summary>
 [JsonConverter(typeof(GetConverter))]
 public sealed class Get : IExpression

@@ -4,11 +4,19 @@ using BotManager.Runtime.Converters;
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
+/// <para>
 /// A list of <see cref="IExpression"/> that will be executed sequentially.
 /// The returned values of the expressions is returns as an array if <c>returnType</c> is not set to null.
-/// <para>
-/// Returns: <see cref="Array"/> or <c>null</c>.
 /// </para>
+/// <para>
+/// Return type is <see cref="Array"/> or <c>null</c>.
+/// </para>
+/// <example>
+/// This json example returns a list with the values <c>1</c>, <c>2</c>, <c>3</c>:
+/// <code>
+/// [ 1, 2, 3 ]
+/// </code>
+/// </example>
 /// </summary>
 [JsonConverter(typeof(ListConverter<List>))]
 public class List : List<IExpression?>, IExpression

@@ -87,10 +87,18 @@
   <dl><dt>Assembly</dt><dd>BotManager.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Returns a boolean value if <a class="xref" href="BotManager.Runtime.Expressions.Equals.html#BotManager_Runtime_Expressions_Equals_A">A</a> and <a class="xref" href="BotManager.Runtime.Expressions.Equals.html#BotManager_Runtime_Expressions_Equals_B">B</a> are equal.</p>
-<p>
-Returns: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value.
+  <div class="markdown summary"><p>
+Returns a boolean value if <a class="xref" href="BotManager.Runtime.Expressions.Equals.html#BotManager_Runtime_Expressions_Equals_A">A</a> and <a class="xref" href="BotManager.Runtime.Expressions.Equals.html#BotManager_Runtime_Expressions_Equals_B">B</a> are equal.
 </p>
+<p>
+Returns type os <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>.
+</p>
+<example>
+This json example returns <code>true</code>:
+<pre><code class="lang-csharp">{ "$Equals": { "A": 10, "B": 10 } }</code></pre>
+This json example returns <code>false</code>:
+<pre><code class="lang-csharp">{ "$Equals": { "A": 10, "B": 100 } }</code></pre>
+</example>
 </div>
   <div class="markdown conceptual"></div>
 

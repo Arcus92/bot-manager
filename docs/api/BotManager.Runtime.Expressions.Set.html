@@ -87,10 +87,16 @@
   <dl><dt>Assembly</dt><dd>BotManager.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Sets a variable in the current <a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeContext</a>.</p>
-<p>
-Returns: Type of the variable.
+  <div class="markdown summary"><p>
+Sets a variable in the current <a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeContext</a>.
 </p>
+<p>
+Returns type is the type of the variable.
+</p>
+<example>
+This json example set the variable "MyVar" to <code>10</code> and returns this value:
+<pre><code class="lang-csharp">{ "$Set": { "Name": "MyVar", "Value": 10 } }</code></pre>
+</example>
 </div>
   <div class="markdown conceptual"></div>
 

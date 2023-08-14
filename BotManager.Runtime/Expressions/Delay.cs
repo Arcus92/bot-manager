@@ -4,10 +4,18 @@ using BotManager.Runtime.Converters;
 namespace BotManager.Runtime.Expressions;
 
 /// <summary>
-/// Holds execution and waits the defined number of milliseconds.
 /// <para>
-/// Returns: <c>null</c>.
+/// Holds execution and waits the defined number of milliseconds.
 /// </para>
+/// <para>
+/// Return type is <c>null</c>.
+/// </para>
+/// <example>
+/// This json example waits three seconds and returns <c>null</c>:
+/// <code>
+/// { "$Delay": 3000 }
+/// </code>
+/// </example>
 /// </summary>
 [TypeConverter(typeof(DelayConverter))]
 public class Delay : IExpression
