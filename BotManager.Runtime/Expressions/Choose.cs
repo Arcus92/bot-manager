@@ -13,7 +13,7 @@ namespace BotManager.Runtime.Expressions;
 /// <example>
 /// This json example returns either <c>1</c>, <c>2</c> or <c>3</c> chosen randomly:
 /// <code>
-/// { "Choose": [ 1, 2, 3 ] }
+/// { "$Choose": [ 1, 2, 3 ] }
 /// </code>
 /// </example>
 /// </summary>
