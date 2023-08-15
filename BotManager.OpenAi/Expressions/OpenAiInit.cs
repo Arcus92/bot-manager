@@ -13,6 +13,12 @@ namespace BotManager.OpenAi.Expressions;
 /// <para>
 /// Return type is <c>null</c>.
 /// </para>
+/// <example>
+/// This json example initials OpenAI and returns <c>null</c>:
+/// <code>
+/// { "$OpenAiInit": { "ApiKey": { "@Env": "OPENAI_API_KEY" } } }
+/// </code>
+/// </example>
 /// </summary>
 public sealed class OpenAiInit : IExpression
 {

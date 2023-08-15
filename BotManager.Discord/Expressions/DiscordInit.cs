@@ -14,6 +14,12 @@ namespace BotManager.Discord.Expressions;
 /// <para>
 /// Return type is <c>null</c>.
 /// </para>
+/// <example>
+/// This json example initials OpenAI and returns <c>null</c>:
+/// <code>
+/// { "$OpenAiInit": { "TokenType": "Bot", "Token": { "@Env": "DISCORD_TOKEN" } } }
+/// </code>
+/// </example>
 /// </summary>
 public sealed class DiscordInit : IExpression
 {

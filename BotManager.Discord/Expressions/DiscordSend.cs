@@ -10,6 +10,12 @@ namespace BotManager.Discord.Expressions;
 /// <para>
 /// Return type is <c>null</c>.
 /// </para>
+/// <example>
+/// This json example sends a Discord message to a channel and returns <c>null</c>:
+/// <code>
+/// { "$DiscordSend": { "Message": "Hello World!", "Guild": "MyServer", "Channel": "MyChannel" } }
+/// </code>
+/// </example>
 /// </summary>
 public sealed class DiscordSend : IExpression
 {

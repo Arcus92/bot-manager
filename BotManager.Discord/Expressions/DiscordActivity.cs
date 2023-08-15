@@ -12,6 +12,12 @@ namespace BotManager.Discord.Expressions;
 /// <para>
 /// Return type is <c>null</c>.
 /// </para>
+/// <example>
+/// This json example sets the Discord status to "is playing The Game" and returns <c>null</c>:
+/// <code>
+/// { "$DiscordActivity": { "Name": "The Game", "Activity": "Playing" } }
+/// </code>
+/// </example>
 /// </summary>
 public sealed class DiscordActivity : IExpression
 {

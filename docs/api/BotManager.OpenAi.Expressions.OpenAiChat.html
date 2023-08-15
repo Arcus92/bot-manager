@@ -93,6 +93,13 @@ Executes a char request to the OpenAI api. The <a class="xref" href="BotManager.
 <p>
 Return type is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>.
 </p>
+<example>
+This json example sends an OpenAI chat request and returns the result:
+<pre><code class="lang-csharp">{ "$OpenAiChat": { "Messages": [
+  { "Role": "System", "Text": "Create a recipe suggestion for the following ingredient list:" },
+  { "Role": "User", "Text": "Cheesecake" }
+] } }</code></pre>
+</example>
 </div>
   <div class="markdown conceptual"></div>
 

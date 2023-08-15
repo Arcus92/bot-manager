@@ -11,6 +11,12 @@ namespace BotManager.Discord.Expressions;
 /// <para>
 /// Return type is <c>null</c>.
 /// </para>
+/// <example>
+/// This json example sends a Discord message as a command response and returns <c>null</c>:
+/// <code>
+/// { "$DiscordRespond": { "Message": "Got your command!" } }
+/// </code>
+/// </example>
 /// </summary>
 public sealed class DiscordRespond : IExpression
 {

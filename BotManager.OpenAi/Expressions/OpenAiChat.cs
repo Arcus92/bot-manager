@@ -11,6 +11,15 @@ namespace BotManager.OpenAi.Expressions;
 /// <para>
 /// Return type is <see cref="string"/>.
 /// </para>
+/// <example>
+/// This json example sends an OpenAI chat request and returns the result:
+/// <code>
+/// { "$OpenAiChat": { "Messages": [
+///   { "Role": "System", "Text": "Create a recipe suggestion for the following ingredient list:" },
+///   { "Role": "User", "Text": "Cheesecake" }
+/// ] } }
+/// </code>
+/// </example>
 /// </summary>
 public sealed class OpenAiChat : IExpression
 {

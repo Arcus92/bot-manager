@@ -92,6 +92,10 @@ Sets the status activity shown in the current bot users profile. The <a class="x
 <p>
 Return type is <code>null</code>.
 </p>
+<example>
+This json example sets the Discord status to "is playing The Game" and returns <code>null</code>:
+<pre><code class="lang-csharp">{ "$DiscordActivity": { "Name": "The Game", "Activity": "Playing" } }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -103,6 +107,10 @@ You can register <a class="xref" href="BotManager.Discord.Expressions.DiscordIni
 <p>
 Return type is <code>null</code>.
 </p>
+<example>
+This json example initials OpenAI and returns <code>null</code>:
+<pre><code class="lang-csharp">{ "$OpenAiInit": { "TokenType": "Bot", "Token": { "@Env": "DISCORD_TOKEN" } } }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -114,6 +122,10 @@ initialized.
 <p>
 Return type is <code>null</code>.
 </p>
+<example>
+This json example sends a Discord message as a command response and returns <code>null</code>:
+<pre><code class="lang-csharp">{ "$DiscordRespond": { "Message": "Got your command!" } }</code></pre>
+</example>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -124,6 +136,10 @@ Sends a text message to a Discord channel. The <a class="xref" href="BotManager.
 <p>
 Return type is <code>null</code>.
 </p>
+<example>
+This json example sends a Discord message to a channel and returns <code>null</code>:
+<pre><code class="lang-csharp">{ "$DiscordSend": { "Message": "Hello World!", "Guild": "MyServer", "Channel": "MyChannel" } }</code></pre>
+</example>
 </dd>
     </dl>
 

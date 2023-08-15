@@ -7,6 +7,7 @@ namespace BotManager.OpenAi;
 /// <summary>
 /// Defines a single chat message for the <see cref="OpenAiChat"/> expression.
 /// </summary>
+[Serializable]
 public sealed class OpenAiChatMessage
 {
     /// <summary>
