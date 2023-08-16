@@ -16,7 +16,7 @@ namespace BotManager.OpenAi.Expressions;
 /// <example>
 /// This json example initials OpenAI and returns <c>null</c>:
 /// <code>
-/// { "$OpenAiInit": { "ApiKey": { "@Env": "OPENAI_API_KEY" } } }
+/// { "$OpenAiInit": { "ApiKey": { "$Env": "OPENAI_API_KEY" } } }
 /// </code>
 /// </example>
 /// </summary>

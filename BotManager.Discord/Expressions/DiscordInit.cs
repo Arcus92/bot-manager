@@ -17,7 +17,7 @@ namespace BotManager.Discord.Expressions;
 /// <example>
 /// This json example initials OpenAI and returns <c>null</c>:
 /// <code>
-/// { "$OpenAiInit": { "TokenType": "Bot", "Token": { "@Env": "DISCORD_TOKEN" } } }
+/// { "$OpenAiInit": { "TokenType": "Bot", "Token": { "$Env": "DISCORD_TOKEN" } } }
 /// </code>
 /// </example>
 /// </summary>
