@@ -1,4 +1,5 @@
-using BotManager.WebServer.Types;
+using BotManager.WebServer.Models;
+using BotManager.WebServer.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BotManager.WebServer.Controllers;
@@ -15,9 +16,15 @@ public class TypesController : ControllerBase
     /// </summary>
     private readonly ILogger<TypesController> _logger;
 
-    public TypesController(ILogger<TypesController> logger)
+    /// <summary>
+    /// The type service.
+    /// </summary>
+    private readonly ITypeService _typeService;
+
+    public TypesController(ILogger<TypesController> logger, ITypeService typeService)
     {
         _logger = logger;
+        _typeService = typeService;
     }
     
     /// <summary>
@@ -27,6 +34,6 @@ public class TypesController : ControllerBase
     [HttpGet]
     public IEnumerable<TypeInfo> Get()
     {
-        return TypeInfo.Types;
+        return _typeService.Types;
     }
 }

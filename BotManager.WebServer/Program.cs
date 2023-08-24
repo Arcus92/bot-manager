@@ -1,7 +1,8 @@
 using BotManager.Discord;
 using BotManager.OpenAi;
 using BotManager.Runtime;
-using BotManager.WebServer.Types;
+using BotManager.WebServer.Services;
+using BotManager.WebServer.Services.Implementations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,10 +11,9 @@ RuntimePlugin.Register();
 DiscordPlugin.Register();
 OpenAiPlugin.Register();
 
-TypeInfo.RegisterFromExpressions();
-
 // Add services to the container.
 
+builder.Services.AddSingleton<ITypeService, TypeService>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

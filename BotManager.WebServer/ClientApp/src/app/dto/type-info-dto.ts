@@ -1,8 +1,9 @@
 import {TypePropertyInfoDto} from "./type-property-info-dto";
 
 export interface TypeInfoDto {
-    typeName: string;
-    expressionName?: string;
+    typeName: string,
+    expressionName?: string,
+    documentation?: string,
     isAbstract: boolean,
     isNative: boolean,
     isList: boolean,
