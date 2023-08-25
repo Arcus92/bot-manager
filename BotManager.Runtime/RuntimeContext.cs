@@ -1,3 +1,5 @@
+using BotManager.Runtime.Utils;
+
 namespace BotManager.Runtime;
 
 /// <summary>
@@ -33,6 +35,11 @@ public sealed class RuntimeContext
     /// Gets and sets the root path of the current config file.
     /// </summary>
     public string? RootPath { get; set; }
+
+    /// <summary>
+    /// Gets and sets the date time provider for the current runtime.
+    /// </summary>
+    public IDateTimeProvider DateTimeProvider { get; set; } = new DefaultDateTimeProvider();
 
     #region Logger
     

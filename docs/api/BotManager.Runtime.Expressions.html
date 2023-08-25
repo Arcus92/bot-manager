@@ -160,6 +160,26 @@ This json example returns either <code>1</code>, <code>2</code> or <code>3</code
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="BotManager.Runtime.Expressions.Cooldown.html">Cooldown</a></dt>
+      <dd><p>
+Executes the <a class="xref" href="BotManager.Runtime.Expressions.Cooldown.html#BotManager_Runtime_Expressions_Cooldown_Action">Action</a> expression with a cooldown of <a class="xref" href="BotManager.Runtime.Expressions.Cooldown.html#BotManager_Runtime_Expressions_Cooldown_Milliseconds">Milliseconds</a>. If this expression is
+called multiple times while the cooldown timer is still ticking down, then the <a class="xref" href="BotManager.Runtime.Expressions.Cooldown.html#BotManager_Runtime_Expressions_Cooldown_Fallback">Fallback</a> branch is
+executed instead.
+</p>
+<p>
+The cooldown timer is started before <a class="xref" href="BotManager.Runtime.Expressions.Cooldown.html#BotManager_Runtime_Expressions_Cooldown_Action">Action</a> is executed. The time <a class="xref" href="BotManager.Runtime.Expressions.Cooldown.html#BotManager_Runtime_Expressions_Cooldown_Action">Action</a> takes to run
+is ignored in the cooldown timer.
+</p>
+<p>
+Returns the value of the executed branch.
+</p>
+<example>
+This json example will return <code>10</code>, but when called again withing 5 minutes will return <code>0</code>:
+<pre><code class="lang-csharp">{ "$Cooldown": { "Action": 10, "Fallback": 0, "Milliseconds": 300000 } }</code></pre>
+</example>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="BotManager.Runtime.Expressions.Delay.html">Delay</a></dt>
       <dd><p>
 Holds execution and waits the defined number of milliseconds.

@@ -455,6 +455,46 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Documentations.AssemblyDocumentation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Documentations.AssemblyDocumentation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Documentations.AssemblyMember.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Documentations.AssemblyMember.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Documentations.AssemblyMemberType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Documentations.AssemblyMemberType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Documentations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Documentations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BotManager.Runtime.Expressions.And.yml",
       "output": {
         ".html": {
@@ -499,6 +539,16 @@
       "output": {
         ".html": {
           "relative_path": "api/BotManager.Runtime.Expressions.Choose.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Expressions.Cooldown.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Expressions.Cooldown.html"
         }
       },
       "version": ""
@@ -789,6 +839,46 @@
       "output": {
         ".html": {
           "relative_path": "api/BotManager.Runtime.Storage-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Utils.DefaultDateTimeProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Utils.DefaultDateTimeProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Utils.IDateTimeProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Utils.IDateTimeProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Utils.TestingDateTimeProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Utils.TestingDateTimeProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Runtime.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Runtime.Utils.html"
         }
       },
       "version": ""
