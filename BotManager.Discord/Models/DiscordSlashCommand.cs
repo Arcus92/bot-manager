@@ -1,6 +1,6 @@
 using BotManager.Runtime;
 
-namespace BotManager.Discord;
+namespace BotManager.Discord.Models;
 
 /// <summary>
 /// Defines the action for a Discord slash command. A slash command can be global or set to a specific guild.

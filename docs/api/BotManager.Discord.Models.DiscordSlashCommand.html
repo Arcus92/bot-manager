@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class OpenAiChat
+      <title>Class DiscordSlashCommand
  </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class OpenAiChat
+      <meta name="title" content="Class DiscordSlashCommand
  ">
       
       <link rel="icon" href="../favicon.ico">
@@ -73,38 +73,26 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="BotManager.OpenAi.Expressions.OpenAiChat">
+        <article data-uid="BotManager.Discord.Models.DiscordSlashCommand">
 
 
 
-  <h1 id="BotManager_OpenAi_Expressions_OpenAiChat" data-uid="BotManager.OpenAi.Expressions.OpenAiChat" class="text-break">
-    Class OpenAiChat
+  <h1 id="BotManager_Discord_Models_DiscordSlashCommand" data-uid="BotManager.Discord.Models.DiscordSlashCommand" class="text-break">
+    Class DiscordSlashCommand
   
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="BotManager.html">BotManager</a>.<a class="xref" href="BotManager.OpenAi.html">OpenAi</a>.<a class="xref" href="BotManager.OpenAi.Expressions.html">Expressions</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>BotManager.OpenAi.dll</dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="BotManager.html">BotManager</a>.<a class="xref" href="BotManager.Discord.html">Discord</a>.<a class="xref" href="BotManager.Discord.Models.html">Models</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>BotManager.Discord.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>
-Executes a char request to the OpenAI api. The <a class="xref" href="BotManager.OpenAi.Expressions.OpenAiInit.html">OpenAiInit</a> must be initialized.
-</p>
-<p>
-Return type is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>.
-</p>
-<example>
-This json example sends an OpenAI chat request and returns the result:
-<pre><code class="lang-csharp">{ "$OpenAiChat": { "Messages": [
-  { "Role": "System", "Text": "Create a recipe suggestion for the following ingredient list:" },
-  { "Role": "User", "Text": "Cheesecake" }
-] } }</code></pre>
-</example>
+  <div class="markdown summary"><p>Defines the action for a Discord slash command. A slash command can be global or set to a specific guild.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class OpenAiChat : IExpression</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class DiscordSlashCommand</code></pre>
   </div>
 
 
@@ -114,16 +102,10 @@ This json example sends an OpenAI chat request and returns the result:
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">OpenAiChat</span></div>
+      <div><span class="xref">DiscordSlashCommand</span></div>
     </dd>
   </dl>
 
-  <dl class="typelist implements">
-    <dt>Implements</dt>
-    <dd>
-      <div><a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a></div>
-    </dd>
-  </dl>
 
 
   <dl class="typelist derived">
@@ -158,10 +140,10 @@ This json example sends an OpenAI chat request and returns the result:
 </h2>
 
 
-  <a id="BotManager_OpenAi_Expressions_OpenAiChat__ctor_" data-uid="BotManager.OpenAi.Expressions.OpenAiChat.#ctor*"></a>
+  <a id="BotManager_Discord_Models_DiscordSlashCommand__ctor_" data-uid="BotManager.Discord.Models.DiscordSlashCommand.#ctor*"></a>
 
-  <h3 id="BotManager_OpenAi_Expressions_OpenAiChat__ctor" data-uid="BotManager.OpenAi.Expressions.OpenAiChat.#ctor">
-  OpenAiChat()
+  <h3 id="BotManager_Discord_Models_DiscordSlashCommand__ctor" data-uid="BotManager.Discord.Models.DiscordSlashCommand.#ctor">
+  DiscordSlashCommand()
   
   </h3>
 
@@ -169,7 +151,7 @@ This json example sends an OpenAI chat request and returns the result:
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OpenAiChat()</code></pre>
+    <pre><code class="lang-csharp hljs">public DiscordSlashCommand()</code></pre>
   </div>
 
 
@@ -188,24 +170,19 @@ This json example sends an OpenAI chat request and returns the result:
 </h2>
 
 
-  <a id="BotManager_OpenAi_Expressions_OpenAiChat_Messages_" data-uid="BotManager.OpenAi.Expressions.OpenAiChat.Messages*"></a>
+  <a id="BotManager_Discord_Models_DiscordSlashCommand_Action_" data-uid="BotManager.Discord.Models.DiscordSlashCommand.Action*"></a>
 
-  <h3 id="BotManager_OpenAi_Expressions_OpenAiChat_Messages" data-uid="BotManager.OpenAi.Expressions.OpenAiChat.Messages">
-  Messages
+  <h3 id="BotManager_Discord_Models_DiscordSlashCommand_Action" data-uid="BotManager.Discord.Models.DiscordSlashCommand.Action">
+  Action
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The chat messages to respond to.</p>
-<p>
-You should provide your ruleset as a separate <span class="xref">OpenAI.GPT3.ObjectModels.StaticValues.ChatMessageRoles.System</span> message and not
-concat it with user input. Use a message with <span class="xref">OpenAI.GPT3.ObjectModels.StaticValues.ChatMessageRoles.User</span> role for user
-input. This prioritizes your ruleset over the user input and protects against prompt injection.
-</p>
+  <div class="markdown level1 summary"><p>Gets and sets the expression to run once a user executes this slash command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OpenAiChatMessage[]? Messages { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IExpression? Action { get; set; }</code></pre>
   </div>
 
 
@@ -214,7 +191,7 @@ input. This prioritizes your ruleset over the user input and protects against pr
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="BotManager.OpenAi.Models.OpenAiChatMessage.html">OpenAiChatMessage</a>[]</dt>
+    <dt><a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a></dt>
     <dd></dd>
   </dl>
 
@@ -225,46 +202,127 @@ input. This prioritizes your ruleset over the user input and protects against pr
 
 
 
-  <h2 class="section" id="methods">Methods
-</h2>
+  <a id="BotManager_Discord_Models_DiscordSlashCommand_Description_" data-uid="BotManager.Discord.Models.DiscordSlashCommand.Description*"></a>
 
-
-  <a id="BotManager_OpenAi_Expressions_OpenAiChat_ExecuteAsync_" data-uid="BotManager.OpenAi.Expressions.OpenAiChat.ExecuteAsync*"></a>
-
-  <h3 id="BotManager_OpenAi_Expressions_OpenAiChat_ExecuteAsync_BotManager_Runtime_RuntimeContext_System_Type_" data-uid="BotManager.OpenAi.Expressions.OpenAiChat.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)">
-  ExecuteAsync(RuntimeContext, Type?)
+  <h3 id="BotManager_Discord_Models_DiscordSlashCommand_Description" data-uid="BotManager.Discord.Models.DiscordSlashCommand.Description">
+  Description
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Executes the expression in the given <a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeContext</a>.
-Please do not use this method to run an expression. Use <a class="xref" href="BotManager.Runtime.RuntimeContext.html#BotManager_Runtime_RuntimeContext_ExecuteAsync_BotManager_Runtime_IExpression_">ExecuteAsync(IExpression?)</a> instead.</p>
+  <div class="markdown level1 summary"><p>Gets and sets the commands description.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;object?&gt; ExecuteAsync(RuntimeContext context, Type? returnType)</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Description { get; set; }</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>context</code> <a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeContext</a></dt>
-    <dd><p>The current runtime context.</p>
-</dd>
-    <dt><code>returnType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
-    <dd><p>The expected return type. Use <code>typeof(object)</code> for a generic result. Use <code>null</code> if you don't need the
-return value.</p>
-</dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p>Returns the result of the expression.</p>
-</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
   </dl>
 
 
 
+
+
+
+
+
+  <a id="BotManager_Discord_Models_DiscordSlashCommand_Guild_" data-uid="BotManager.Discord.Models.DiscordSlashCommand.Guild*"></a>
+
+  <h3 id="BotManager_Discord_Models_DiscordSlashCommand_Guild" data-uid="BotManager.Discord.Models.DiscordSlashCommand.Guild">
+  Guild
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets and sets the guild for this command.
+If no guild is defined, it will be registered as global command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DiscordIdentifier? Guild { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BotManager.Discord.Models.DiscordIdentifier.html">DiscordIdentifier</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BotManager_Discord_Models_DiscordSlashCommand_Name_" data-uid="BotManager.Discord.Models.DiscordSlashCommand.Name*"></a>
+
+  <h3 id="BotManager_Discord_Models_DiscordSlashCommand_Name" data-uid="BotManager.Discord.Models.DiscordSlashCommand.Name">
+  Name
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets and sets the command name (without the leading slash).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Name { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BotManager_Discord_Models_DiscordSlashCommand_Options_" data-uid="BotManager.Discord.Models.DiscordSlashCommand.Options*"></a>
+
+  <h3 id="BotManager_Discord_Models_DiscordSlashCommand_Options" data-uid="BotManager.Discord.Models.DiscordSlashCommand.Options">
+  Options
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets and sets the list of parameter for this command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DiscordSlashCommandOption[]? Options { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BotManager.Discord.Models.DiscordSlashCommandOption.html">DiscordSlashCommandOption</a>[]</dt>
+    <dd></dd>
+  </dl>
 
 
 

@@ -155,6 +155,56 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Discord.Models.DiscordEmbed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Discord.Models.DiscordEmbed.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Discord.Models.DiscordIdentifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Discord.Models.DiscordIdentifier.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Discord.Models.DiscordSlashCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Discord.Models.DiscordSlashCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Discord.Models.DiscordSlashCommandOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Discord.Models.DiscordSlashCommandOption.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.Discord.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.Discord.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BotManager.Discord.yml",
       "output": {
         ".html": {
@@ -199,6 +249,26 @@
       "output": {
         ".html": {
           "relative_path": "api/BotManager.OpenAi.Expressions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.OpenAi.Models.OpenAiChatMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.OpenAi.Models.OpenAiChatMessage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BotManager.OpenAi.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BotManager.OpenAi.Models.html"
         }
       },
       "version": ""

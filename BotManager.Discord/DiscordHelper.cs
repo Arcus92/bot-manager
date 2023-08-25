@@ -1,4 +1,5 @@
 using BotManager.Discord.Expressions;
+using BotManager.Discord.Models;
 using BotManager.Runtime;
 using Discord;
 using Discord.WebSocket;

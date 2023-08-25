@@ -1,9 +1,8 @@
 using System.Text.Json.Serialization;
-using BotManager.Runtime;
 using BotManager.Runtime.Converters;
 using Discord;
 
-namespace BotManager.Discord;
+namespace BotManager.Discord.Models;
 
 /// <summary>
 /// Defines a option for a <see cref="DiscordSlashCommand"/>.

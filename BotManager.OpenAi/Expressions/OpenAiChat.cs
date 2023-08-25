@@ -1,3 +1,4 @@
+using BotManager.OpenAi.Models;
 using BotManager.Runtime;
 using OpenAI.GPT3.ObjectModels;
 using OpenAI.GPT3.ObjectModels.RequestModels;
@@ -60,7 +61,7 @@ public sealed class OpenAiChat : IExpression
         var request = new ChatCompletionCreateRequest
         {
             Messages = messages,
-            Model = Models.ChatGpt3_5Turbo
+            Model = OpenAI.GPT3.ObjectModels.Models.ChatGpt3_5Turbo
         };
 
         // Fetches the result

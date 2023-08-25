@@ -2,7 +2,7 @@ using BotManager.OpenAi.Expressions;
 using BotManager.Runtime;
 using OpenAI.GPT3.ObjectModels;
 
-namespace BotManager.OpenAi;
+namespace BotManager.OpenAi.Models;
 
 /// <summary>
 /// Defines a single chat message for the <see cref="OpenAiChat"/> expression.

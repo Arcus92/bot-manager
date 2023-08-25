@@ -2,7 +2,7 @@ using BotManager.Discord.Expressions;
 using BotManager.Runtime;
 using Discord;
 
-namespace BotManager.Discord;
+namespace BotManager.Discord.Models;
 
 /// <summary>
 /// Returns a Discord embed message object. Embeds are formatted messages with title, description, a preview image,

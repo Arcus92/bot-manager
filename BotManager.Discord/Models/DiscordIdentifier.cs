@@ -3,7 +3,7 @@ using BotManager.Discord.Converters;
 using BotManager.Runtime;
 using Discord;
 
-namespace BotManager.Discord;
+namespace BotManager.Discord.Models;
 
 /// <summary>
 /// Identifies a guild, channel or user either by name or id.

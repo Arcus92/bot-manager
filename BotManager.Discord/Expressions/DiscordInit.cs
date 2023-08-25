@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using BotManager.Discord.Models;
 using BotManager.Runtime;
 using BotManager.Runtime.Converters;
 using Discord;

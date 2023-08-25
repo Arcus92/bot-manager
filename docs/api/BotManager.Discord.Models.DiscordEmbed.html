@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class DiscordSend
+      <title>Class DiscordEmbed
  </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class DiscordSend
+      <meta name="title" content="Class DiscordEmbed
  ">
       
       <link rel="icon" href="../favicon.ico">
@@ -73,35 +73,28 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="BotManager.Discord.Expressions.DiscordSend">
+        <article data-uid="BotManager.Discord.Models.DiscordEmbed">
 
 
 
-  <h1 id="BotManager_Discord_Expressions_DiscordSend" data-uid="BotManager.Discord.Expressions.DiscordSend" class="text-break">
-    Class DiscordSend
+  <h1 id="BotManager_Discord_Models_DiscordEmbed" data-uid="BotManager.Discord.Models.DiscordEmbed" class="text-break">
+    Class DiscordEmbed
   
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="BotManager.html">BotManager</a>.<a class="xref" href="BotManager.Discord.html">Discord</a>.<a class="xref" href="BotManager.Discord.Expressions.html">Expressions</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="BotManager.html">BotManager</a>.<a class="xref" href="BotManager.Discord.html">Discord</a>.<a class="xref" href="BotManager.Discord.Models.html">Models</a></dd></dl>
   <dl><dt>Assembly</dt><dd>BotManager.Discord.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>
-Sends a text message to a Discord channel. The <a class="xref" href="BotManager.Discord.Expressions.DiscordInit.html">DiscordInit</a> must be initialized.
-</p>
-<p>
-Return type is <code>null</code>.
-</p>
-<example>
-This json example sends a Discord message to a channel and returns <code>null</code>:
-<pre><code class="lang-csharp">{ "$DiscordSend": { "Message": "Hello World!", "Guild": "MyServer", "Channel": "MyChannel" } }</code></pre>
-</example>
+  <div class="markdown summary"><p>Returns a Discord embed message object. Embeds are formatted messages with title, description, a preview image,
+author and footer.
+This can be used in <a class="xref" href="BotManager.Discord.Expressions.DiscordSend.html">DiscordSend</a> and <a class="xref" href="BotManager.Discord.Expressions.DiscordRespond.html">DiscordRespond</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class DiscordSend : IExpression</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class DiscordEmbed</code></pre>
   </div>
 
 
@@ -111,16 +104,10 @@ This json example sends a Discord message to a channel and returns <code>null</c
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">DiscordSend</span></div>
+      <div><span class="xref">DiscordEmbed</span></div>
     </dd>
   </dl>
 
-  <dl class="typelist implements">
-    <dt>Implements</dt>
-    <dd>
-      <div><a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a></div>
-    </dd>
-  </dl>
 
 
   <dl class="typelist derived">
@@ -155,10 +142,10 @@ This json example sends a Discord message to a channel and returns <code>null</c
 </h2>
 
 
-  <a id="BotManager_Discord_Expressions_DiscordSend__ctor_" data-uid="BotManager.Discord.Expressions.DiscordSend.#ctor*"></a>
+  <a id="BotManager_Discord_Models_DiscordEmbed__ctor_" data-uid="BotManager.Discord.Models.DiscordEmbed.#ctor*"></a>
 
-  <h3 id="BotManager_Discord_Expressions_DiscordSend__ctor" data-uid="BotManager.Discord.Expressions.DiscordSend.#ctor">
-  DiscordSend()
+  <h3 id="BotManager_Discord_Models_DiscordEmbed__ctor" data-uid="BotManager.Discord.Models.DiscordEmbed.#ctor">
+  DiscordEmbed()
   
   </h3>
 
@@ -166,7 +153,7 @@ This json example sends a Discord message to a channel and returns <code>null</c
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DiscordSend()</code></pre>
+    <pre><code class="lang-csharp hljs">public DiscordEmbed()</code></pre>
   </div>
 
 
@@ -185,56 +172,19 @@ This json example sends a Discord message to a channel and returns <code>null</c
 </h2>
 
 
-  <a id="BotManager_Discord_Expressions_DiscordSend_AllowedMentions_" data-uid="BotManager.Discord.Expressions.DiscordSend.AllowedMentions*"></a>
+  <a id="BotManager_Discord_Models_DiscordEmbed_Author_" data-uid="BotManager.Discord.Models.DiscordEmbed.Author*"></a>
 
-  <h3 id="BotManager_Discord_Expressions_DiscordSend_AllowedMentions" data-uid="BotManager.Discord.Expressions.DiscordSend.AllowedMentions">
-  AllowedMentions
+  <h3 id="BotManager_Discord_Models_DiscordEmbed_Author" data-uid="BotManager.Discord.Models.DiscordEmbed.Author">
+  Author
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets and sets if user, channel and role mentions are allowed in this message.</p>
-<p>
-Use <code>&lt;@userId&gt;</code> to tag a user, <code>&lt;#channelId&gt;</code> to tag a channel and
-<code>@&lt;#roleId&gt;</code> to tag a role.
-</p>
+  <div class="markdown level1 summary"><p>Gets and sets the expression to resolve the author name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool AllowedMentions { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="BotManager_Discord_Expressions_DiscordSend_Channel_" data-uid="BotManager.Discord.Expressions.DiscordSend.Channel*"></a>
-
-  <h3 id="BotManager_Discord_Expressions_DiscordSend_Channel" data-uid="BotManager.Discord.Expressions.DiscordSend.Channel">
-  Channel
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets and sets the target channel to send the message to. If not defined, it will use the channel from the
-current runtime context.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IExpression? Channel { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IExpression? Author { get; set; }</code></pre>
   </div>
 
 
@@ -254,52 +204,19 @@ current runtime context.</p>
 
 
 
-  <a id="BotManager_Discord_Expressions_DiscordSend_Embed_" data-uid="BotManager.Discord.Expressions.DiscordSend.Embed*"></a>
+  <a id="BotManager_Discord_Models_DiscordEmbed_Description_" data-uid="BotManager.Discord.Models.DiscordEmbed.Description*"></a>
 
-  <h3 id="BotManager_Discord_Expressions_DiscordSend_Embed" data-uid="BotManager.Discord.Expressions.DiscordSend.Embed">
-  Embed
+  <h3 id="BotManager_Discord_Models_DiscordEmbed_Description" data-uid="BotManager.Discord.Models.DiscordEmbed.Description">
+  Description
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets and sets the optional embed data for this message.</p>
+  <div class="markdown level1 summary"><p>Gets and sets the expression to resolve the description.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DiscordEmbed? Embed { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="BotManager.Discord.Models.DiscordEmbed.html">DiscordEmbed</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="BotManager_Discord_Expressions_DiscordSend_Guild_" data-uid="BotManager.Discord.Expressions.DiscordSend.Guild*"></a>
-
-  <h3 id="BotManager_Discord_Expressions_DiscordSend_Guild" data-uid="BotManager.Discord.Expressions.DiscordSend.Guild">
-  Guild
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets and sets the target guild to send the message to. If not defined, it will use the guild from the current
-runtime context.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IExpression? Guild { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IExpression? Description { get; set; }</code></pre>
   </div>
 
 
@@ -319,19 +236,147 @@ runtime context.</p>
 
 
 
-  <a id="BotManager_Discord_Expressions_DiscordSend_Message_" data-uid="BotManager.Discord.Expressions.DiscordSend.Message*"></a>
+  <a id="BotManager_Discord_Models_DiscordEmbed_Footer_" data-uid="BotManager.Discord.Models.DiscordEmbed.Footer*"></a>
 
-  <h3 id="BotManager_Discord_Expressions_DiscordSend_Message" data-uid="BotManager.Discord.Expressions.DiscordSend.Message">
-  Message
+  <h3 id="BotManager_Discord_Models_DiscordEmbed_Footer" data-uid="BotManager.Discord.Models.DiscordEmbed.Footer">
+  Footer
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets and sets the expression to resolve the message.</p>
+  <div class="markdown level1 summary"><p>Gets and sets the expression to resolve the footer text.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IExpression? Message { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IExpression? Footer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BotManager_Discord_Models_DiscordEmbed_ImageUrl_" data-uid="BotManager.Discord.Models.DiscordEmbed.ImageUrl*"></a>
+
+  <h3 id="BotManager_Discord_Models_DiscordEmbed_ImageUrl" data-uid="BotManager.Discord.Models.DiscordEmbed.ImageUrl">
+  ImageUrl
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets and sets the expression to resolve the image url.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IExpression? ImageUrl { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BotManager_Discord_Models_DiscordEmbed_ThumbnailUrl_" data-uid="BotManager.Discord.Models.DiscordEmbed.ThumbnailUrl*"></a>
+
+  <h3 id="BotManager_Discord_Models_DiscordEmbed_ThumbnailUrl" data-uid="BotManager.Discord.Models.DiscordEmbed.ThumbnailUrl">
+  ThumbnailUrl
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets and sets the expression to resolve the thumbnail url.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IExpression? ThumbnailUrl { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BotManager_Discord_Models_DiscordEmbed_Title_" data-uid="BotManager.Discord.Models.DiscordEmbed.Title*"></a>
+
+  <h3 id="BotManager_Discord_Models_DiscordEmbed_Title" data-uid="BotManager.Discord.Models.DiscordEmbed.Title">
+  Title
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets and sets the expression to resolve the title.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IExpression? Title { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BotManager.Runtime.IExpression.html">IExpression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BotManager_Discord_Models_DiscordEmbed_Url_" data-uid="BotManager.Discord.Models.DiscordEmbed.Url*"></a>
+
+  <h3 id="BotManager_Discord_Models_DiscordEmbed_Url" data-uid="BotManager.Discord.Models.DiscordEmbed.Url">
+  Url
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets and sets the expression to resolve the target url.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IExpression? Url { get; set; }</code></pre>
   </div>
 
 
@@ -355,38 +400,32 @@ runtime context.</p>
 </h2>
 
 
-  <a id="BotManager_Discord_Expressions_DiscordSend_ExecuteAsync_" data-uid="BotManager.Discord.Expressions.DiscordSend.ExecuteAsync*"></a>
+  <a id="BotManager_Discord_Models_DiscordEmbed_BuildAsync_" data-uid="BotManager.Discord.Models.DiscordEmbed.BuildAsync*"></a>
 
-  <h3 id="BotManager_Discord_Expressions_DiscordSend_ExecuteAsync_BotManager_Runtime_RuntimeContext_System_Type_" data-uid="BotManager.Discord.Expressions.DiscordSend.ExecuteAsync(BotManager.Runtime.RuntimeContext,System.Type)">
-  ExecuteAsync(RuntimeContext, Type?)
+  <h3 id="BotManager_Discord_Models_DiscordEmbed_BuildAsync_BotManager_Runtime_RuntimeContext_" data-uid="BotManager.Discord.Models.DiscordEmbed.BuildAsync(BotManager.Runtime.RuntimeContext)">
+  BuildAsync(RuntimeContext)
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Executes the expression in the given <a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeContext</a>.
-Please do not use this method to run an expression. Use <a class="xref" href="BotManager.Runtime.RuntimeContext.html#BotManager_Runtime_RuntimeContext_ExecuteAsync_BotManager_Runtime_IExpression_">ExecuteAsync(IExpression?)</a> instead.</p>
+  <div class="markdown level1 summary"><p>Builds the <span class="xref">Discord.Embed</span> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;object?&gt; ExecuteAsync(RuntimeContext context, Type? returnType)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Embed&gt; BuildAsync(RuntimeContext context)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>context</code> <a class="xref" href="BotManager.Runtime.RuntimeContext.html">RuntimeContext</a></dt>
-    <dd><p>The current runtime context.</p>
-</dd>
-    <dt><code>returnType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
-    <dd><p>The expected return type. Use <code>typeof(object)</code> for a generic result. Use <code>null</code> if you don't need the
-return value.</p>
+    <dd><p>The runtime context.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p>Returns the result of the expression.</p>
-</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">Embed</span>&gt;</dt>
+    <dd></dd>
   </dl>
 
 

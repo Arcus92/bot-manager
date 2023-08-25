@@ -1,3 +1,4 @@
+using BotManager.Discord.Models;
 using BotManager.Runtime;
 using Discord;
 

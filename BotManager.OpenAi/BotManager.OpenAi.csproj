@@ -24,4 +24,5 @@
       <ProjectReference Include="..\BotManager.Runtime\BotManager.Runtime.csproj" />
     </ItemGroup>
 
+
 </Project>
