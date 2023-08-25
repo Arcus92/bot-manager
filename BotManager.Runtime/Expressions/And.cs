@@ -23,6 +23,7 @@ namespace BotManager.Runtime.Expressions;
 /// </example>
 /// </summary>
 [JsonConverter(typeof(ListConverter<And>))]
+[Serializable]
 public sealed class And : List<IExpression?>, IExpression
 {
     /// <inheritdoc />

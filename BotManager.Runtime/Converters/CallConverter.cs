@@ -6,7 +6,7 @@ namespace BotManager.Runtime.Converters;
 /// <summary>
 /// The <see cref="JsonConverter"/> for <see cref="Call"/>.
 /// </summary>
-public class CallConverter : StringConverterBase<Call>
+public sealed class CallConverter : StringConverterBase<Call>
 {
     /// <inheritdoc />
     protected override Call From(string value) => new(value);

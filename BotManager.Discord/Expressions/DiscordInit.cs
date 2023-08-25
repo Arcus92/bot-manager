@@ -21,6 +21,7 @@ namespace BotManager.Discord.Expressions;
 /// </code>
 /// </example>
 /// </summary>
+[Serializable]
 public sealed class DiscordInit : IExpression
 {
     internal const string Tag = "Discord";

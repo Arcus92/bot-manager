@@ -10,7 +10,7 @@ namespace BotManager.Runtime.Documentations;
 /// This class can read the .NET documentation .xml files and access the <see cref="Members"/> in runtime.
 /// </summary>
 [XmlRoot("doc")]
-public class AssemblyDocumentation : IXmlSerializable
+public sealed class AssemblyDocumentation : IXmlSerializable
 {
     /// <summary>
     /// Gets and sets the assembly name.

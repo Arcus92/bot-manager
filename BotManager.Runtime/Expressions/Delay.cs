@@ -18,7 +18,8 @@ namespace BotManager.Runtime.Expressions;
 /// </example>
 /// </summary>
 [TypeConverter(typeof(DelayConverter))]
-public class Delay : IExpression
+[Serializable]
+public sealed class Delay : IExpression
 {
     /// <summary>
     /// Empty constructor for serialization.

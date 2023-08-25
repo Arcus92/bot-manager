@@ -17,6 +17,7 @@ namespace BotManager.Discord.Expressions;
 /// </code>
 /// </example>
 /// </summary>
+[Serializable]
 public sealed class DiscordSend : IExpression
 {
     /// <summary>

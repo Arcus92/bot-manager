@@ -7,7 +7,7 @@ namespace BotManager.Runtime.Converters;
 /// <summary>
 /// The <see cref="JsonConverter"/> for <see cref="Expressions.UInt32"/>.
 /// </summary>
-public class UInt32Converter : JsonConverter<UInt32>
+public sealed class UInt32Converter : JsonConverter<UInt32>
 {
     /// <inheritdoc />
     public override UInt32 Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)

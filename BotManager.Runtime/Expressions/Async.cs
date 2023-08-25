@@ -18,6 +18,7 @@ namespace BotManager.Runtime.Expressions;
 /// </example>
 /// </summary>
 [JsonConverter(typeof(AsyncConverter))]
+[Serializable]
 public sealed class Async : IExpression
 {
     /// <summary>

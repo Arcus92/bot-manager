@@ -22,6 +22,7 @@ namespace BotManager.Runtime.Expressions;
 /// </example>
 /// </summary>
 [JsonConverter(typeof(BooleanConverter))]
+[Serializable]
 public sealed class Boolean : IExpression
 {
     /// <summary>

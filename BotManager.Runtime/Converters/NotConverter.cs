@@ -6,7 +6,7 @@ namespace BotManager.Runtime.Converters;
 /// <summary>
 /// The <see cref="JsonConverter"/> for <see cref="Not"/>.
 /// </summary>
-public class NotConverter : ExpressionConverterBase<Not>
+public sealed class NotConverter : ExpressionConverterBase<Not>
 {
     /// <inheritdoc />
     protected override Not From(IExpression? value) => new(value);

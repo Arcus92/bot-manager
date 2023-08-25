@@ -6,7 +6,7 @@ namespace BotManager.Discord.Converters;
 /// <summary>
 /// The <see cref="JsonConverter"/> for <see cref="DiscordIdentifier"/>.
 /// </summary>
-public class DiscordIdentifierConverter : JsonConverter<DiscordIdentifier>
+public sealed class DiscordIdentifierConverter : JsonConverter<DiscordIdentifier>
 {
     /// <inheritdoc />
     public override DiscordIdentifier Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)

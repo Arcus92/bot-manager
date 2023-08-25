@@ -18,6 +18,7 @@ namespace BotManager.Runtime.Expressions;
 /// </example>
 /// </summary>
 [JsonConverter(typeof(EnvConverter))]
+[Serializable]
 public sealed class Env : IExpression
 {
     /// <summary>

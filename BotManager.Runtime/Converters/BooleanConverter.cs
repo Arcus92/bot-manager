@@ -7,7 +7,7 @@ namespace BotManager.Runtime.Converters;
 /// <summary>
 /// The <see cref="JsonConverter"/> for <see cref="Boolean"/>.
 /// </summary>
-public class BooleanConverter : JsonConverter<Boolean>
+public sealed class BooleanConverter : JsonConverter<Boolean>
 {
     /// <inheritdoc />
     public override Boolean Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)

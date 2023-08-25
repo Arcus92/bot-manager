@@ -8,6 +8,7 @@ namespace BotManager.Discord;
 /// <summary>
 /// Defines a option for a <see cref="DiscordSlashCommand"/>.
 /// </summary>
+[Serializable]
 public struct DiscordSlashCommandOption
 {
     /// <summary>

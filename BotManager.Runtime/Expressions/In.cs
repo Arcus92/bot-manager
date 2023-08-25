@@ -18,6 +18,7 @@ namespace BotManager.Runtime.Expressions;
 /// </code>
 /// </example>
 /// </summary>
+[Serializable]
 public sealed class In : IExpression
 {
     /// <summary>

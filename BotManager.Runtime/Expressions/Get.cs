@@ -18,6 +18,7 @@ namespace BotManager.Runtime.Expressions;
 /// </example>
 /// </summary>
 [JsonConverter(typeof(GetConverter))]
+[Serializable]
 public sealed class Get : IExpression
 {
     /// <summary>

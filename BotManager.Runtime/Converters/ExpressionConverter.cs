@@ -10,7 +10,7 @@ namespace BotManager.Runtime.Converters;
 /// <summary>
 /// The <see cref="JsonConverter"/> for <see cref="IExpression"/>.
 /// </summary>
-public class ExpressionConverter : JsonConverter<IExpression?>
+public sealed class ExpressionConverter : JsonConverter<IExpression?>
 {
     /// <inheritdoc />
     public override IExpression? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)

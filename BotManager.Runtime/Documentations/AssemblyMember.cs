@@ -5,7 +5,7 @@ namespace BotManager.Runtime.Documentations;
 /// <summary>
 /// A single member of a <see cref="AssemblyDocumentation"/>.
 /// </summary>
-public class AssemblyMember
+public sealed class AssemblyMember
 {
     /// <summary>
     /// Gets the type of the member.

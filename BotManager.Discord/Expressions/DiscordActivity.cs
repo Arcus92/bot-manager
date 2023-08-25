@@ -19,6 +19,7 @@ namespace BotManager.Discord.Expressions;
 /// </code>
 /// </example>
 /// </summary>
+[Serializable]
 public sealed class DiscordActivity : IExpression
 {
     /// <summary>

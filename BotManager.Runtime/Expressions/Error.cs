@@ -18,7 +18,8 @@ namespace BotManager.Runtime.Expressions;
 /// </example>
 /// </summary>
 [JsonConverter(typeof(ErrorConverter))]
-public class Error : IExpression
+[Serializable]
+public sealed class Error : IExpression
 {
     /// <summary>
     /// Empty constructor for serialization.

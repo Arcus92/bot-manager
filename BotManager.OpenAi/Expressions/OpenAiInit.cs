@@ -20,6 +20,7 @@ namespace BotManager.OpenAi.Expressions;
 /// </code>
 /// </example>
 /// </summary>
+[Serializable]
 public sealed class OpenAiInit : IExpression
 {
     internal const string Tag = "OpenAI";

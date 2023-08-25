@@ -10,7 +10,7 @@ namespace BotManager.Discord;
 /// This can be used in <see cref="DiscordSend"/> and <see cref="DiscordRespond"/>.
 /// </summary>
 [Serializable]
-public class DiscordEmbed
+public sealed class DiscordEmbed
 {
     /// <summary>
     /// Gets and sets the expression to resolve the title.

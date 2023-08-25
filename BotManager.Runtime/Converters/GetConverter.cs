@@ -6,7 +6,7 @@ namespace BotManager.Runtime.Converters;
 /// <summary>
 /// The <see cref="JsonConverter"/> for <see cref="Env"/>.
 /// </summary>
-public class GetConverter : StringConverterBase<Get>
+public sealed class GetConverter : StringConverterBase<Get>
 {
     /// <inheritdoc />
     protected override Get From(string value) => new(value);

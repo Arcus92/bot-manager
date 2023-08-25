@@ -6,7 +6,7 @@ namespace BotManager.Runtime.Converters;
 /// <summary>
 /// The <see cref="JsonConverter"/> for <see cref="Include"/>.
 /// </summary>
-public class IncludeConverter : StringConverterBase<Include>
+public sealed class IncludeConverter : StringConverterBase<Include>
 {
     /// <inheritdoc />
     protected override Include From(string value) => new(value);

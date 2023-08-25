@@ -9,6 +9,7 @@ namespace BotManager.Discord;
 /// Identifies a guild, channel or user either by name or id.
 /// </summary>
 [JsonConverter(typeof(DiscordIdentifierConverter))]
+[Serializable]
 public readonly struct DiscordIdentifier
 {
     /// <summary>

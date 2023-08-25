@@ -7,7 +7,7 @@ namespace BotManager.Runtime.Converters;
 /// The generic <see cref="JsonConverter"/> for <see cref="Expressions.List"/>s.
 /// </summary>
 /// <typeparam name="T"></typeparam>
-public class ListConverter<T> : JsonConverter<T> where T : class, IList<IExpression?>, new()
+public sealed class ListConverter<T> : JsonConverter<T> where T : class, IList<IExpression?>, new()
 {
     /// <inheritdoc />
     public override T? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)

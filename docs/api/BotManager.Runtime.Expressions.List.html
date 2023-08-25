@@ -103,7 +103,7 @@ This json example returns a list with the values <code>1</code>, <code>2</code>,
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[JsonConverter(typeof(ListConverter&lt;List&gt;))]
-public class List : List&lt;IExpression?&gt;, IList&lt;IExpression?&gt;, ICollection&lt;IExpression?&gt;, IList, ICollection, IReadOnlyList&lt;IExpression?&gt;, IReadOnlyCollection&lt;IExpression?&gt;, IEnumerable&lt;IExpression?&gt;, IEnumerable, IExpression</code></pre>
+public sealed class List : List&lt;IExpression?&gt;, IList&lt;IExpression?&gt;, ICollection&lt;IExpression?&gt;, IList, ICollection, IReadOnlyList&lt;IExpression?&gt;, IReadOnlyCollection&lt;IExpression?&gt;, IEnumerable&lt;IExpression?&gt;, IEnumerable, IExpression</code></pre>
   </div>
 
 
@@ -289,9 +289,6 @@ public class List : List&lt;IExpression?&gt;, IList&lt;IExpression?&gt;, ICollec
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>

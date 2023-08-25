@@ -6,7 +6,7 @@ namespace BotManager.Runtime.Converters;
 /// <summary>
 /// The <see cref="JsonConverter"/> for <see cref="Env"/>.
 /// </summary>
-public class EnvConverter : StringConverterBase<Env>
+public sealed class EnvConverter : StringConverterBase<Env>
 {
     /// <inheritdoc />
     protected override Env From(string value) => new(value);

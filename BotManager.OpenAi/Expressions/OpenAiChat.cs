@@ -21,6 +21,7 @@ namespace BotManager.OpenAi.Expressions;
 /// </code>
 /// </example>
 /// </summary>
+[Serializable]
 public sealed class OpenAiChat : IExpression
 {
     /// <summary>

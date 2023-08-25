@@ -14,7 +14,8 @@ namespace BotManager.Runtime.Expressions;
 /// </code>
 /// </example>
 /// </summary>
-public class Function : IExpression
+[Serializable]
+public sealed class Function : IExpression
 {
     /// <summary>
     /// Gets and sets the name of the function.

@@ -19,7 +19,8 @@ namespace BotManager.Runtime.Expressions;
 /// </example>
 /// </summary>
 [JsonConverter(typeof(ListConverter<List>))]
-public class List : List<IExpression?>, IExpression
+[Serializable]
+public sealed class List : List<IExpression?>, IExpression
 {
     /// <inheritdoc />
     public async Task<object?> ExecuteAsync(RuntimeContext context, Type? returnType)

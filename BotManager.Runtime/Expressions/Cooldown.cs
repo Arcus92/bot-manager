@@ -21,7 +21,7 @@ namespace BotManager.Runtime.Expressions;
 /// </example>
 /// </summary>
 [Serializable]
-public class Cooldown : IExpression
+public sealed class Cooldown : IExpression
 {
     /// <summary>
     /// Gets and sets the main expression to execute when no cooldown timer is ticking.

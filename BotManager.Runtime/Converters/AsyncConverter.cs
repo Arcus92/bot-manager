@@ -6,7 +6,7 @@ namespace BotManager.Runtime.Converters;
 /// <summary>
 /// The <see cref="JsonConverter"/> for <see cref="Async"/>.
 /// </summary>
-public class AsyncConverter : ExpressionConverterBase<Async>
+public sealed class AsyncConverter : ExpressionConverterBase<Async>
 {
     /// <inheritdoc />
     protected override Async From(IExpression? value) => new(value);

@@ -102,7 +102,7 @@ This json example writes an error to the output and returns <code>null</code>:
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[JsonConverter(typeof(ErrorConverter))]
-public class Error : IExpression</code></pre>
+public sealed class Error : IExpression</code></pre>
   </div>
 
 
@@ -129,9 +129,6 @@ public class Error : IExpression</code></pre>
     <dd>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>

@@ -16,7 +16,8 @@ namespace BotManager.Runtime.Expressions;
 /// </code>
 /// </example>
 /// </summary>
-public class Try : IExpression
+[Serializable]
+public sealed class Try : IExpression
 {
     /// <summary>
     /// Gets and sets the expression to try.

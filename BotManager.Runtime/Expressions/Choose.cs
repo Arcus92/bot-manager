@@ -18,6 +18,7 @@ namespace BotManager.Runtime.Expressions;
 /// </example>
 /// </summary>
 [JsonConverter(typeof(ListConverter<Choose>))]
+[Serializable]
 public sealed class Choose : List<IExpression?>, IExpression
 {
     /// <inheritdoc />

@@ -18,7 +18,8 @@ namespace BotManager.Runtime.Expressions;
 /// </example>
 /// </summary>
 [JsonConverter(typeof(CallConverter))]
-public class Call : IExpression
+[Serializable]
+public sealed class Call : IExpression
 {
     internal const string Tag = "Call";
     

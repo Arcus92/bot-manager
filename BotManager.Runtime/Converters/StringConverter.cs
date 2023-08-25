@@ -6,7 +6,7 @@ namespace BotManager.Runtime.Converters;
 /// <summary>
 /// The <see cref="JsonConverter"/> for <see cref="Expressions.String"/>.
 /// </summary>
-public class StringConverter : StringConverterBase<String>
+public sealed class StringConverter : StringConverterBase<String>
 {
     /// <inheritdoc />
     protected override String From(string value) => new(value);

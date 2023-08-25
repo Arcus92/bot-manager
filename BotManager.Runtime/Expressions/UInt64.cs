@@ -18,6 +18,7 @@ namespace BotManager.Runtime.Expressions;
 /// </example>
 /// </summary>
 [JsonConverter(typeof(UInt64Converter))]
+[Serializable]
 public sealed class UInt64 : IExpression
 {
     /// <summary>

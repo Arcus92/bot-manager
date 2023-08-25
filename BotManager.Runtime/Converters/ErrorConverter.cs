@@ -6,7 +6,7 @@ namespace BotManager.Runtime.Converters;
 /// <summary>
 /// The <see cref="JsonConverter"/> for <see cref="Error"/>.
 /// </summary>
-public class ErrorConverter : ExpressionConverterBase<Error>
+public sealed class ErrorConverter : ExpressionConverterBase<Error>
 {
     /// <inheritdoc />
     protected override Error From(IExpression? value) => new(value);

@@ -102,7 +102,7 @@ This json example executes the user-defined function "MyFunction" and returns it
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[JsonConverter(typeof(CallConverter))]
-public class Call : IExpression</code></pre>
+public sealed class Call : IExpression</code></pre>
   </div>
 
 
@@ -129,9 +129,6 @@ public class Call : IExpression</code></pre>
     <dd>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>

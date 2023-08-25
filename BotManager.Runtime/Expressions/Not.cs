@@ -22,6 +22,7 @@ namespace BotManager.Runtime.Expressions;
 /// </example>
 /// </summary>
 [JsonConverter(typeof(NotConverter))]
+[Serializable]
 public sealed class Not : IExpression
 {
     /// <summary>

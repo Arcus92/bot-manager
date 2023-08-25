@@ -18,7 +18,8 @@ namespace BotManager.Runtime.Expressions;
 /// </example>
 /// </summary>
 [JsonConverter(typeof(InfoConverter))]
-public class Info : IExpression
+[Serializable]
+public sealed class Info : IExpression
 {
     /// <summary>
     /// Empty constructor for serialization.

@@ -6,7 +6,7 @@ namespace BotManager.Runtime.Converters;
 /// <summary>
 /// The <see cref="JsonConverter"/> for <see cref="Info"/>.
 /// </summary>
-public class InfoConverter : ExpressionConverterBase<Info>
+public sealed class InfoConverter : ExpressionConverterBase<Info>
 {
     /// <inheritdoc />
     protected override Info From(IExpression? value) => new(value);

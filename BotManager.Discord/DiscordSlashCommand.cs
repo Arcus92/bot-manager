@@ -5,6 +5,7 @@ namespace BotManager.Discord;
 /// <summary>
 /// Defines the action for a Discord slash command. A slash command can be global or set to a specific guild.
 /// </summary>
+[Serializable]
 public sealed class DiscordSlashCommand
 {
     /// <summary>

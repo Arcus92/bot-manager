@@ -19,7 +19,8 @@ namespace BotManager.Runtime.Expressions;
 /// </example>
 /// </summary>
 [JsonConverter(typeof(IncludeConverter))]
-public class Include : IExpression
+[Serializable]
+public sealed class Include : IExpression
 {
     internal const string Tag = "Include";
     
