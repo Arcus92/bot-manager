@@ -18,6 +18,7 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatButtonModule} from "@angular/material/button";
 import {MatTreeModule} from "@angular/material/tree";
 import {MatIconModule} from "@angular/material/icon";
+import {ConfigXmlSummeryComponent} from "./components/config-xml-summery/config-xml-summery.component";
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {MatIconModule} from "@angular/material/icon";
     ConfigEditorComponent,
     ConfigObjectComponent,
     ConfigListComponent,
+    ConfigXmlSummeryComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
