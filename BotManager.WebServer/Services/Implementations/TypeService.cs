@@ -80,6 +80,12 @@ public class TypeService : ITypeService
     /// <returns>Returns the created type info.</returns>
     private TypeInfo Register(Type type)
     {
+        // Flatting array types
+        if (type.IsArray)
+        {
+            type = type.GetElementType() ?? throw new InvalidOperationException();
+        }
+        
         // Check existing type.
         if (_typeMap.TryGetValue(type, out var typeInfo))
         {
@@ -119,7 +125,7 @@ public class TypeService : ITypeService
         var result = new TypeInfo
         {
             TypeName = type.FullName,
-            Documentation = GetMemberDocumentation(type.Assembly, AssemblyMemberType.Type, type.FullName ?? ""),
+            DocumentationXml = GetMemberDocumentation(type.Assembly, AssemblyMemberType.Type, type.FullName ?? ""),
             Properties = GetPropertiesFromType(type),
             IsAbstract = type.IsAbstract
         };
@@ -153,6 +159,8 @@ public class TypeService : ITypeService
             result.Values = Enum.GetNames(type);
         }
 
+        result.IsObject = result is { IsNative: false, IsEnum: false };
+        
         return result;
     }
     
@@ -166,18 +174,15 @@ public class TypeService : ITypeService
         var result = new TypePropertyInfo();
         var parentType = propertyInfo.DeclaringType;
         var originalType = propertyInfo.PropertyType;
-        result.Type = GetRawPropertyType(originalType);
+        result.Type = GetUnderlyingPropertyType(originalType);
         result.Name = propertyInfo.Name;
         result.TypeName = result.Type.FullName;
         
-        result.Documentation = GetMemberDocumentation(propertyInfo.Module.Assembly, AssemblyMemberType.Property,
+        result.DocumentationXml = GetMemberDocumentation(propertyInfo.Module.Assembly, AssemblyMemberType.Property,
             $"{parentType?.FullName}.{propertyInfo.Name}");
         
         // Checks if this is a root property.
         result.IsRootProperty = propertyInfo.GetCustomAttribute<JsonRootPropertyAttribute>() is not null;
-        
-        // Checks if this is an array.
-        result.IsArray = originalType.IsArray;
 
         return result;
     }
@@ -187,24 +192,17 @@ public class TypeService : ITypeService
     #region Static
     
     /// <summary>
-    /// Returns a 
+    /// Returns the raw type of the property, by removing nullable wrapper types.
     /// </summary>
-    /// <param name="type"></param>
+    /// <param name="type">The original type.</param>
     /// <returns></returns>
-    /// <exception cref="InvalidOperationException"></exception>
-    private static Type GetRawPropertyType(Type type)
+    private static Type GetUnderlyingPropertyType(Type type)
     {
-        // Don't add arrays directly.
-        if (type.IsArray)
-        {
-            return GetRawPropertyType(type.GetElementType() ?? throw new InvalidOperationException());
-        }
-        
         // Ignore nullable types.
         var nullableType = Nullable.GetUnderlyingType(type);
         if (nullableType is not null)
         {
-            return GetRawPropertyType(nullableType);
+            return GetUnderlyingPropertyType(nullableType);
         }
 
         return type;

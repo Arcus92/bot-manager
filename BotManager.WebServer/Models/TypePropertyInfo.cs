@@ -27,16 +27,11 @@ public class TypePropertyInfo
     /// <summary>
     /// Gets the documentation for this property.
     /// </summary>
-    public string? Documentation { get; set; }
+    public string? DocumentationXml { get; set; }
     
     /// <summary>
     /// The property is written directly to the parent JSON object.
     /// This means there is no property map. The parent object can only have one property.
     /// </summary>
     public bool IsRootProperty { get; set; }
-    
-    /// <summary>
-    /// Gets if the property is an array.
-    /// </summary>
-    public bool IsArray { get; set; }
 }

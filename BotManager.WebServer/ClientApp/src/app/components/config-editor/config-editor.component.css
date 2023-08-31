@@ -1,51 +1,31 @@
-.config-box {
-  background: #00000010;
-  box-shadow: 0 0 1px #808080;
-  padding: 0.5em 0 0.5em 0.5em;
-  margin: 0 0 0.5em 0;
-  box-sizing: border-box;
-  clear: both;
+.config-tree-invisible {
+  display: none;
 }
 
-.config-box:hover {
-  box-shadow: 0 0 2px #808080;
+.config-tree ul,
+.config-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
 }
 
-.config-box::after {
-  clear: both;
-  display:block;
-  content: '';
+/*
+ * This padding sets alignment of the nested nodes.
+ */
+.config-tree .mat-nested-tree-node div[role=group] {
+  padding-left: 40px;
 }
 
-.config-controls {
-  background: #00000010;
-  padding: 0.2em;
-  float: right;
-  text-align: right;
+/*
+ * Padding for leaf nodes.
+ * Leaf nodes need to have padding so as to align with other non-leaf nodes
+ * under the same parent.
+ */
+.config-tree div[role=group] > .mat-tree-node {
+  padding-left: 10px;
 }
 
-.config-controls button,
-.config-box button {
-  font-size: 80%;
-}
-
-.config-native-value {
-  padding: 0.5em;
-}
-
-.config-box input[type=text],
-.config-box input[type=number],
-.config-box select {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.config-type-name,
-.config-property-name {
-  font-weight: bold;
-}
-
-.config-property-type {
-  font-weight: normal;
-  font-size: 80%;
+.documentation {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1em;
 }

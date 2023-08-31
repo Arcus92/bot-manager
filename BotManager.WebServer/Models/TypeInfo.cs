@@ -17,7 +17,7 @@ public class TypeInfo
     /// <summary>
     /// Gets the documentation for this type.
     /// </summary>
-    public string? Documentation { get; set; }
+    public string? DocumentationXml { get; set; }
 
     /// <summary>
     /// Gets the name of the expression.
@@ -29,6 +29,11 @@ public class TypeInfo
     /// </summary>
     public bool IsAbstract { get; set; }
 
+    /// <summary>
+    /// Gets if this is a object type.
+    /// </summary>
+    public bool IsObject { get; set; }
+    
     /// <summary>
     /// Gets if this is a native type like string, numbers or boolean.
     /// </summary>
