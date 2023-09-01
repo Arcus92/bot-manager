@@ -15,7 +15,7 @@ public sealed class AssemblyDocumentation : IXmlSerializable
     /// <summary>
     /// Gets and sets the assembly name.
     /// </summary>
-    public string Name { get; set; }
+    public string Name { get; set; } = "";
 
     /// <summary>
     /// Gets the list of all members in this assembly.

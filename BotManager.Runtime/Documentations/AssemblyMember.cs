@@ -15,12 +15,12 @@ public sealed class AssemblyMember
     /// <summary>
     /// Gets the full name of the member.
     /// </summary>
-    public string Name { get; set; }
-    
+    public string Name { get; set; } = "";
+
     /// <summary>
     /// Gets the xml content.
     /// </summary>
-    public string XmlContent { get; set; }
+    public string XmlContent { get; set; } = "";
     
     #region Xml
     
