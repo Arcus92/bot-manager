@@ -13,7 +13,7 @@
  * This padding sets alignment of the nested nodes.
  */
 .config-tree .mat-nested-tree-node div[role=group] {
-  padding-left: 40px;
+  padding-left: 48px;
 }
 
 /*
@@ -25,7 +25,21 @@
   padding-left: 10px;
 }
 
+.mat-tree-node-icon {
+  width: 48px;
+}
+
 .documentation {
   background: rgba(0, 0, 0, 0.2);
   padding: 1em;
+  margin-left: 48px;
+}
+
+.title {
+  flex: 1;
+  font-weight: bold;
+}
+
+.input {
+  flex: 1;
 }

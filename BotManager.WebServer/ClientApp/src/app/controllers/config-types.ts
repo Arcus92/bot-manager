@@ -71,18 +71,17 @@ export class ConfigTypes {
       return this.getTypeByTypeName("System.Boolean");
     }
 
-    // List
-    if (Array.isArray(object)) {
-      return this.getTypeByExpressionName("$List");
-    }
-
     // Non-expression types
     if (targetType && !this.isExpressionType(targetType)) {
       return targetType;
     }
 
+    // List
+    if (Array.isArray(object)) {
+      return this.getTypeByExpressionName("$List");
+    }
+
     // Expression
-    let expressionName: string | null = null;
     for (let propertyName in object) {
       if (propertyName.startsWith('$')) {
         return this.getTypeByExpressionName(propertyName);
@@ -90,6 +89,38 @@ export class ConfigTypes {
     }
 
     return undefined;
+  }
+
+  /**
+   * Returns true if the given target type can be assigned by the given type.
+   */
+  public isAssignableFrom(targetType: TypeInfoDto, type: TypeInfoDto): boolean {
+    // Check exact type
+    if (targetType.typeName === type.typeName)
+      return true;
+
+    // Check parent types
+    for (const parentTypeName of type.parentTypeNames) {
+      // TODO: May support multiple levels of inheritance
+      if (targetType.typeName === parentTypeName)
+        return true;
+    }
+
+    return false;
+  }
+
+  /**
+   * Returns a list of types that are assignable by the given target type.
+   */
+  public getAssignableTypes(targetType: TypeInfoDto, includeAbstract = false): TypeInfoDto[] {
+    const list: TypeInfoDto[] = [];
+    for (const type of this.types) {
+      if (type.isAbstract && !includeAbstract) continue;
+      if (this.isAssignableFrom(targetType, type)) {
+        list.push(type);
+      }
+    }
+    return list;
   }
 
   /**
@@ -103,49 +134,70 @@ export class ConfigTypes {
   }
 
   /**
-   * Creates a new instance for the given type.
+   * Creates an empty instance from the given type.
    */
-  public createInstance(type: TypeInfoDto | null | undefined): any {
-    let item: any = {};
-    if (type) {
-      // Handles arrays.
-      if (type.isList) {
-        item = [];
-      } else if (type.isNative) {
-        switch (type.typeName) {
-          case "System.Int32":
-          case "System.UInt32":
-          case "System.Int64":
-          case "System.UInt64":
-            item = 0;
-            break;
-          case "System.String":
-            item = "";
-            break;
-          case "System.Boolean":
-            item = false;
-            break;
-        }
-      } else if (type.isEnum) {
-        item = type.values[0];
-      } else {
-        // Init native properties.
-        for (let property of type.properties) {
-          const propertyType = this.getTypeByTypeName(property.typeName);
-          if (!propertyType || !propertyType.isNative && !propertyType.isEnum) continue;
+  public createInstance(type?: TypeInfoDto): any {
+    if (!type || type.isAbstract) return null;
 
-          item[property.name] = this.createInstance(propertyType);
-        }
-      }
-
-      // Handles expression types.
-      if (type.expressionName) {
-        const root: any = {};
-        root[type.expressionName] = item;
-        item = root;
-      }
+    // Handle native types
+    switch (type.typeName) {
+      case 'System.String':
+        return '';
+      case 'System.Int32':
+      case 'System.UInt32':
+      case 'System.Int64':
+      case 'System.UInt64':
+        return 0;
+      case 'System.Boolean':
+        return false;
     }
 
-    return item;
+    // Handle enums
+    if (type.isEnum && type.values.length > 0) {
+      return type.values[0];
+    }
+
+    // Handle lists
+    if (type.isList) {
+      return [];
+    }
+
+    // Handle objects
+    let properties: any = {};
+    let instance: any = properties;
+
+    // Add properties
+    for (const property of type.properties) {
+      const propertyType = this.getTypeByTypeName(property.typeName);
+      const value = this.createInstance(propertyType);
+      if (property.isRootProperty) {
+        properties = value;
+        break;
+      }
+
+      properties[property.name] = value;
+    }
+
+    // Expression wrapper
+    if (type.expressionName) {
+      instance = {};
+      instance[type.expressionName] = properties;
+    }
+
+    return instance;
+  }
+
+  /**
+   * Returns the element type of a list or array type.
+   */
+  public getListElementType(type: TypeInfoDto): TypeInfoDto | undefined {
+    // Typed array
+    if (type.typeName.endsWith('[]')) {
+      const typeName = type.typeName.substring(0, type.typeName.length - 2);
+      return this.getTypeByTypeName(typeName);
+    }
+
+    // Normal expression list
+    return this.getTypeByTypeName('BotManager.Runtime.IExpression');
   }
 }

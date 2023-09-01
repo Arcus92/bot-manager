@@ -8,11 +8,13 @@ import {TypePropertyInfoDto} from "../../dto/type-property-info-dto";
 interface ConfigNode {
   name: string;
   value?: any;
+  type?: TypeInfoDto;
+  targetType?: TypeInfoDto;
   documentationXml?: string;
-  hasInput: boolean;
-  isArray: boolean;
-  isArrayElement: boolean;
+  isProperty: boolean;
+  isList: boolean;
   children?: ConfigNode[];
+  parent?: ConfigNode;
 }
 
 @Component({
@@ -68,7 +70,7 @@ export class ConfigEditorComponent {
     }
 
     const targetType = this.types?.getTypeByExpressionName("$List");
-    const node = this.buildNode(this._value, targetType?.typeName);
+    const node = this.buildNode(this._value, targetType?.typeName, undefined);
     this.dataSource.data = [node];
   }
 
@@ -77,69 +79,42 @@ export class ConfigEditorComponent {
   treeControl = new NestedTreeControl<ConfigNode>(node => node.children);
   dataSource = new MatTreeNestedDataSource<ConfigNode>();
 
-  private buildNode(value: any, targetTypeName?: string): ConfigNode {
-    // This is an array
-    let isArray = false;
-    if (targetTypeName?.endsWith('[]')) {
-      targetTypeName = targetTypeName.substring(0, targetTypeName?.length - 2);
-      isArray = true;
-    }
-
+  private buildNode(value: any, targetTypeName?: string, parent?: ConfigNode): ConfigNode {
     const targetType = targetTypeName ? this.types?.getTypeByTypeName(targetTypeName) : undefined;
-    const type = this.types?.getTypeByObject(value) ?? targetType;
-
-
+    const type = this.types?.getTypeByObject(value, targetType) ?? targetType;
 
     const node: ConfigNode = {
-      name: type?.typeName ?? '-/-',
+      name: this.getDisplayNameFromType(type),
       value: value,
-      hasInput: false,
-      isArray: false,
-      isArrayElement: false,
+      parent: parent,
+      type: type,
+      targetType: targetType,
       documentationXml: type?.documentationXml,
+      isProperty: false,
+      isList: false,
     };
 
-    if (!value) {
-      node.name = '-/-';
-    }
-
     if (type) {
-      node.hasInput = type.isEnum || type.isNative;
-
-      if (isArray) {
-        node.name += '[]';
+      if (type.isList) {
         node.children = [];
-        node.isArray = true;
+        node.isList = true;
         if (value) {
+          const elementType = this.types?.getListElementType(type);
           for (const child of value) {
-            const childNode = this.buildNode(child, targetType?.typeName);
-            childNode.isArrayElement = true;
-            node.children.push(childNode);
+            node.children.push(this.buildNode(child, elementType?.typeName, node));
           }
         }
-      } else if (type.isList) {
+      } else if (type.isObject) {
         node.children = [];
-        node.isArray = true;
         if (value) {
-          for (const child of value) {
-            const childNode = this.buildNode(child);
-            childNode.isArrayElement = true;
-            node.children.push(childNode);
+          for (const property of type.properties) {
+            const propertyType = this.types?.getTypeByTypeName(property.typeName);
+            const propertyValue = this.getPropertyValue(value, property);
+            const propertyNode = this.buildNode(propertyValue, propertyType?.typeName, node);
+            propertyNode.name = property.name;
+            propertyNode.documentationXml = property.documentationXml;
+            node.children.push(propertyNode);
           }
-        }
-      } else if (!type.isNative && !type.isEnum) {
-        node.children = [];
-        for (const property of type.properties) {
-          const propertyValue = this.getPropertyValue(value, property);
-
-          node.children.push({
-            name: property.name,
-            hasInput: false,
-            isArray: false,
-            isArrayElement: false,
-            documentationXml: property.documentationXml,
-            children: [this.buildNode(propertyValue, property.typeName)]
-          });
         }
       }
     }
@@ -148,10 +123,112 @@ export class ConfigEditorComponent {
   }
 
   /**
-   * Returns if the given node has children nodes.
+   * Returns if this node is a list.
    */
-  public hasChild = (_: number, node: ConfigNode) => !!node.children && node.children.length > 0;
+  public nodeIsList = (node: ConfigNode) => node.isList;
 
+  /**
+   * Returns if this node is a list element.
+   */
+  public nodeIsListElement = (node: ConfigNode) => node.parent?.isList;
+
+  /**
+   * Returns if this node can change it's type and the settings button should be visible.
+   */
+  public nodeCanChangeType = (node: ConfigNode) => node.targetType?.isObject;
+
+  /**
+   * Returns if this node has a visible expand button.
+   */
+  public nodeHasExpandButton = (node: ConfigNode) => node.type?.isObject && node.value !== null;
+
+  /**
+   * Returns if this node is visualized by an input field.
+   */
+  public nodeIsInput = (node: ConfigNode) => node.type?.isNative && node.type?.typeName !== 'System.Boolean' &&
+    node.value !== null;
+
+  /**
+   * Returns if this node is visualized by an input field.
+   */
+  public nodeIsCheckbox = (node: ConfigNode) => node.type?.isNative && node.type?.typeName === 'System.Boolean' &&
+    node.value !== null;
+
+  /**
+   * Returns if this node is set to null.
+   */
+  public nodeIsNull = (node: ConfigNode) => node.value === null;
+
+  /**
+   * Returns if this node is visualized by a drop-down box.
+   */
+  public nodeIsEnum = (node: ConfigNode) => node.type?.isEnum && node.value !== null;
+
+  /**
+   * Returns the input type for the given node.
+   */
+  public nodeGetInputType(node: ConfigNode) {
+    switch (node.type?.typeName) {
+      case 'System.String':
+        return 'text';
+      case 'System.Int32':
+      case 'System.UInt32':
+      case 'System.Int64':
+      case 'System.UInt64':
+        return 'number';
+    }
+    return 'text';
+  }
+
+  /**
+   * Refreshes the tree view.
+   */
+  private updateTree() {
+    const data = this.dataSource.data;
+    this.dataSource.data = [];
+    this.dataSource.data = data;
+  }
+
+
+  /**
+   * Creates and adds a new node to the given list.
+   */
+  public onAddNodeClicked(node: ConfigNode) {
+    if (!node.type) return;
+
+    const elementType = this.types?.getListElementType(node.type);
+
+    // TODO: Select type
+
+    const instance = this.types?.createInstance(elementType);
+    const child = this.buildNode(instance, elementType?.typeName, node);
+    node.children?.push(child);
+
+    this.updateTree();
+  }
+
+  /**
+   * Removes the node from the parent list.
+   */
+  public onRemoveNodeClicked(node: ConfigNode) {
+    if (!node.parent?.children) return;
+    const index = node.parent.children.indexOf(node);
+    if (index < 0) return;
+    node.parent.children.splice(index, 1);
+    this.updateTree();
+  }
+
+  /**
+   * Changes the type of a node by replacing it.
+   */
+  public onChangeTypeClicked(node: ConfigNode) {
+    if (!this.types || !node.targetType) return;
+
+    // TODO: Select type
+    for (const type of this.types.getAssignableTypes(node.targetType)) {
+      console.log(type.typeName);
+    }
+  }
 
   /**
    * Returns the value for the given property for this object.
@@ -179,5 +256,25 @@ export class ConfigEditorComponent {
     }
 
     return undefined;
+  }
+
+  /**
+   * Gets the display name for the given type.
+   */
+  public getDisplayNameFromType(type?: TypeInfoDto): string {
+    if (!type) {
+      return '-/-';
+    }
+
+    if (type.expressionName) {
+      return type.expressionName;
+    }
+
+    let name = type.typeName;
+    const index = name.lastIndexOf('.');
+    if (index) {
+      name = name.substring(index + 1);
+    }
+    return name;
   }
 }

@@ -18,6 +18,9 @@ import {MatTreeModule} from "@angular/material/tree";
 import {MatIconModule} from "@angular/material/icon";
 import {ConfigXmlSummeryComponent} from "./components/config-xml-summery/config-xml-summery.component";
 import {MatTooltipModule} from "@angular/material/tooltip";
+import {MatListModule} from "@angular/material/list";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 
 @NgModule({
   declarations: [
@@ -26,25 +29,28 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     ConfigEditorComponent,
     ConfigXmlSummeryComponent,
   ],
-    imports: [
-        BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
-        BrowserAnimationsModule,
-        HttpClientModule,
-        FormsModule,
-        RouterModule.forRoot([
-            {path: '', component: HomeComponent, pathMatch: 'full'},
-        ]),
-        MatCardModule,
-        MatExpansionModule,
-        MatInputModule,
-        MatFormFieldModule,
-        ReactiveFormsModule,
-        MatSelectModule,
-        MatButtonModule,
-        MatTreeModule,
-        MatIconModule,
-        MatTooltipModule,
-    ],
+  imports: [
+    BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
+    BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
+    RouterModule.forRoot([
+      {path: '', component: HomeComponent, pathMatch: 'full'},
+    ]),
+    MatCardModule,
+    MatExpansionModule,
+    MatInputModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatTreeModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatListModule,
+    MatCheckboxModule,
+    MatSlideToggleModule,
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

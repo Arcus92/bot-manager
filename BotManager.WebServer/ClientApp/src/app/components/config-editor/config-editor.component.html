@@ -1,34 +1,59 @@
 <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="config-tree">
 
-  <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
-    <div *ngIf="!node.hasInput">{{node.name}}</div>
-    <div *ngIf="node.hasInput">
-      <mat-form-field>
-        <mat-label>{{ node.name }}</mat-label>
-        <input matInput type="text" [value]="node.value" />
-      </mat-form-field>
-    </div>
-  </mat-tree-node>
-
-  <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
+  <mat-nested-tree-node *matTreeNodeDef="let node">
     <div class="mat-tree-node">
-      <button mat-icon-button matTreeNodeToggle
-              [attr.aria-label]="'Toggle ' + node.name">
-        <mat-icon class="mat-icon-rtl-mirror">
-          {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
-        </mat-icon>
-      </button>
 
-      <div>{{node.name}}</div>
+      <div class="mat-tree-node-icon">
+        <button *ngIf="nodeHasExpandButton(node)" mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name">
+          <mat-icon class="mat-icon-rtl-mirror">
+            {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+          </mat-icon>
+        </button>
+      </div>
 
-      <button mat-icon-button *ngIf="node.isArray">
+      <!-- Null -->
+      <mat-form-field *ngIf="nodeIsNull(node)" class="input">
+        <mat-label>{{ node.name }}</mat-label>
+        <input matInput type="text" value="(null)" disabled />
+      </mat-form-field>
+
+      <!-- Object -->
+      <mat-form-field *ngIf="nodeHasExpandButton(node)" class="input">
+        <mat-label>{{ node.name }}</mat-label>
+        <input matInput type="text" value="{{getDisplayNameFromType(node.type)}}" disabled />
+      </mat-form-field>
+
+      <!-- Input -->
+      <mat-form-field *ngIf="nodeIsInput(node)" class="input">
+        <mat-label>{{ node.name }}</mat-label>
+        <input matInput [type]="nodeGetInputType(node)" [(ngModel)]="node.value" />
+      </mat-form-field>
+
+      <!-- Enum -->
+      <mat-form-field *ngIf="nodeIsEnum(node)" class="input">
+        <mat-label>{{ node.name }}</mat-label>
+        <select matNativeControl [(ngModel)]="node.value">
+          <option *ngFor="let option of node.targetType.values" [value]="option">{{ option }}</option>
+        </select>
+      </mat-form-field>
+
+      <!-- Boolean -->
+      <mat-checkbox *ngIf="nodeIsCheckbox(node)" class="input" [(ngModel)]="node.value">
+        {{ node.name }}
+      </mat-checkbox>
+
+
+      <button mat-icon-button *ngIf="nodeIsList(node)" (click)="onAddNodeClicked(node)">
         <mat-icon>add</mat-icon>
       </button>
 
-      <button mat-icon-button *ngIf="node.isArrayElement">
+      <button mat-icon-button *ngIf="nodeIsListElement(node)" (click)="onRemoveNodeClicked(node)">
         <mat-icon>remove</mat-icon>
       </button>
 
+      <button mat-icon-button *ngIf="nodeCanChangeType(node)" (click)="onChangeTypeClicked(node)">
+        <mat-icon>settings</mat-icon>
+      </button>
     </div>
 
     <div [class.config-tree-invisible]="!treeControl.isExpanded(node)" role="group">

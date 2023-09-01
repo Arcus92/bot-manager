@@ -80,16 +80,18 @@ public class TypeService : ITypeService
     /// <returns>Returns the created type info.</returns>
     private TypeInfo Register(Type type)
     {
-        // Flatting array types
-        if (type.IsArray)
-        {
-            type = type.GetElementType() ?? throw new InvalidOperationException();
-        }
-        
         // Check existing type.
         if (_typeMap.TryGetValue(type, out var typeInfo))
         {
             return typeInfo;
+        }
+        
+        // Register array types.
+        if (type.IsArray)
+        {
+            var elementType = type.GetElementType();
+            if (elementType is not null)
+                Register(elementType);
         }
 
         typeInfo = CreateTypeInfo(type);
@@ -127,7 +129,7 @@ public class TypeService : ITypeService
             TypeName = type.FullName,
             DocumentationXml = GetMemberDocumentation(type.Assembly, AssemblyMemberType.Type, type.FullName ?? ""),
             Properties = GetPropertiesFromType(type),
-            IsAbstract = type.IsAbstract
+            IsAbstract = type.IsAbstract,
         };
 
         // Checks if this is a list.
