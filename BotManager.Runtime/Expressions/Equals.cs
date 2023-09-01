@@ -22,12 +22,12 @@ namespace BotManager.Runtime.Expressions;
 public sealed class Equals : IExpression
 {
     /// <summary>
-    /// Gets the first value
+    /// Gets the first value.
     /// </summary>
     public IExpression? A { get; set; }
     
     /// <summary>
-    /// Gets the second value
+    /// Gets the second value.
     /// </summary>
     public IExpression? B { get; set; }
 

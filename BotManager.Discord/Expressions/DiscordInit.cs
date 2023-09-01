@@ -28,25 +28,25 @@ public sealed class DiscordInit : IExpression
     internal const string Tag = "Discord";
 
     /// <summary>
-    /// The operation context the plugin was initialized with
+    /// The operation context the plugin was initialized with.
     /// </summary>
     private RuntimeContext _context = new();
     
     #region Config
 
     /// <summary>
-    /// Gets and sets the <see cref="Token"/> type
+    /// Gets and sets the <see cref="Token"/> type.
     /// </summary>
     [JsonConverter(typeof(EnumConverter<TokenType>))]
     public TokenType TokenType { get; set; } = TokenType.Bot;
 
     /// <summary>
-    /// Gets and sets the Discord API key
+    /// Gets and sets the Discord API key.
     /// </summary>
     public IExpression? Token { get; set; }
 
     /// <summary>
-    /// Gets and sets the slash commands
+    /// Gets and sets the slash commands.
     /// </summary>
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public DiscordSlashCommand[]? Commands { get; set; }
@@ -54,7 +54,7 @@ public sealed class DiscordInit : IExpression
     #endregion Config
     
     /// <summary>
-    /// The Discord client
+    /// The Discord client.
     /// </summary>
     private readonly DiscordSocketClient _client = new();
 

@@ -39,7 +39,7 @@ public sealed class Env : IExpression
     }
     
     /// <summary>
-    /// Gets and sets the name of the variable
+    /// Gets and sets the name of the variable.
     /// </summary>
     [JsonRootProperty]
     public string Name { get; set; }

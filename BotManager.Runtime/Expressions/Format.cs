@@ -45,12 +45,12 @@ public sealed class Format : IExpression
     }
 
     /// <summary>
-    /// Gets and sets the format text
+    /// Gets and sets the format text.
     /// </summary>
     public IExpression? Text { get; set; }
 
     /// <summary>
-    /// Gets and sets the parameter list
+    /// Gets and sets the parameter list.
     /// </summary>
     public List? Parameters { get; set; }
     

@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "/home/david/RiderProjects/BotManager/.docfx",
+  "source_base_path": "/home/david/RiderProjects/bot-manager/.docfx",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -25,30 +25,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BotManager.Discord.DiscordEmbed.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/BotManager.Discord.DiscordEmbed.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/BotManager.Discord.DiscordHelper.yml",
       "output": {
         ".html": {
           "relative_path": "api/BotManager.Discord.DiscordHelper.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/BotManager.Discord.DiscordIdentifier.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/BotManager.Discord.DiscordIdentifier.html"
         }
       },
       "version": ""
@@ -65,26 +45,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BotManager.Discord.DiscordSlashCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/BotManager.Discord.DiscordSlashCommand.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/BotManager.Discord.DiscordSlashCommandOption.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/BotManager.Discord.DiscordSlashCommandOption.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/BotManager.Discord.Expressions.DiscordActivity.yml",
       "output": {
         ".html": {
@@ -95,30 +55,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BotManager.Discord.Expressions.DiscordEmbed.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/BotManager.Discord.Expressions.DiscordEmbed.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/BotManager.Discord.Expressions.DiscordInit.yml",
       "output": {
         ".html": {
           "relative_path": "api/BotManager.Discord.Expressions.DiscordInit.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/BotManager.Discord.Expressions.DiscordPlugin.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/BotManager.Discord.Expressions.DiscordPlugin.html"
         }
       },
       "version": ""
@@ -235,16 +175,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BotManager.OpenAi.Expressions.OpenAiPlugin.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/BotManager.OpenAi.Expressions.OpenAiPlugin.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/BotManager.OpenAi.Expressions.yml",
       "output": {
         ".html": {
@@ -269,16 +199,6 @@
       "output": {
         ".html": {
           "relative_path": "api/BotManager.OpenAi.Models.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/BotManager.OpenAi.OpenAiChatMessage.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/BotManager.OpenAi.OpenAiChatMessage.html"
         }
       },
       "version": ""
@@ -849,16 +769,6 @@
       "output": {
         ".html": {
           "relative_path": "api/BotManager.Runtime.IExpression.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/BotManager.Runtime.InputAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/BotManager.Runtime.InputAttribute.html"
         }
       },
       "version": ""
